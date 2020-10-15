@@ -1,0 +1,19 @@
+mixin sLogos()
+	// start sLogos
+	+b.SECTION.sLogos.section#sLogos&attributes(attributes)
+		.container 
+			+b.section-title
+				h2 Экспо-партнеры
+			.row
+				- for (var x = 1; x < 13; x++)
+					+e.col.col-xl.col-md-3.col-sm-4.col-6
+						//- (class="wow  animate__fadeInUp "   )
+						+pic(`partner-${x}`,'','') 
+				+e.col.col-xl.col-md-3.col-sm-4.col-6
+					//- (class="wow  animate__fadeInUp "   )
+					+pic(`partner-8`,'','') 
+				+e.col.col-xl.col-md-3.col-sm-4.col-6
+					//- (class="wow  animate__fadeInUp "   )
+					+pic(`partner-10`,'','') 
+			 
+	// end sLogos

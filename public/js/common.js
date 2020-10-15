@@ -9,7 +9,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 var JSCCommon = {
 	// часть вызов скриптов здесь, для использования при AJAX
 	btnToggleMenuMobile: [].slice.call(document.querySelectorAll(".toggle-menu-mobile--js")),
-	menuMobile: document.querySelector(".menu-mobile--js"),
+	menuMobile: document.querySelector(".nav-wrap"),
 	menuMobileLink: [].slice.call(document.querySelectorAll(".menu-mobile--js ul li a")),
 	modalCall: function modalCall() {
 		$(".link-modal").fancybox({
@@ -31,6 +31,12 @@ var JSCCommon = {
 					// ZOOM: "Zoom"
 
 				}
+			},
+			eforeLoad: function eforeLoad() {
+				document.querySelector("html").classList.add("fixed");
+			},
+			afterClose: function afterClose() {
+				document.querySelector("html").classList.remove("fixed");
 			}
 		});
 		$(".modal-close-js").click(function () {
@@ -155,7 +161,7 @@ var JSCCommon = {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 
 		if (isIE11) {
-			$("body").prepend('<p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p>');
+			$("body").after('<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
 	},
 	sendForm: function sendForm() {
@@ -238,11 +244,11 @@ var $ = jQuery;
 function eventHandler() {
 	var _defaultSl;
 
+	JSCCommon.ifie();
 	JSCCommon.modalCall();
 	JSCCommon.tabscostume('tabs');
 	JSCCommon.mobileMenu();
 	JSCCommon.inputMask();
-	JSCCommon.ifie();
 	JSCCommon.sendForm();
 	JSCCommon.heightwindow();
 	JSCCommon.animateScroll(); // JSCCommon.CustomInputFile();
@@ -257,7 +263,15 @@ function eventHandler() {
 	} // /добавляет подложку для pixel perfect
 
 
-	function whenResize() {}
+	function whenResize() {
+		var topH = $("header ").innerHeight();
+
+		if ($(window).scrollTop() > topH) {
+			$('.top-nav  ').addClass('fixed');
+		} else {
+			$('.top-nav  ').removeClass('fixed');
+		}
+	}
 
 	window.addEventListener('resize', function () {
 		whenResize();

@@ -11,12 +11,124 @@ include components/btn.pug
 
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
+		+icon('arror-left')
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
+		+icon('arror-right')
 //- /arrow for swiper-slider
 
 mixin ie11()
 	//- modernizer and for ie11
 	 
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+
+
+mixin page-title(t)
+	.container
+		+b.page-title
+			.row 
+				.col
+					h1= t
+				block
+
+mixin reg(b="Зарегистрироваться")
+	+b.form-wrap(class="form-wrap--border")
+			form(action='/file-upload'  enctype="multipart/form-data")
+				//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
+				.row
+					
+					.col-lg-6
+						+input("",'text','Фамилия')
+					.col-lg-6
+						+input("",'text','Имя')
+					.col-lg-6
+						+input("",'text','Отчество')
+					.col-lg-6
+					.col-lg-6
+						+input("",'text','Фамилия на английском')
+					.col-lg-6
+						+input("",'text','Имя на английском')
+					.col-lg-6
+						+input("",'text','Страна') 
+					.col-lg-6
+						+input("",'text','Город')
+					.col-lg-12
+						+input("",'text','Название компании')
+					.col-lg-12
+						+input("",'text','Название компании на английском')
+					.col-lg-6
+						+input("",'text','Должность')
+					.col-lg-6
+						+input("",'text','Должность на английском')
+					.col-lg-6
+						+input("+7 ___ ___ __ __",'tel','Телефон')
+					.col-lg-6
+					 
+					.col-lg-6 
+						+input("",'text','Пароль')
+					.col-lg-6 
+						+input("",'text','Повторите пароль')
+					.col-lg-12
+						label.dropzone-wrapper.d-block
+							+b.dropzone(action='/file-upload')
+								#dropzone
+									+e.prev-wrap 
+										span.strong +
+											br
+											| добавить
+											br
+											| фото
+										
+									.fallback
+										input(name='file', type='file', multiple='')
+							//- +e.file Выбрать фото
+					.col-lg-6.my-4
+						button.btn.btn-primary.btn-arrows.w-100(type="submit")= b
+					.col-lg-12
+						+in-c()
+							+e.SPAN.text Согласие на получение сообщений от других участников
+
+						br
+						+in-c()
+							+e.SPAN.text Согласен на обработку #[a(href="#") персональных данных]
+mixin login(b="Зарегистрироваться")
+	+b.form-wrap(class="form-wrap--border")
+		.container
+			.row
+				.col
+					form(action='/file-upload'  enctype="multipart/form-data")
+						//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
+						.row
+							.col-lg-6
+								+input("",'email','Электронный адрес / E-mail')
+							 
+							.col-lg-6
+								+input("",'password','Пароль / Password') 
+							.col-lg-6.mb-4
+								+e.btn.w-100.ttu(type="submit") Войти
+							.col-lg-6.mb-4.align-self-center
+								a.btn.btn-link(href="#") Восстановить пароль
+
+						 
+				.col-lg-auto
+					+e.aside 
+						//- .h6.strong.mb-4 Пояснение к регистрации
+						//- +e.aside-text.text-secondary Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+mixin password(b="Зарегистрироваться")
+	+b.form-wrap(class="form-wrap--border")
+		.container
+			.row
+				.col
+					form(action='/file-upload'  enctype="multipart/form-data")
+						//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
+						.row
+							.col-lg-6
+								+input("",'email','Электронный адрес / E-mail')
+							.w-100
+							.col-lg-6.mb-4
+								+e.btn.w-100.ttu(type="submit") Восстановить
+
+						 
+				.col-lg-auto
+					+e.aside 
+						//- .h6.strong.mb-4 Пояснение к регистрации
+						//- +e.aside-text.text-secondary Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации

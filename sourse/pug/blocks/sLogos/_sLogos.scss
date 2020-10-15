@@ -1,0 +1,59 @@
+
+	// start .sLogos
+	.sLogos {
+	 background-color: #ffffff;
+	 @include media-breakpoint-up(md){
+	 --sPB: #{rem(160)};
+	 }
+	 h2{
+		 color: #2A2D31;
+	 }
+	 
+		 .section-title{
+			  	@include media-breakpoint-up(md){
+
+					}
+		 }
+		 .row{
+			 align-items: center;
+			// justify-content: space-around;
+				// justify-content: space-between;
+				justify-content: center;
+			
+				padding-top: rem(15);
+		 }
+		 &__col{ 
+			 text-align: center;
+			 padding-top: rem(15);
+			 @include media-breakpoint-up(xl) {
+				 flex: 0 0 (100% / 7);
+				 max-width: (100% / 7);
+			 }
+			 
+		 }
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	
+	//
+	@include media-breakpoint-between(md, xl) { }
+	
+	
+	//
+	@include media-breakpoint-only(sm) {}
+	@include media-breakpoint-only(md) {}
+	@include media-breakpoint-only(lg) {}
+	@include media-breakpoint-only(xl) {}
+	
+	//
+	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(lg) {}
+	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-down(sm) {
+		.section-title{
+			padding-bottom: 0;
+		}
+	}
+
+} // end.sLogos

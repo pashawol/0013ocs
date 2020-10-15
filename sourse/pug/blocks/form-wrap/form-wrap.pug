@@ -11,7 +11,7 @@ mixin input(placeholder,  t='text', label, name= t)
 			+e.SELECT.input.form-control( name= name)&attributes(attributes)
 				option(value= placeholder)= placeholder
 				- for (var x = 1; x < 5; x++)
-					option(value=` placeholder ${x}`)= `placeholder ${x}`
+					option(value=` placeholder ${x}`)= `placeholder dfssfsd dfsdfd sads ${x}`
 		else if t=='file'
 			+e.INPUT.input.form-control(type= t  name= name)&attributes(attributes)
 			
@@ -22,7 +22,7 @@ mixin input(placeholder,  t='text', label, name= t)
 	+e.input-wrap.form-group
 		if label
 			label
-				+e.SPAN.title= label
+				+b.SPAN.input-title= label
 				+t(t,placeholder, name)&attributes(attributes)
 				block
 		else
@@ -30,10 +30,10 @@ mixin input(placeholder,  t='text', label, name= t)
 		block
 	// +e.input-wrap
 mixin select(label,pl,...items)
-	+e.input-wrap.form-group
+	+e.input-wrap
 		label
 			+e.SPAN.title= label
-			+e.SELECT.input.form-control
+			+e.SELECT.input
 
 					option()= pl
 					each item in items
@@ -74,4 +74,5 @@ mixin add-file(n)
 mixin polite()
 	+e.polite
 		+in-c()(checked)
-			+e.SMALL.text.text-secondary Согласен на обработку и хранение моих персональных данных в соответствии с условиями
+			+e.SPAN.text Согласен на обработку 
+				a(href="#" ).tdu персональных данных

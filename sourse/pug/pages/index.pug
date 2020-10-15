@@ -3,22 +3,41 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sLogos/_sLogos.pug
+include ../blocks/sVideo/_sVideo.pug
+include ../blocks/sWelcome/_sWelcome.pug
+include ../blocks/justUpgraitIt/_justUpgraitIt.pug
+//- include ../blocks/sAwaits/_sAwaits.pug
+//- include ../blocks/sDates/_sDates.pug
+//- include ../blocks/sExhibition/_sExhibition.pug
+//- include ../blocks/sPartners/_sPartners.pug
+//- include ../blocks/sWelcome/_sWelcome.pug
+//- include ../blocks/sEvents/_sEvents.pug
+//- include ../blocks/sSpeakers/_sSpeakers.pug
+
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'main-page'
 block title
-	- let  title= 'title'
+	- let  title= 'Главная'
 	title= title
 block pagecontent
-	+mob-mnu()
-	+header()
-
-		+top-nav()
-		+topLine()
+	+top-nav()
 	+headerBlock()
-
-	+sForm()
-	+sContact()
+	+sVideo
+	+sWelcome
+	+justUpgraitIt
+	
+	//- +sWelcome
+	//- +sEvents0
+	//- +sAwaits
+	//- +sDates
+	//- +sVideo
+	//- +sExhibition
+ 
+	//- +sLogos
+	//- +sSpeakers0()
+	+sLogos
 	+footer()
 
 

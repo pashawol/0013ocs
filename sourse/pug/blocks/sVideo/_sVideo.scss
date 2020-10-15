@@ -1,0 +1,111 @@
+
+	// start .sVideo
+	.sVideo {
+		padding-top: 0;
+		position: relative;
+		z-index: 3;
+		@include media-breakpoint-up(sm){
+
+			padding-bottom:calc(var(--sPB) * 2.65) ;
+		}
+	
+		&__wrap {
+
+			margin-left: auto;
+			margin-right: auto;
+			max-width: rem(1168); 
+
+			&--sm {
+				max-width: rem(645);
+
+			}
+		}
+
+		@include media-breakpoint-up(xxl) {
+			.container {
+				max-width: 1805px;
+			}
+		}
+
+		&__video {
+			z-index: 4;
+
+			@include media-breakpoint-up(sm) {
+
+				// margin-bottom: rem(45);
+			}
+
+			margin-top: rem(35);
+			margin-bottom: rem(25);
+			@include block(1168, 656);
+			background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+			box-shadow: 0px 53.6471px 24.1412px -11.6235px rgba(0, 0, 0, 0.25);
+
+			// overflow: hidden;
+			@include media-breakpoint-up(lg) {
+				--sp: #{rem(-32)};
+				--w: #{rem(160)};
+				--h: #{rem(424)};
+			}
+			
+			@include media-breakpoint-up(md) {
+				--sp: #{rem(-32 * .8)};
+				--w: #{rem(160 * .8)};
+				--h: #{rem(424 * .8)};
+			}
+			@include media-breakpoint-up(sm) {
+				--sp: #{rem(-32 * .5)};
+				--w: #{rem(160 * .5)};
+				--h: #{rem(424 * .5)};
+			}
+			--sp: #{rem(-32 * .32)};
+			--w: #{rem(160 * .32)};
+			--h: #{rem(424 * .32)};
+
+			picture {
+
+				&::before,
+				&::after {
+					content: '';
+					background: #FF5700;
+					position: absolute;
+					width: var(--w);
+					height: var(--h);
+						
+				}
+				&::before {
+					top: var(--sp);
+					left: var(--sp);
+				}
+
+				&::after {
+					bottom: var(--sp);
+					right: var(--sp);
+				}
+				img {
+					position: relative;
+					z-index: 2;
+				} 
+			}
+
+			.icon {
+				@include a-cent;
+				color: #000000;
+				@include media-breakpoint-up(sm){
+
+					font-size: rem(106);
+				}
+				font-size: rem(56);
+			}
+		}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sVideo

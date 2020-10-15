@@ -1,4 +1,21 @@
 mixin footer()
-	+b.FOOTER.footer.block-with-lazy
+	+b.FOOTER.footer
 		.container
-			h2 footer
+			+e.head
+				.row
+					.col
+						+e.text--mx КРУГЛОСУТОЧНЫЙ  ПРИЕМ ЭЛЕКТРОННОЙ КОРРЕСПОНДЕНЦИИ: 
+						+e.text: a(href="mailto:FORUM@OCS.RU") FORUM@OCS.RU 
+					.col-lg-auto
+						+e.text.text-lg-right Мы в соц. сетях
+						+soc
+		+e.footer
+			.container
+				.row
+					.col-xl-3.col-auto © 2020. Все права защищены
+					.col-auto
+						a(href="#") 2018 
+					.col
+						a(href="#") 2019 
+					.col-auto
+						a.text-white(href="#") ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ

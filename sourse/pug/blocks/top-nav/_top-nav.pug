@@ -8,20 +8,29 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
-		span
+	
 	+b.menu-mobile--js.d-lg-none
-		+b.toggle-menu-mobile--js
-			span
 		+e.inner
 		
 			+mnu()
 			.text-right
 	//  мобильное меню
-mixin top-nav() 
+mixin top-nav(l) 
 	// start top-nav
-	+b.top-nav.block-with-lazy
+	+b.top-nav
 		.container
-			+mnu()
+			.row
+				.col.d-xl-none
+					+b.toggle-menu-mobile--js
+						span
+				+e.col.col-xl.order-xl-0.order-last
+					.nav-wrap
+						+mnu()  
+
+				.col-auto
+					+e.btn.btn-primary(href='#') Регистрация
+				.col-auto
+					+e.btn--cabinet.btn-white(href='#')
+						+icon('user')
 					
 	// end top-nav

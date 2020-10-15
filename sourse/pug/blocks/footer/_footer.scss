@@ -1,15 +1,42 @@
+
+ 
 .footer {
+	padding-top: calc(var(--sPT) * 1.9);
+	&__text{
+		font-weight: bold;
+	 @include rfs(40px);
+	 margin-bottom: 1em;
+	 &--mx{
+		 max-width: em(180);
+	 }
+	 line-height: 140%;
+	}
+	
+	&__head{
 		
+		padding-bottom: calc(var(--sPT) * 1.2);
+ }
+ &__footer{
+	 border-top: 1px solid rgba($color: #FFFFFF, $alpha: .5);
+	 padding: rem(40) 0 rem(24);
+	 .container{
+		 @include media-breakpoint-up(xxl) {
+				max-width: 1807px;
+		 }
 
-
-// 
-@include media-breakpoint-up(xl) {}
-
-@include media-breakpoint-up(lg) {}
+	 }
+	 .row{
+		 > * {
+			 padding-bottom: 1rem;
+		 }
+	 }
+ }
 
 @include media-breakpoint-up(md) {}
 
-@include media-breakpoint-up(sm) {}
+@include media-breakpoint-up(sm) {
+ 
+}
 
 @include media-breakpoint-up(xs) {}
 
@@ -40,4 +67,10 @@
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+
+
+}
+
+.smallest{
+	font-size: 12px;
 }

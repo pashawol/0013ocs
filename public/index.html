@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>title</title>
+		<title>Главная</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
@@ -23,113 +23,364 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
-		<div class="toggle-menu-mobile toggle-menu-mobile--js d-lg-none"><span></span>
-		</div>
-		<div class="menu-mobile menu-mobile--js d-lg-none">
-			<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
-			</div>
-			<div class="menu-mobile__inner">
-				<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-					</li>
-					<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
-					</li>
-				</ul>
-				<div class="text-right"></div>
-			</div>
-		</div>
-		<!--  мобильное меню-->
-		<!-- start header-->
-		<header class="header" id="header">
+	<body class="main-page">
+		<div class="main-wrapper">
 			<!-- start top-nav-->
-			<div class="top-nav block-with-lazy">
+			<div class="top-nav">
 				<div class="container">
-					<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="/" itemprop="url">Главная</a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Услуги  </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Подбор септика   </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Акции </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> О компании  </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Доставка и оплата </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Клиентам  </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url"> Наши работы   </a>
-						</li>
-						<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#sContact" itemprop="url">Контакты </a>
-						</li>
-					</ul>
+					<div class="row">
+						<div class="col d-xl-none">
+							<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
+							</div>
+						</div>
+						<div class="top-nav__col col-xl order-xl-0 order-last">
+							<div class="nav-wrap">
+								<ul class="navMenu" itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link text-primary" href="#" itemprop="url"> Программа </a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Спикеры</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Участники</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Партнеры</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">EXPO </a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">3D-EXPO</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">LIVE</a>
+									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О форуме</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-auto"><a class="top-nav__btn btn-primary" href="#">Регистрация</a>
+						</div>
+						<div class="col-auto"><a class="top-nav__btn top-nav__btn--cabinet btn-white" href="#">
+							<svg class="icon icon-user ">
+								<use xlink:href="img/svg/sprite.svg#user"></use>
+							</svg></a>
+						</div>
+					</div>
 				</div>
 			</div>
 			<!-- end top-nav-->
-			<!-- start topLine-->
-			<section class="topLine section" id="topLine">
+			<!-- start headerBlock-->
+			<div class="headerBlock bg-wrap" id="headerBlock"> 
 				<div class="container">
-					<div class="section-title text-center">
-						<h2>topLine</h2>
+					<div class="headerBlock__row row">
+						<div class="col-auto mb-3"><img class="res-i" src="img/svg/logo-1.svg" loading="lazy" alt=""/></div>
+						<div class="col mb-3"><img class="res-i" src="img/svg/logo-2.png" loading="lazy" alt=""/></div>
+						<div class="col-lg-auto mb-3">
+							<div class="headerBlock__text">Диалоговая <br> кросс-платформа нового поколения
+							</div>
+						</div>
 					</div>
-					<div class="row"></div>
+					<div class="animate-block-circle"><img class="img-1" src="img/svg/circle-1.svg" alt=""/>
+						<div class="ellipse ellipse-1 ellipse-css">
+							<div class="dot dot3"></div>
+							<div class="dot dot4"></div>
+							<div class="dot dot5"></div>
+							<div class="dot dot6"> </div>
+						</div><img class="img-2" src="img/svg/circle-2.svg" alt=""/>
+						<div class="ellipse ellipse-2 ellipse-css">
+							<div class="dot dot1"></div>
+							<div class="dot dot4"></div>
+							<div class="dot dot5"></div>
+							<div class="dot dot6"> </div>
+						</div><img class="img-3" src="img/svg/circle-3.svg" alt=""/>
+						<div class="ellipse ellipse-3 ellipse-css">
+							<div class="dot dot1"></div>
+							<div class="dot dot2"></div>
+							<div class="dot dot3"></div>
+							<div class="dot dot4"></div>
+							<div class="dot dot5"></div>
+							<div class="dot dot6"> </div>
+						</div>
+					</div>
+					<div class="headerBlock__center-block">
+						<h1>III Глобальный технологический форум  OCS Distribution IT-ОСЬ 2020</h1>
+						<div class="text-center">
+							<!-- picture-->
+							<picture class="title-img"> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/title.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+									<source srcset="img/@1x/webp/title.webp" loading="lazy" type="image/webp"/>
+									<source srcset="img/@2x/title.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
+									<source srcset="img/@1x/title.png" loading="lazy" type="image/png"/><img src="img/@2x/title.png" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="headerBlock__date h2">19 ноября в 12:00
+						</div>
+					</div>
+					<div class="headerBlock__footer">
+						<div class="row">
+							<div class="col-lg-4 col-6">
+								<div class="headerBlock__number">11 
+								</div>
+								<div class="headerBlock__text-lg">часовых <br/>поясов
+								</div>
+							</div>
+							<div class="col-lg-4 col-6 text-right order-lg-last">
+								<div class="headerBlock__number">1000+
+								</div>
+								<div class="headerBlock__text-lg mw-100">участников
+								</div>
+							</div>
+							<div class="col">
+								<div class="headerBlock__keys h3">Ключевые партнеры  и&nbsp;конечные заказчики  со&nbsp;всей России
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end headerBlock-->
+			<!-- start sVideo-->
+			<div class="sVideo section" id="sVideo"> 
+				<div class="container">
+					<div class="sVideo__wrap"><a class="sVideo__video bg-wrap" href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&amp;list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&amp;index=13" data-fancybox="videoGal">
+						<!-- picture-->
+						<picture class="picture-bg"> 
+							<noscript class="loading-lazy">
+								<source srcset="img/@2x/webp/video.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
+								<source srcset="img/@1x/webp/video.webp" loading="lazy" type="image/webp"/>
+								<source srcset="img/@2x/video.jpg" loading="lazy" type="image/jpg" media="(min-width:576px)"/>
+								<source srcset="img/@1x/video.jpg" loading="lazy" type="image/jpg"/><img class="object-fit-js" src="img/@2x/video.jpg" loading="lazy" alt=""/>
+							</noscript>
+						</picture>
+						<!-- /picture-->
+						<svg class="icon icon-play ">
+							<use xlink:href="img/svg/sprite.svg#play"></use>
+						</svg></a>
+					</div>
+				</div>
+			</div>
+			<!-- end sVideo-->
+			<!-- start sWelcome-->
+			<section class="sWelcome section bg-wrap" id="sWelcome">
+				<!-- picture-->
+				<picture class="picture-bg"> 
+					<noscript class="loading-lazy">
+						<source srcset="img/@2x/webp/bg2.webp" loading="lazy" type="image/webp"/><img class="object-fit-js" src="img/@2x/bg2.png" loading="lazy" alt=""/>
+					</noscript>
+				</picture>
+				<!-- /picture-->
+				<div class="container"> 
+					<div class="section-title text-center">
+						<h2>Дорогие друзья!</h2>
+					</div>
+					<p>2020 год оказался беспрецедентным и&nbsp;подарил нам парадигму &laquo;новой нормальности&raquo;, в которой работа, общение, жизнь навсегда и&nbsp;кардинально видоизменились. В&nbsp;процессе ускоренной трансформации и&nbsp;адаптации к&nbsp;новому режиму людям открылась совершенно новая реальность, которая оказалась существенно глубже и&nbsp;противоречивей, чем существовавшие до&nbsp;этого представления о&nbsp;ней.</p>
+					<p>Теперь наша задача&nbsp;&mdash; научиться быстро находить ответы новым вызовам и&nbsp;видеть новые технологические возможности, чтобы текущий цифровой апгрейд позволил выстроить</p>
 				</div>
 			</section>
-			<!-- end topLine-->
-		</header>
-		<!-- end header-->
-		<div class="block-wrap"><img class="block" src="img/@2x/gar-3.jpg" alt=""></div>
-		<!-- start headerBlock-->
-		<div class="headerBlock section" id="headerBlock">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>headerBlock ds dfsdfdsfsd</h2>
+			<!-- end sWelcome-->
+			<!-- start justUpgraitIt-->
+			<section class="justUpgraitIt section" id="justUpgraitIt">
+				<div class="container">
+					<div class="animate-block-circle"><img class="img-1" src="img/svg/circle-4.svg" loading="lazy" alt=""/>
+						<div class="ellipse ellipse-1 ellipse-css">
+							<div class="dot dot3"></div>
+							<div class="dot dot4"></div>
+							<div class="dot dot5"></div>
+							<div class="dot dot6"> </div>
+						</div>
+						<div class="ellipse ellipse-2 ellipse-css">
+							<div class="dot dot1"></div>
+							<div class="dot dot4"></div>
+							<div class="dot dot5"></div>
+							<div class="dot dot6"> </div>
+						</div><img class="img-3" src="img/svg/circle-3-2.svg" loading="lazy" alt=""/>
+					</div>
+					<div class="justUpgraitIt__text justUpgraitIt__text--top">Just
+					</div>
+					<div class="justUpgraitIt__text justUpgraitIt__text--center"><img class="res-i" src="img/svg/text.svg" loading="lazy" alt=""/>
+					</div>
+					<div class="justUpgraitIt__text justUpgraitIt__text--bot">IT
+					</div>
 				</div>
-				<div class="row"></div>
-			</div>
+			</section>
+			<!-- end justUpgraitIt-->
+			<!-- start sLogos-->
+			<section class="sLogos section" id="sLogos">
+				<div class="container"> 
+					<div class="section-title">
+						<h2>Экспо-партнеры</h2>
+					</div>
+					<div class="row">
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-1.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-1.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-2.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-2.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-3.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-3.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-4.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-4.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-5.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-5.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-6.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-6.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-7.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-7.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-8.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-8.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-9.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-9.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-10.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-10.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-11.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-11.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-12.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-12.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-8.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-8.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+						<div class="sLogos__col col-xl col-md-3 col-sm-4 col-6">
+							<!-- picture-->
+							<picture> 
+								<noscript class="loading-lazy">
+									<source srcset="img/@2x/webp/partner-10.webp" loading="lazy" type="image/webp"/><img src="img/@2x/partner-10.jpg" loading="lazy" alt=""/>
+								</noscript>
+							</picture>
+							<!-- /picture-->
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end sLogos-->
+			<footer class="footer">
+				<div class="container">
+					<div class="footer__head">
+						<div class="row">
+							<div class="col">
+								<div class="footer__text footer__text--mx">КРУГЛОСУТОЧНЫЙ  ПРИЕМ ЭЛЕКТРОННОЙ КОРРЕСПОНДЕНЦИИ: 
+								</div>
+								<div class="footer__text"><a href="mailto:FORUM@OCS.RU">FORUM@OCS.RU </a>
+								</div>
+							</div>
+							<div class="col-lg-auto">
+								<div class="footer__text text-lg-right">Мы в соц. сетях
+								</div>
+								<div class="soc"><a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-fb ">
+										<use xlink:href="img/svg/sprite.svg#fb"></use>
+									</svg></a><a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-instagram ">
+										<use xlink:href="img/svg/sprite.svg#instagram"></use>
+									</svg></a><a class="soc__item" href="#" target="_blank">
+									<svg class="icon icon-ZUBRIT ">
+										<use xlink:href="img/svg/sprite.svg#ZUBRIT"></use>
+									</svg></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer__footer">
+					<div class="container">
+						<div class="row">
+							<div class="col-xl-3 col-auto">© 2020. Все права защищены</div>
+							<div class="col-auto"><a href="#">2018 </a></div>
+							<div class="col"><a href="#">2019 </a></div>
+							<div class="col-auto"><a class="text-white" href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></div>
+						</div>
+					</div>
+				</div>
+			</footer>
 		</div>
-		<!-- end headerBlock-->
-		<!-- start sForm-->
-		<section class="sForm section" id="sForm">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>sForm</h2>
-				</div>
-				<div class="row"></div>
-			</div>
-		</section>
-		<!-- end sForm-->
-		<!-- start sContact-->
-		<section class="sContact section" id="sContact">
-			<div class="container">
-				<div class="section-title text-center">
-					<h2>sContact</h2>
-				</div>
-				<div class="row"></div>
-			</div>
-		</section>
-		<!-- end sContact-->
-		<footer class="footer block-with-lazy">
-			<div class="container">
-				<h2>footer</h2>
-			</div>
-		</footer>
 		<!--  start modals-->
 		<div class="modal-win" id="modal-call" style="display: none">
 			<div class="form-wrap">
@@ -151,7 +402,7 @@
 					<button class="form-wrap__btn btn" type="submit"> 
 					</button>
 					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><small class="custom-input__text text-secondary">Согласен на обработку и хранение моих персональных данных в соответствии с условиями</small>
+						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Согласен на обработку <a class="tdu" href="#">персональных данных</a></span>
 						</label>
 					</div>
 				</form>
