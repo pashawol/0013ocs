@@ -7,6 +7,7 @@ include ../blocks/sLogos/_sLogos.pug
 include ../blocks/sVideo/_sVideo.pug
 include ../blocks/sWelcome/_sWelcome.pug
 include ../blocks/justUpgraitIt/_justUpgraitIt.pug
+include ../blocks/sMembers/_sMembers.pug
 //- include ../blocks/sAwaits/_sAwaits.pug
 //- include ../blocks/sDates/_sDates.pug
 //- include ../blocks/sExhibition/_sExhibition.pug
@@ -17,14 +18,14 @@ include ../blocks/justUpgraitIt/_justUpgraitIt.pug
 
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'main-page-2'
 block title
-	- let  title= 'Главная'
+	- let  title= 'Главная 2'
 	title= title
 block pagecontent
 	+top-nav()
-	+headerBlock()
-	+sVideo
+	+headerBlock1()
+	+sMembers
 	+sWelcome
 	+justUpgraitIt
 	

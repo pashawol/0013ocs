@@ -1,6 +1,64 @@
 
+.main-page-2 .justUpgraitIt{
+	// .container{
+		// position: relative;
+		@keyframes blinkingText {
+			0% {
+				opacity: 1;
+				transform: scale(1);
+			}
+
+			// 49% {
+			// 	opacity: .5;
+			// 	transform: scale(1.2);
+			// }
+
+			50% {
+				opacity: .5;
+				transform: scale(1);
+			}
+
+
+			100% {
+				transform: scale(1);
+				opacity: 1;
+			}
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			width: rem(700px);
+			height: rem(700px);
+			mix-blend-mode: normal;
+			filter: blur(100px);
+			@include a-cent(y)
+		}
+
+		&::before {
+			background: $primary;
+			left: -600px;
+			animation: blinkingText 2.8s infinite;
+			top: rem(-50);
+		}
+
+		&::after {
+			right: -600px;
+			top: rem(100);
+			bottom: auto;
+			background: #1FC4FF;
+			filter: blur(100px);
+			animation: blinkingText 3.2s infinite;
+		}
+	// }
+}
 	// start .justUpgraitIt
+	
 	.justUpgraitIt {
+		position: relative;
+		z-index: 5;
 		@include media-breakpoint-up(sm) {
 
 			min-height: 707px;

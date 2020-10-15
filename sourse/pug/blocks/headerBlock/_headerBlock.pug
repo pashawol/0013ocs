@@ -1,45 +1,8 @@
-mixin headerBlock()
+mixin headerBlockBody()
 	// start headerBlock
-	+b.headerBlock.bg-wrap#headerBlock&attributes(attributes)  
+	+b.headerBlock(class="bg-wrap")#headerBlock&attributes(attributes)  
 		.container
-			+e.row.row
-				.col-auto.mb-3
-					img.res-i(src="img/svg/logo-1.svg" loading="lazy", alt="")
-				.col.mb-3
-					img.res-i(src="img/svg/logo-2.png" loading="lazy", alt="") 
-				.col-lg-auto.mb-3
-					+e.text Диалоговая <br> кросс-платформа нового поколения
-			+b.animate-block-circle
-				img.img-1(src="img/svg/circle-1.svg", alt="") 
-				.ellipse.ellipse-1.ellipse-css
-					//- .dot.dot1
-					//- .dot.dot2
-					.dot.dot3
-					.dot.dot4
-					.dot.dot5
-					.dot.dot6 
-				img.img-2(src="img/svg/circle-2.svg", alt="") 
-				.ellipse.ellipse-2.ellipse-css
-					.dot.dot1
-					//- .dot.dot2
-					//- .dot.dot3
-					.dot.dot4
-					.dot.dot5
-					.dot.dot6 
-				img.img-3(src="img/svg/circle-3.svg", alt="")
-				.ellipse.ellipse-3.ellipse-css
-					.dot.dot1
-					.dot.dot2
-					.dot.dot3
-					.dot.dot4
-					.dot.dot5
-					.dot.dot6 
-
-			+e.center-block
-				h1 III Глобальный технологический форум  OCS Distribution IT-ОСЬ 2020
-				.text-center
-					+pic('title.png')(class="title-img")
-				+e.date.h2 19 ноября в 12:00
+			block
 			+e.footer
 				.row
 					.col-lg-4.col-6
@@ -54,3 +17,104 @@ mixin headerBlock()
 						+e.keys.h3 Ключевые партнеры  и&nbsp;конечные заказчики  со&nbsp;всей России
 		
 	// end headerBlock
+mixin headerBlock()
+	+headerBlockBody()
+		+e.play.d-none.d-sm-block(href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&index=13" data-fancybox="videoGal")
+			+e.DIV.play-btn
+				+icon('play')
+			+e.DIV.play-text Видео-
+				br
+				| инструкция
+		+e.row.row
+			.col-auto.mb-3
+				img.res-i(src="img/svg/logo-1.svg" loading="lazy", alt="")
+			.col.mb-3
+				img.res-i(src="img/svg/logo-2.png" loading="lazy", alt="") 
+			.col-lg-auto.mb-3
+				+e.text Диалоговая <br> кросс-платформа нового поколения
+		+b.animate-block-circle
+			img.img-1(src="img/svg/circle-1.svg", alt="") 
+			.ellipse.ellipse-1.ellipse-css
+				//- .dot.dot1
+				//- .dot.dot2
+				.dot.dot3
+				.dot.dot4
+				.dot.dot5
+				.dot.dot6 
+			img.img-2(src="img/svg/circle-2.svg", alt="") 
+			.ellipse.ellipse-2.ellipse-css
+				.dot.dot1
+				//- .dot.dot2
+				//- .dot.dot3
+				.dot.dot4
+				.dot.dot5
+				.dot.dot6 
+			img.img-3(src="img/svg/circle-3.svg", alt="")
+			.ellipse.ellipse-3.ellipse-css
+				.dot.dot1
+				.dot.dot2
+				.dot.dot3
+				.dot.dot4
+				.dot.dot5
+				.dot.dot6 
+
+		+e.center-block
+			h1 III Глобальный технологический форум  OCS Distribution IT-ОСЬ 2020
+			.text-center
+				+pic('title.png')(class="title-img")
+			+e.date.h2 19 ноября в 12:00
+		
+mixin headerBlock1()
+	+headerBlockBody().headerBlock--start
+		+e.play.d-none.d-sm-block(href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&index=13" data-fancybox="videoGal")
+		 
+		+e.row.row
+			.col-auto.mb-3
+				img.res-i(src="img/svg/logo-1.svg" loading="lazy", alt="")
+			.col.mb-3
+				img.res-i(src="img/svg/logo-2.png" loading="lazy", alt="") 
+			.col-lg-auto.mb-3
+				+e.text.mw-100 Диалоговая  кросс-платформа нового поколения
+		+b.animate-block-circle
+			img.img-1(src="img/svg/circle-1.svg", alt="") 
+			.ellipse.ellipse-1.ellipse-css
+				//- .dot.dot1
+				//- .dot.dot2
+				.dot.dot3
+				.dot.dot4
+				.dot.dot5
+				.dot.dot6 
+			img.img-2(src="img/svg/circle-2.svg", alt="") 
+			.ellipse.ellipse-2.ellipse-css
+				.dot.dot1
+				//- .dot.dot2
+				//- .dot.dot3
+				.dot.dot4
+				.dot.dot5
+				.dot.dot6 
+			img.img-3(src="img/svg/circle-3.svg", alt="")
+			.ellipse.ellipse-3.ellipse-css
+				.dot.dot1
+				.dot.dot2
+				.dot.dot3
+				.dot.dot4
+				.dot.dot5
+				.dot.dot6 
+		+e.row.row.pt-5
+			.col-lg-6
+			 
+				+e.title
+					+pic('title.png')(class="title-img")
+					h1 III Глобальный технологический форум  OCS Distribution IT-ОСЬ 2020
+			.col-lg-6
+				+e.wrap
+					+e.video.bg-wrap(href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&index=13" data-fancybox="videoGal")
+						+pic("video2.jpg",'bg')(class="picture-bg") 
+						+icon("play")
+					+e.text-block
+						.row
+							.col
+								.h3 Название Трека в одну строку
+								p 18.08.2020 14:30
+							.col-auto
+								a.btn.btn-primary.px-3(href="#") LIVE 
