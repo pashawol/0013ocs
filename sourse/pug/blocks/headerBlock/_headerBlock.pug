@@ -1,21 +1,22 @@
-mixin headerBlockBody()
+mixin headerBlockBody(f)
 	// start headerBlock
 	+b.headerBlock(class="bg-wrap")#headerBlock&attributes(attributes)  
 		.container
 			block
-			+e.footer
-				.row
-					.col-lg-4.col-6
-						+e.number 11 
-						+e.text-lg часовых 
-							br
-							| поясов
-					.col-lg-4.col-6.text-right.order-lg-last
-						+e.number 1000+
-						+e.text-lg.mw-100 участников
-					.col
-						+e.keys.h3 Ключевые партнеры  и&nbsp;конечные заказчики  со&nbsp;всей России
-		
+			if !f
+				+e.footer
+					.row
+						.col-lg-4.col-6
+							+e.number 11 
+							+e.text-lg часовых 
+								br
+								| поясов
+						.col-lg-4.col-6.text-right.order-lg-last
+							+e.number 1000+
+							+e.text-lg.mw-100 участников
+						.col
+							+e.keys.h3 Ключевые партнеры  и&nbsp;конечные заказчики  со&nbsp;всей России
+			
 	// end headerBlock
 mixin headerBlock()
 	+headerBlockBody()
@@ -118,3 +119,17 @@ mixin headerBlock1()
 								p 18.08.2020 14:30
 							.col-auto
 								a.btn.btn-primary.px-3(href="#") LIVE 
+
+								
+mixin headerBlockPage()
+	+headerBlockBody('f').headerBlock--start
+		+e.play.d-none.d-sm-block(href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&index=13" data-fancybox="videoGal")
+		 
+		+e.row.row
+			.col-auto.mb-3
+				img.res-i(src="img/svg/logo-1.svg" loading="lazy", alt="")
+			.col.mb-3
+				img.res-i(src="img/svg/logo-2.png" loading="lazy", alt="") 
+			.col-lg-auto.mb-3
+				+e.text.mw-100 Диалоговая  кросс-платформа нового поколения
+		
