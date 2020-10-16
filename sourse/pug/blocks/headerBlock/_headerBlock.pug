@@ -4,7 +4,7 @@ mixin headerBlockBody(f)
 		.container
 			block
 			if !f
-				+e.footer
+				+e.footer(class="wow  animate__fadeInUp "   )
 					.row
 						.col-lg-4.col-6
 							+e.number 11 
@@ -20,20 +20,20 @@ mixin headerBlockBody(f)
 	// end headerBlock
 mixin headerBlock()
 	+headerBlockBody()
-		+e.play.d-none.d-sm-block(href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&index=13" data-fancybox="videoGal")
-			+e.DIV.play-btn
+		+e.play.d-none.d-sm-block(href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&index=13" data-fancybox="videoGal" class="wow  animate__fadeInUp "   )
+			+e.DIV.play-btn(class="wow  animate__fadeInUp "   )
 				+icon('play')
 			+e.DIV.play-text Видео-
 				br
 				| инструкция
-		+e.row.row
+		+e.row.row(class="wow  animate__fadeInUp "   )
 			.col-auto.mb-3
 				img.res-i(src="img/svg/logo-1.svg" loading="lazy", alt="")
 			.col.mb-3
 				img.res-i(src="img/svg/logo-2.png" loading="lazy", alt="") 
 			.col-lg-auto.mb-3
 				+e.text Диалоговая <br> кросс-платформа нового поколения
-		+b.animate-block-circle
+		+b.animate-block-circle(class="wow  animate__fadeInUp "   )
 			img.img-1(src="img/svg/circle-1.svg", alt="") 
 			.ellipse.ellipse-1.ellipse-css
 				//- .dot.dot1
@@ -59,7 +59,7 @@ mixin headerBlock()
 				.dot.dot5
 				.dot.dot6 
 
-		+e.center-block
+		+e.center-block(class="wow  animate__fadeInUp "   )
 			h1 III Глобальный технологический форум  OCS Distribution IT-ОСЬ 2020
 			.text-center
 				+pic('title.png')(class="title-img")
@@ -67,9 +67,9 @@ mixin headerBlock()
 		
 mixin headerBlock1()
 	+headerBlockBody().headerBlock--start
-		+e.play.d-none.d-sm-block(href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&index=13" data-fancybox="videoGal")
+		+e.play.d-none.d-sm-block(href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&index=13" data-fancybox="videoGal" class="wow  animate__fadeInUp "   )
 		 
-		+e.row.row
+		+e.row.row(class="wow  animate__fadeInUp "   )
 			.col-auto.mb-3
 				img.res-i(src="img/svg/logo-1.svg" loading="lazy", alt="")
 			.col.mb-3
@@ -123,9 +123,9 @@ mixin headerBlock1()
 								
 mixin headerBlockPage()
 	+headerBlockBody('f').headerBlock--start
-		+e.play.d-none.d-sm-block(href="https://www.youtube.com/watch?v=mbcP3Oc0PjU&list=PLqKQF2ojwm3l4oPjsB9chrJmlhZ-zOzWT&index=13" data-fancybox="videoGal")
+ 
 		 
-		+e.row.row
+		+e.row.row(class="wow  animate__fadeInUp "   )
 			.col-auto.mb-3
 				img.res-i(src="img/svg/logo-1.svg" loading="lazy", alt="")
 			.col.mb-3

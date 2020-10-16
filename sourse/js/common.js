@@ -304,7 +304,12 @@ function eventHandler() {
 	});
 	// modal window
 
-	
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated',
+	});
+	wow.init();
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

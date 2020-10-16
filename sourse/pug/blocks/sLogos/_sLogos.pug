@@ -2,9 +2,9 @@ mixin sLogos()
 	// start sLogos
 	+b.SECTION.sLogos.section#sLogos&attributes(attributes)
 		.container 
-			+b.section-title
+			+b.section-title(class="wow  animate__fadeInUp "   )
 				h2 Экспо-партнеры
-			.row
+			.row(class="wow  animate__fadeInUp "   )
 				- for (var x = 1; x < 13; x++)
 					+e.col.col-xl.col-md-3.col-sm-4.col-6
 						//- (class="wow  animate__fadeInUp "   )

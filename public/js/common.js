@@ -304,6 +304,12 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+
+	var wow = new WOW({
+		mobile: false,
+		animateClass: 'animate__animated'
+	});
+	wow.init();
 }
 
 ;

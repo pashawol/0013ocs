@@ -2,7 +2,7 @@ mixin sMembers()
 	// start sMembers
 	+b.sMembers&attributes(attributes)
 		.container
-			+b.section-title.text-center
+			+b.section-title.text-center(class="wow  animate__fadeInUp "   )
 				h2 Ключевые спикеры
 			//- +e.filter
 			//- 	.row
@@ -20,7 +20,7 @@ mixin sMembers()
 			//- 	+e.toggle.d-lg-none
 			//- 		span.show Больше фильтров
 			//- 		span.hide Скрыть
-			.row
+			.row(class="wow  animate__fadeInUp "   )
 				mixin item(i,t)
 					.col-lg-3.col-sm-6
 						+e.item
