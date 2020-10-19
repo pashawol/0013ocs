@@ -291,16 +291,28 @@ select.form-control {
 			}
 		}
 	}
+	.dropdown-wrap{
+		.input-title{
+			max-width: calc(100% - #{rem(35)});
+		}
+	}
 	.dropdown-block{
 		display: none;
 		&.active{
-			display: block;
+			display: flex;
+		}
+		.custom-input{
+			max-width: calc(100% - #{rem(40)});
 		}
 	}
 
-	.d-flex{
-		.custom-input{
-			display: block;
+	.dropdown-block {
+		
+		flex-wrap: wrap;
+		&__item{
+			width: 100%;
+		}
+		.custom-input{ 
 			margin-left: 0;
 		}
 	}

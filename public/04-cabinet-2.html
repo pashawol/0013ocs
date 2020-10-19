@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Восстановление пароля</title>
+		<title>Личный кабинет</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body>
+	<body class="cabinet-page">
 		<div class="main-wrapper">
 			<!-- start top-nav-->
 			<div class="top-nav">
@@ -68,74 +68,85 @@
 				</div>
 			</div>
 			<!-- end top-nav-->
-			<!-- start headerBlock-->
-			<div class="headerBlock bg-wrap headerBlock headerBlock--start" id="headerBlock"> 
-				<div class="container">
-					<div class="headerBlock__row row wow animate__fadeInUp">
-						<div class="col-auto mb-3"><img class="res-i" src="img/svg/logo-1.svg" loading="lazy" alt=""/></div>
-						<div class="col mb-3"><img class="res-i" src="img/svg/logo-2.png" loading="lazy" alt=""/></div>
-						<div class="col-lg-auto mb-3">
-							<div class="headerBlock__text mw-100">Диалоговая  кросс-платформа нового поколения
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- end headerBlock-->
 			<div class="page-title wow animate__fadeInUp">
 				<div class="container container-large">
-					<h1>Восстановление пароля</h1>
+					<h1>Личный кабинет</h1>
 				</div>
 			</div>
-			<div class="sLogin">
-				<div class="container container-large">
-					<div class="row">
-						<div class="col-lg-7 section">
-							<div class="form-wrap form-wrap form-wrap--border">
-								<div class="container"> 
-									<form action="/file-upload" enctype="multipart/form-data">
-										<div class="col-lg-6 g-0 wow  animate__fadeInUp ">
-											<div class="form-wrap__input-wrap form-group">
-												<label><input class="form-wrap__input form-control" type="email" placeholder="" name="email-ocs"/> <span class="input-title">E-mail</span>
-												</label> 
+			<div class="container">
+				<div class="page-title page-title--lines"> 
+					<ul>
+						<li><a href="#">Профиль</a></li>
+						<li><a class="active" href="#">Мое расписание</a></li>
+						<li><a href="#">Чаты</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- start sEvents-->
+			<div class="sEvents pt-0 section" id="sEvents">
+				<div class="container">
+						<div class="sEvents__item">
+							<div class="sEvents__star active">
+								<svg class="icon icon-star ">
+									<use xlink:href="img/svg/sprite.svg#star"></use>
+								</svg>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="sEvents__head"> 
+										<div class="row"> 
+											<div class="sEvents__time col-auto pb-1">12.55 – 14.10
 											</div>
-											<!-- +e.input-wrap-->
-											<button class="form-wrap__btn w-100 ttu" type="submit">Восстановить
-											</button>
+											<div class="pb-1 col-auto">Встреча/переговоры</div>
 										</div>
-									</form>
+									</div>
+									<div class="h4 fw-500"><a class="text-white" href="#">Переговорная №1</a></div>
+								</div>
+								<div class="col-xl-3 col-sm-auto"><a href="#"><img src="img/@2x/zoom.png" loading="lazy" alt=""/></a></div>
+							</div>
+						</div>
+						<div class="sEvents__item">
+							<div class="sEvents__star active">
+								<svg class="icon icon-star ">
+									<use xlink:href="img/svg/sprite.svg#star"></use>
+								</svg>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="sEvents__head"> 
+										<div class="row"> 
+											<div class="sEvents__time col-auto pb-1">12.55 – 14.10
+											</div> 
+											<div class="pb-1 col-auto text-light">Пленарная дискуссия</div>
+											<div class="pb-1 col-auto">ЗАЛ «ИННОВАЦИИ»</div>
+										</div>
+									</div>
+									<div class="h4 fw-500"><a class="text-white" href="#">In Railway We Trust.</a></div>
+									<div class="h6">Глобальное сотрудничество в условиях неопределенности</div>
 								</div>
 							</div>
 						</div>
-						<div class="col">
-							<!-- start justUpgraitIt-->
-							<section class="justUpgraitIt section" id="justUpgraitIt">
-								<div class="container">
-									<div class="animate-block-circle wow animate__fadeInUp"><img class="img-1" src="img/svg/circle-4.svg" loading="lazy" alt=""/>
-										<div class="ellipse ellipse-1 ellipse-css">
-											<div class="dot dot3"></div>
-											<div class="dot dot4"></div>
-											<div class="dot dot5"></div>
-											<div class="dot dot6"> </div>
+						<div class="sEvents__item">
+							<div class="sEvents__star active">
+								<svg class="icon icon-star ">
+									<use xlink:href="img/svg/sprite.svg#star"></use>
+								</svg>
+							</div>
+							<div class="row">
+								<div class="col">
+									<div class="sEvents__head"> 
+										<div class="row"> 
+											<div class="sEvents__time col-auto pb-1">12.55 – 14.10
+											</div> 
+											<div class="pb-1 col-auto text-light">Пленарная дискуссия</div>
+											<div class="pb-1 col-auto">ЗАЛ «ИННОВАЦИИ»</div>
 										</div>
-										<div class="ellipse ellipse-2 ellipse-css">
-											<div class="dot dot1"></div>
-											<div class="dot dot4"></div>
-											<div class="dot dot5"></div>
-											<div class="dot dot6"> </div>
-										</div><img class="img-3" src="img/svg/circle-3-2.svg" loading="lazy" alt=""/>
 									</div>
-									<div class="justUpgraitIt__text justUpgraitIt__text--top wow animate__fadeInUp">Just
-									</div>
-									<div class="justUpgraitIt__text justUpgraitIt__text--center wow animate__fadeInUp"><img class="res-i" src="img/svg/text.svg" loading="lazy" alt=""/>
-									</div>
-									<div class="justUpgraitIt__text justUpgraitIt__text--bot wow animate__fadeInUp">IT
-									</div>
+									<div class="h4 fw-500"><a class="text-white" href="#">Finance as a Masterpiece.</a></div>
+									<div class="h6">Как привлечь инвестиции в условиях кризиса?</div>
 								</div>
-							</section>
-							<!-- end justUpgraitIt-->
+							</div>
 						</div>
-					</div>
 				</div>
 			</div>
 			<footer class="footer">

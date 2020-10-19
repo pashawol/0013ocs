@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+
+include ../blocks/sCabinet/_sCabinet.pug
+
+block variables
+	- let  mainPage= 'cabinet-page'
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav('l')
+	+page-title(title)
+
+	.container
+		+b.page-title--lines 
+			ul
+				li: a(href="#") Профиль
+				li: a(href="#") Мое расписание
+				li: a.active(href="#") Чаты
+	+sCabinet4
+	//- +sChat
+	//- +sContact()
+	+footer()
+
+
+	
