@@ -1,8 +1,22 @@
 // start .headerBlock
+
+.main-page .headerBlock{
+
+	background: linear-gradient(0deg, #01090E, #000);
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background: linear-gradient(179.71deg, #000 0.25%, rgba(1, 9, 14, 0.64) 28.96%, rgba(1, 9, 14, 0) 51.04%, rgba(1, 9, 14, 0.54) 74.87%, #000 99.75%);
+		}
+}
 .headerBlock {
 	position: relative;
 	z-index: 2;
-	background: linear-gradient(0deg, #01090E, #000);
 	.container{
 		position: relative;
 	}
@@ -48,16 +62,7 @@
 	&__play-text{
 
 	}
-	&::after{
-		content: '';
-		position: absolute;
-		left: 0;
-		top: 0;
-		width: 100%;
-		height: 100%;
-		z-index: -1;
-		background: linear-gradient(179.71deg,  #000 0.25%, rgba(1, 9, 14, 0.64) 28.96%, rgba(1, 9, 14, 0) 51.04%, rgba(1, 9, 14, 0.54) 74.87%,  #000 99.75%);
-	}
+
 	@include media-breakpoint-up(xxl){
 
 		padding-top: rem(30);

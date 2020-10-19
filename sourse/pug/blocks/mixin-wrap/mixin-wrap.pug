@@ -22,58 +22,167 @@ mixin ie11()
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 
 
-mixin page-title(t)
-	.container
-		+b.page-title
-			.row 
-				.col
-					h1= t
-				block
-
+mixin page-title(title)
+	+b.page-title(class="wow  animate__fadeInUp "   )
+		.container.container-large
+			h1= title
 mixin reg(b="Зарегистрироваться")
-	+b.form-wrap(class="form-wrap--border")
+	+b.form-wrap(class="form-wrap--border wow  animate__fadeInUp "   )
 			form(action='/file-upload'  enctype="multipart/form-data")
 				//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
 				.row
 					
 					.col-lg-6
-						+input("",'text','Фамилия')
+						+input("Ваша имя",'text','Имя *')(required)
 					.col-lg-6
-						+input("",'text','Имя')
+						+input("Ваша фамилия",'text','Фамилия *')(required)
 					.col-lg-6
-						+input("",'text','Отчество')
+						+input("Ваш e-mail",'email','E-mail *')(required)
 					.col-lg-6
+						+input("+7 ___ ___ __ __",'tel','Телефон') 
 					.col-lg-6
-						+input("",'text','Фамилия на английском')
-					.col-lg-6
-						+input("",'text','Имя на английском')
-					.col-lg-6
-						+input("",'text','Страна') 
-					.col-lg-6
-						+input("",'text','Город')
-					.col-lg-12
-						+input("",'text','Название компании')
-					.col-lg-12
-						+input("",'text','Название компании на английском')
-					.col-lg-6
-						+input("",'text','Должность')
-					.col-lg-6
-						+input("",'text','Должность на английском')
-					.col-lg-6
-						+input("+7 ___ ___ __ __",'tel','Телефон')
-					.col-lg-6
-					 
+						+input("Город проживания",'text','Город*')(required)
+					.col-12.pt-3
+						.row
+							.col-auto.pb-2
+								+in-c('radio', 'Вендор', name='type-of')(data-tab-radio="vendor-block")
+								
+							.col-auto.pb-2
+								+in-c('radio', 'Партнер', name='type-of')(data-tab-radio="partner-block" checked)
+							.col-auto.pb-2
+								+in-c('radio', 'Заказчик', name='type-of')(data-tab-radio="costumer-block")
+							.col-auto.pb-2
+								+in-c('radio', 'OCS ', name='type-of')(data-tab-radio="ocs-block")
+							.col-auto.pb-2
+								+in-c('radio', 'СМИ', name='type-of')(data-tab-radio="media-block")
+					.col-lg-6.tab-radio-content.vendor-block
+						
+							// Вендоры 
+							+input("Компания-партнер",'select','Компания-партнер')
+					
+				
+					.col-lg-6.tab-radio-content.costumer-block
+							+input("Компания-партнер",'text','Компания-партнер')  
+					.col-lg-6.tab-radio-content.ocs-block
+							+input("Компания-партнер",'text','Компания-партнер')(value="OCS" disabled )
+					.col-lg-6.tab-radio-content.media-block
+							+input("Компания-партнер",'text','Компания-партнер')  
+				 
+					
+
+					.col-lg-12.pb-3.tab-radio-content.partner-block
+						// партнеры
+						+b.input-title.dropdown-toggle-js.h5.mb-5 Группы оборудования, которыми вы занимаетесь
+							span.plus
+						+b.dropdown-block--js
+							
+							+e.item
+								.d-flex
+									+in-c('checkbox', ' Безопасность')
+									.dropdown-toggle-js.d-inline-block: span.plus
+								+b.dropdown-block--js
+									+e.item
+										+in-c('checkbox', ' Конференц-системы')
+									+e.item
+										+in-c('checkbox', ' Пожарно-охранные комплексы')
+									+e.item
+										+in-c('checkbox', 'Системы оповещения')
+									+e.item
+										+in-c('checkbox', ' СКУД')
+									+e.item
+										+in-c('checkbox', ' Видеонаблюдение')
+							+e.item
+								+in-c('checkbox', 'Бытовая техника и электроника')
+							+e.item
+								.d-flex
+									+in-c('checkbox', 'Инженерная инфраструктура')
+									.dropdown-toggle-js.d-inline-block: span.plus
+								+b.dropdown-block--js
+									+e.item
+										+in-c('checkbox', ' Видеокарты')
+									+e.item
+										+in-c('checkbox', 'Диски (HDD, SSD, ODD)')
+									+e.item
+										+in-c('checkbox', 'Интерф. платы и устройства')
+									+e.item
+										+in-c('checkbox', ' Комплектующие для серверов')
+									+e.item
+										+in-c('checkbox', ' Корпуса')
+									+e.item
+										+in-c('checkbox', 'Материнские платы')
+									+e.item
+										+in-c('checkbox', ' Оперативная память')
+									+e.item
+										+in-c('checkbox', ' Память флеш')
+									+e.item
+										+in-c('checkbox', ' Платформы для ПК')
+									+e.item
+										+in-c('checkbox', 'Процессоры')
+									+e.item
+										+in-c('checkbox', 'БП и кулеры')
+								+e.item
+									+in-c('checkbox', 'Мобильные системы')
+								+e.item
+									.d-flex
+										+in-c('checkbox', "Оборудование маркировки и автоидентификации")
+										.dropdown-toggle-js.d-inline-block: span.plus
+									+b.dropdown-block--js
+										+e.item
+											+in-c('checkbox', ' Мониторы, проекторы, доски')
+										+e.item
+											+in-c('checkbox', ' Мультимедиа')
+										+e.item
+											+in-c('checkbox', 'Печать и сканирование')
+										+e.item
+											+in-c('checkbox', 'Профессиональная поддержка и сервис')
+										+e.item
+											+in-c('checkbox', 'Профессиональные ЖК панели и телевизоры')
+										+e.item
+											+in-c('checkbox', 'Расходные материалы')
+										+e.item
+											+in-c('checkbox', 'Устройства ввода')
+										+e.item
+											+in-c('checkbox', 'Кабели, разъемы')
+									+e.item
+										+in-c('checkbox', 'ПК')
+									+e.item
+										+in-c('checkbox', 'Программное обеспечение')
+									+e.item
+										+in-c('checkbox', 'Профессиональное мультимедиа и AV оборудование')
+									+e.item
+										+in-c('checkbox', 'Серверы')
+									+e.item
+										+in-c('checkbox', 'Сетевое оборудование и системы связи')
+									+e.item
+										+in-c('checkbox', 'СХД')
+						.row
+							.col-lg-6
+								
+								+input("название компании без ООО и",'text','Компания-партнер','partners')( list="partners-company")
+									<datalist id="partners-company">
+										<option value="San Francisco">
+										<option value="New York">
+										<option value="Seattle">
+										<option value="Los Angeles">
+										<option value="Chicago">
+									</datalist>
+							.col-lg-6 
+								
+								+input("Менеджер в OCS",'select','Менеджер в OCS')
 					.col-lg-6 
-						+input("",'text','Пароль')
+						+input("Должность*",'text','Должность*')(required)
+					.w-100
 					.col-lg-6 
-						+input("",'text','Повторите пароль')
+						+input("Пароль",'password','Пароль*')(required)
+					.col-lg-6 
+						+input("Повторите пароль",'password','Повторите пароль*')(required)
 					.col-lg-12
 						label.dropzone-wrapper.d-block
 							+b.dropzone(action='/file-upload')
 								#dropzone
-									+e.prev-wrap 
-										span.strong +
-											br
+									+e.prev-wrap
+										+icon('user-drop')
+										span.text-primary
 											| добавить
 											br
 											| фото
@@ -83,52 +192,35 @@ mixin reg(b="Зарегистрироваться")
 							//- +e.file Выбрать фото
 					.col-lg-6.my-4
 						button.btn.btn-primary.btn-arrows.w-100(type="submit")= b
-					.col-lg-12
-						+in-c()
-							+e.SPAN.text Согласие на получение сообщений от других участников
+					//- .col-lg-12
+					//- 	+in-c()
+					//- 		+e.SPAN.text Согласие на получение сообщений от других участников
 
-						br
-						+in-c()
-							+e.SPAN.text Согласен на обработку #[a(href="#") персональных данных]
+					//- 	br
+					//- 	+in-c()
+					//- 		+e.SPAN.text Согласен на обработку #[a(href="#") персональных данных]
 mixin login(b="Зарегистрироваться")
 	+b.form-wrap(class="form-wrap--border")
-		.container
-			.row
-				.col
-					form(action='/file-upload'  enctype="multipart/form-data")
-						//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
-						.row
-							.col-lg-6
-								+input("",'email','Электронный адрес / E-mail')
-							 
-							.col-lg-6
-								+input("",'password','Пароль / Password') 
-							.col-lg-6.mb-4
-								+e.btn.w-100.ttu(type="submit") Войти
-							.col-lg-6.mb-4.align-self-center
-								a.btn.btn-link(href="#") Восстановить пароль
+		.container 
+			form(action='/file-upload'  enctype="multipart/form-data")
+				//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
+				.col-lg-6.g-0
+					+input("",'email','Электронный адрес / E-mail') 
+					+input("",'password','Пароль / Password') 
+						//- .col-lg-6.mb-4
+					+e.btn.w-100.ttu.mb-3(type="submit") Войти
+					.pb-2 Нет аккаунта? 
+						| 
+						a(href="#") Зарегистрироваться
+					.pb-2
+						a(href="#") Восстановить пароль
 
-						 
-				.col-lg-auto
-					+e.aside 
-						//- .h6.strong.mb-4 Пояснение к регистрации
-						//- +e.aside-text.text-secondary Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+	 
 mixin password(b="Зарегистрироваться")
 	+b.form-wrap(class="form-wrap--border")
-		.container
-			.row
-				.col
-					form(action='/file-upload'  enctype="multipart/form-data")
-						//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
-						.row
-							.col-lg-6
-								+input("",'email','Электронный адрес / E-mail')
-							.w-100
-							.col-lg-6.mb-4
-								+e.btn.w-100.ttu(type="submit") Восстановить
-
-						 
-				.col-lg-auto
-					+e.aside 
-						//- .h6.strong.mb-4 Пояснение к регистрации
-						//- +e.aside-text.text-secondary Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться. Lorem Ipsum используют потому, что тот обеспечивает более или менее стандартное заполнение шаблона, а также реальное распределение букв и пробелов в абзацах, которое не получается при простой дубликации
+		.container 
+			form(action='/file-upload'  enctype="multipart/form-data")
+				//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
+				.col-lg-6.g-0
+					+input("",'email','Электронный адрес / E-mail') 
+					+e.btn.w-100.ttu(type="submit") Восстановить

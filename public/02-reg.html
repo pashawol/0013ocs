@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Главная 2</title>
+		<title>Регистрация</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
@@ -21,10 +21,11 @@
 		<meta name="theme-color" content="#3361d8">
 		<link rel="stylesheet" href="libs/swiper/css/swiper.min.css"/>
 		<link rel="stylesheet" href="libs/animate.css/animate.min.css"/>
+		<link rel="stylesheet" href="js/dropzone.min.css"/>
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body class="main-page-2">
+	<body>
 		<div class="main-wrapper">
 			<!-- start top-nav-->
 			<div class="top-nav">
@@ -45,11 +46,11 @@
 									</li>
 									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Партнеры</a>
 									</li>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">LIVE</a>
+									</li>
 									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">EXPO </a>
 									</li>
 									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">3D-EXPO</a>
-									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">LIVE</a>
 									</li>
 									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">О форуме</a>
 									</li>
@@ -81,6 +82,386 @@
 				</div>
 			</div>
 			<!-- end headerBlock-->
+			<div class="page-title wow animate__fadeInUp">
+				<div class="container container-large">
+					<h1>Регистрация</h1>
+				</div>
+			</div>
+			<div class="sLogin">
+				<div class="container container-large">
+					<div class="row">
+						<div class="col-lg-7 section">
+							<div class="form-wrap form-wrap form-wrap--border wow animate__fadeInUp">
+								<form action="/file-upload" enctype="multipart/form-data">
+									<div class="row">
+										<div class="col-lg-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" type="text" placeholder="Ваша имя" name="text" required="required"/><span class="input-title">Имя *</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-lg-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" type="text" placeholder="Ваша фамилия" name="text" required="required"/><span class="input-title">Фамилия *</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-lg-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" type="email" placeholder="Ваш e-mail" name="email" required="required"/><span class="input-title">E-mail *</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-lg-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" type="tel" placeholder="+7 ___ ___ __ __" name="tel"/> <span class="input-title">Телефон</span>
+												</label> 
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-lg-6">
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" type="text" placeholder="Город проживания" name="text" required="required"/><span class="input-title">Город*</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-12 pt-3">
+											<div class="row">
+												<div class="col-auto pb-2">
+													<label class="custom-input"><input class="custom-input__input" type="radio" name="type-of" data-tab-radio="vendor-block"/><span class="custom-input__lab"></span><span class="custom-input__text">Вендор</span>
+													</label>
+												</div>
+												<div class="col-auto pb-2">
+													<label class="custom-input"><input class="custom-input__input" type="radio" name="type-of" data-tab-radio="partner-block" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Партнер</span>
+													</label>
+												</div>
+												<div class="col-auto pb-2">
+													<label class="custom-input"><input class="custom-input__input" type="radio" name="type-of" data-tab-radio="costumer-block"/><span class="custom-input__lab"></span><span class="custom-input__text">Заказчик</span>
+													</label>
+												</div>
+												<div class="col-auto pb-2">
+													<label class="custom-input"><input class="custom-input__input" type="radio" name="type-of" data-tab-radio="ocs-block"/><span class="custom-input__lab"></span><span class="custom-input__text">OCS </span>
+													</label>
+												</div>
+												<div class="col-auto pb-2">
+													<label class="custom-input"><input class="custom-input__input" type="radio" name="type-of" data-tab-radio="media-block"/><span class="custom-input__lab"></span><span class="custom-input__text">СМИ</span>
+													</label>
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-6 tab-radio-content vendor-block">
+											<!-- Вендоры -->
+											<div class="form-wrap__input-wrap form-group">
+												<label>
+													<select class="form-wrap__input form-control" name="select">
+														<option value="Компания-партнер">Компания-партнер</option>
+														<option value=" placeholder 1">placeholder dfssfsd dfsdfd sads 1</option>
+														<option value=" placeholder 2">placeholder dfssfsd dfsdfd sads 2</option>
+														<option value=" placeholder 3">placeholder dfssfsd dfsdfd sads 3</option>
+														<option value=" placeholder 4">placeholder dfssfsd dfsdfd sads 4</option>
+													</select><span class="input-title">Компания-партнер</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-lg-6 tab-radio-content costumer-block">
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" type="text" placeholder="Компания-партнер" name="text"/> <span class="input-title">Компания-партнер</span>
+												</label> 
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-lg-6 tab-radio-content ocs-block">
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" type="text" placeholder="Компания-партнер" name="text" value="OCS" disabled="disabled"/><span class="input-title">Компания-партнер</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-lg-6 tab-radio-content media-block">
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" type="text" placeholder="Компания-партнер" name="text"/> <span class="input-title">Компания-партнер</span>
+												</label> 
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-lg-12 pb-3 tab-radio-content partner-block">
+											<!-- партнеры-->
+											<div class="input-title dropdown-toggle-js h5 mb-5">Группы оборудования, которыми вы занимаетесь<span class="plus"></span>
+											</div>
+											<div class="dropdown-block dropdown-block--js">
+												<div class="dropdown-block__item">
+													<div class="d-flex">
+														<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Безопасность</span>
+														</label>
+														<div class="dropdown-toggle-js d-inline-block"><span class="plus"></span></div>
+													</div>
+													<div class="dropdown-block dropdown-block--js">
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Конференц-системы</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Пожарно-охранные комплексы</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Системы оповещения</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> СКУД</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Видеонаблюдение</span>
+															</label>
+														</div>
+													</div>
+												</div>
+												<div class="dropdown-block__item">
+													<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Бытовая техника и электроника</span>
+													</label>
+												</div>
+												<div class="dropdown-block__item">
+													<div class="d-flex">
+														<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Инженерная инфраструктура</span>
+														</label>
+														<div class="dropdown-toggle-js d-inline-block"><span class="plus"></span></div>
+													</div>
+													<div class="dropdown-block dropdown-block--js">
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Видеокарты</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Диски (HDD, SSD, ODD)</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Интерф. платы и устройства</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Комплектующие для серверов</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Корпуса</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Материнские платы</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Оперативная память</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Память флеш</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Платформы для ПК</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Процессоры</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">БП и кулеры</span>
+															</label>
+														</div>
+													</div>
+													<div class="dropdown-block__item">
+														<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Мобильные системы</span>
+														</label>
+													</div>
+													<div class="dropdown-block__item">
+														<div class="d-flex">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Оборудование маркировки и автоидентификации</span>
+															</label>
+															<div class="dropdown-toggle-js d-inline-block"><span class="plus"></span></div>
+														</div>
+														<div class="dropdown-block dropdown-block--js">
+															<div class="dropdown-block__item">
+																<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Мониторы, проекторы, доски</span>
+																</label>
+															</div>
+															<div class="dropdown-block__item">
+																<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Мультимедиа</span>
+																</label>
+															</div>
+															<div class="dropdown-block__item">
+																<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Печать и сканирование</span>
+																</label>
+															</div>
+															<div class="dropdown-block__item">
+																<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Профессиональная поддержка и сервис</span>
+																</label>
+															</div>
+															<div class="dropdown-block__item">
+																<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Профессиональные ЖК панели и телевизоры</span>
+																</label>
+															</div>
+															<div class="dropdown-block__item">
+																<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Расходные материалы</span>
+																</label>
+															</div>
+															<div class="dropdown-block__item">
+																<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Устройства ввода</span>
+																</label>
+															</div>
+															<div class="dropdown-block__item">
+																<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Кабели, разъемы</span>
+																</label>
+															</div>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">ПК</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Программное обеспечение</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Профессиональное мультимедиа и AV оборудование</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Серверы</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Сетевое оборудование и системы связи</span>
+															</label>
+														</div>
+														<div class="dropdown-block__item">
+															<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">СХД</span>
+															</label>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-lg-6">
+													<div class="form-wrap__input-wrap form-group">
+														<label><input class="form-wrap__input form-control" type="text" placeholder="название компании без ООО и" name="partners" list="partners-company"/><datalist id="partners-company">
+<option value="San Francisco">
+<option value="New York">
+<option value="Seattle">
+<option value="Los Angeles">
+<option value="Chicago">
+</datalist><span class="input-title">Компания-партнер</span>
+														</label><datalist id="partners-company">
+<option value="San Francisco">
+<option value="New York">
+<option value="Seattle">
+<option value="Los Angeles">
+<option value="Chicago">
+</datalist>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+												<div class="col-lg-6"> 
+													<div class="form-wrap__input-wrap form-group">
+														<label>
+															<select class="form-wrap__input form-control" name="select">
+																<option value="Менеджер в OCS">Менеджер в OCS</option>
+																<option value=" placeholder 1">placeholder dfssfsd dfsdfd sads 1</option>
+																<option value=" placeholder 2">placeholder dfssfsd dfsdfd sads 2</option>
+																<option value=" placeholder 3">placeholder dfssfsd dfsdfd sads 3</option>
+																<option value=" placeholder 4">placeholder dfssfsd dfsdfd sads 4</option>
+															</select><span class="input-title">Менеджер в OCS</span>
+														</label>
+													</div>
+													<!-- +e.input-wrap-->
+												</div>
+											</div>
+										</div>
+										<div class="col-lg-6"> 
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" type="text" placeholder="Должность*" name="text" required="required"/><span class="input-title">Должность*</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="w-100"></div>
+										<div class="col-lg-6"> 
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" type="password" placeholder="Пароль" name="password" required="required"/><span class="input-title">Пароль*</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-lg-6"> 
+											<div class="form-wrap__input-wrap form-group">
+												<label><input class="form-wrap__input form-control" type="password" placeholder="Повторите пароль" name="password" required="required"/><span class="input-title">Повторите пароль*</span>
+												</label>
+											</div>
+											<!-- +e.input-wrap-->
+										</div>
+										<div class="col-lg-12">
+											<label class="dropzone-wrapper d-block">
+												<div class="dropzone" action="/file-upload">
+													<div id="dropzone">
+														<div class="dropzone__prev-wrap">
+															<svg class="icon icon-user-drop ">
+																<use xlink:href="img/svg/sprite.svg#user-drop"></use>
+															</svg><span class="text-primary">добавить<br/>фото</span>
+														</div>
+														<div class="fallback">
+															<input name="file" type="file" multiple=""/>
+														</div>
+													</div>
+												</div>
+											</label>
+										</div>
+										<div class="col-lg-6 my-4">
+											<button class="btn btn-primary btn-arrows w-100" type="submit">Зарегистрироваться</button>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="col">
+							<!-- start justUpgraitIt-->
+							<section class="justUpgraitIt section" id="justUpgraitIt">
+								<div class="container">
+									<div class="animate-block-circle wow animate__fadeInUp"><img class="img-1" src="img/svg/circle-4.svg" loading="lazy" alt=""/>
+										<div class="ellipse ellipse-1 ellipse-css">
+											<div class="dot dot3"></div>
+											<div class="dot dot4"></div>
+											<div class="dot dot5"></div>
+											<div class="dot dot6"> </div>
+										</div>
+										<div class="ellipse ellipse-2 ellipse-css">
+											<div class="dot dot1"></div>
+											<div class="dot dot4"></div>
+											<div class="dot dot5"></div>
+											<div class="dot dot6"> </div>
+										</div><img class="img-3" src="img/svg/circle-3-2.svg" loading="lazy" alt=""/>
+									</div>
+									<div class="justUpgraitIt__text justUpgraitIt__text--top wow animate__fadeInUp">Just
+									</div>
+									<div class="justUpgraitIt__text justUpgraitIt__text--center wow animate__fadeInUp"><img class="res-i" src="img/svg/text.svg" loading="lazy" alt=""/>
+									</div>
+									<div class="justUpgraitIt__text justUpgraitIt__text--bot wow animate__fadeInUp">IT
+									</div>
+								</div>
+							</section>
+							<!-- end justUpgraitIt-->
+						</div>
+					</div>
+				</div>
+			</div>
 			<footer class="footer">
 				<div class="container wow  animate__fadeInUp ">
 					<div class="footer__head">
@@ -136,7 +517,7 @@
 						</div>
 						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/> 
+					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text" required="required"/>  
 					</div>
 					<!-- +e.input-wrap-->
 					<button class="form-wrap__btn btn" type="submit"> 
@@ -152,6 +533,7 @@
 		<!-- end modals-->
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>
+		<script src="js/dropzone.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/@fancyapps/fancybox/jquery.fancybox.min.js"></script>
 		<!-- modal libs-->

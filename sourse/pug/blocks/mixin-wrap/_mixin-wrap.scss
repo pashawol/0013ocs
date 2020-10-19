@@ -58,3 +58,7 @@
 	}
 }
 
+
+.tab-radio-content:not(.active) {
+	display: none;
+}

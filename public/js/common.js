@@ -310,6 +310,39 @@ function eventHandler() {
 		animateClass: 'animate__animated'
 	});
 	wow.init();
+	var dropdownToggle = document.querySelectorAll(".dropdown-toggle-js");
+
+	if (dropdownToggle) {
+		dropdownToggle.forEach(function (el) {
+			el.addEventListener('click', function () {
+				this.classList.toggle('active');
+				var next = this.nextElementSibling;
+				next.classList.toggle('active');
+			});
+		});
+	} // табы на радиокнопках
+
+
+	$('input[data-tab-radio]').change(function () {
+		var th = $(this),
+				tabRadio = th.data('tab-radio');
+		$('.' + tabRadio).fadeIn(100).addClass("active").siblings('.tab-radio-content').removeClass('active').hide();
+	}); //  если радио таб выбран показать блок
+
+	$('input[data-tab-radio]').each(function () {
+		var th = $(this),
+				tabRadio = th.data('tab-radio');
+
+		if (th.is(":checked")) {
+			$('.' + tabRadio).fadeIn(100).addClass("active").siblings('.tab-radio-content').removeClass('active').hide();
+		}
+	}); //  $(".tab-radio-content-close").click(function(){
+	// 	 var thpar = $(this).parents('.tab-radio-content'),
+	// 			thtab = thpar.attr('id');
+	// 			thpar.fadeOut(100).removeClass("active");
+	// 			$('[data-tab-rad='+thtab+']').prop('checked', false);
+	//  })
+	// /табы на радиокнопках
 }
 
 ;

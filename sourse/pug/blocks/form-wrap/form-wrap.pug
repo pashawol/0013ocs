@@ -22,11 +22,12 @@ mixin input(placeholder,  t='text', label, name= t)
 	+e.input-wrap.form-group
 		if label
 			label
-				+b.SPAN.input-title= label
 				+t(t,placeholder, name)&attributes(attributes)
 				block
+				+b.SPAN.input-title= label
 		else
 			+t(t,placeholder, name)&attributes(attributes)
+			block
 		block
 	// +e.input-wrap
 mixin select(label,pl,...items)

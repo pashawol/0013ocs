@@ -20,18 +20,17 @@ include ../blocks/sMembers/_sMembers.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Регистрация'
+	- let  title= 'Восстановление пароля'
 	title= title
 block pagecontent
 	+top-nav()
 	+headerBlockPage() 
 	+page-title(title)
-	
 	+b.sLogin
 		.container.container-large
 			.row
 				.col-lg-7.section
-					+reg()
+					+password()
 				.col
 					+justUpgraitIt
 	//- +sMembers
