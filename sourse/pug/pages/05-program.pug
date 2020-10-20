@@ -10,24 +10,18 @@ include ../blocks/sEvents/_sEvents.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'Личный кабинет'
+	- let  title= 'Программа'
 	title= title
 block pagecontent
 	//- +mob-mnu()
-	+top-nav('l')
-	+headerBlockPage()
+	+top-nav()
+	//- +page-title(title)
 	+page-title(title)
-
-	//- .container
-	//- 	+b.asideCabmenu
-	//- 		ul
-	//- 			li: a.active(href="#") Профиль
-	//- 			li: a(href="#") Мое расписание
-	//- 			li: a(href="#") Чаты
-	+sCabinetBody()
-		+sEvents()
+	+sEvents-12()
+	//- +sLogos
 	//- +sContact()
 	+footer()
+
 
 
 	

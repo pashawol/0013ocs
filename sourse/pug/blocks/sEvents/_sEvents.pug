@@ -1,83 +1,115 @@
 mixin sEvents()
 	// start sEvents
-	+b.sEvents.pt-0.section#sEvents&attributes(attributes)
-		.container
-				
-				//- +e.btn.btn-primary(href="#") 
-				//- 	+icon('icon-print')
-				mixin item(d,t, p, z)
-					+e.item
+	+b.sEvents&attributes(attributes)
+		mixin item(d,t,l)
+			+e.item
+				.row
+					+e.time.strong.text-primary.col-lg-auto.col.order-first!= d
+					.col-auto.order-lg-last
 						+e.star.active
-							+icon('star')
-						.row
-							.col
-								+e.head 
-									.row 
-										+e.time.col-auto.pb-1!= d 
-										block
-								.h4.fw-500: a.text-white(href="#")!= t
-								if p
-									.h6!= p
-							if z
-								.col-xl-3.col-sm-auto
-									a(href="#")
-										img(src="img/@2x/zoom.png" loading="lazy", alt="")
+							+icon('star-active')
+					.col-md-auto.order-md-first.order-lg-0
+						+e.label-elem!= l
+					.col-lg.order-lg-first
+						+e.text-block
+							+e.title.strong!= t 
+							+e.text
+								.row
+									.col-auto
+										strong.text-primary Ольга Сигаль 
+										| 
+										span OCS Distribution
+									block
+					//- .col-auto.order-lg-last
+					//- 	+e.star.active
+					//- 		+icon('star-active')
+					//- .col-md-auto.order-md-first.order-lg-0
+					//- 	+e.label-elem!= l
 
-				+item(`12.55 – 14.10`, `Переговорная №1`,'','z')
-					.pb-1.col-auto Встреча/переговоры
-				+item(`12.55 – 14.10`, `In Railway We Trust.`,`Глобальное сотрудничество в условиях неопределенности`) 
-					.pb-1.col-auto.text-light Пленарная дискуссия
-					.pb-1.col-auto ЗАЛ «ИННОВАЦИИ»
-				+item(`12.55 – 14.10`, `Finance as a Masterpiece.`,`Как привлечь инвестиции в условиях кризиса?`) 
-					.pb-1.col-auto.text-light Пленарная дискуссия
-					.pb-1.col-auto ЗАЛ «ИННОВАЦИИ»
+
+		+item(`12:40`, `Круглый стол с Ольгой Сигаль : Digital Академия, управляющий партнер «Возможен ли цифровой прорыв для IT-гигантов?»`, `Круглый стол`)
+		+item(`13:50`, `Круглый стол с Анной Черняковой, вице-президентом OCS Distribution`, `Круглый стол`)
+
+		+item(`13:50`, `Название сессии от вендора в одну или несколько строк`, `Сессия`) 
 
 
 mixin sEvents-12()
 	// start sEvents
 	+b.sEvents--page.section#sEvents&attributes(attributes)
-		.container
-			mixin item(d,t,k,l,c,ev)
-				+e.item(href="#")&attributes(attributes)
-					+e.row.row
-						+e.col.col
-							.small!= d
-							if l
-								+e.location ЗАЛ «ИННОВАЦИИ»
-							else
-								+e.location ЗАЛ «СТРАТЕГИИ»
-							if ev
-								+e.event Пленарная дискуссия
-						.col-auto.order-sm-last 
-							+e.star(class= c)
-								+icon('star') 
-					.h4= t
-					if k
-						+e.whatHappen= k
-			.tabs-inner
+		.container.container-large
+			mixin item(d,t,l, star , active)
+				+e.item(class="wow  animate__fadeInUp "   )&attributes(attributes)
+					.row
+						+e.time.strong.text-primary.col-lg-auto.col.order-first!= d
+
+						if star
+							.col-auto.order-lg-last
+								+e.star(class= active)
+									+icon('star-active')
+						if l
+							.col-md-auto.order-md-first.order-lg-0
+								+e.label-elem!= l
+						.col-lg.order-lg-first
+							+e.text-block
+								+e.title.strong!= t
+								if block
+									block
+								else
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Ольга Сигаль 
+												| 
+												span OCS Distribution
+												
+			mixin itemB(d,t,l, star , active)
+				+e.item(class="wow  animate__fadeInUp "   )&attributes(attributes)
+					.row
+						+e.time.strong.text-primary.col-lg-auto.col.order-first!= d
+
+						if star
+							.col-auto.order-lg-last
+								+e.star(class= active)
+									+icon('star-active')
+						if l
+							.col-md-auto.order-md-first.order-lg-0
+								+e.label-elem!= l
+						.col-12
+							+e.text-block
+								+e.title.strong!= t
+								if block
+									block
+								else
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Ольга Сигаль 
+												| 
+												span OCS Distribution
+
+			+item(`11:50`, `Начало мероприятия, приветственное слово участникам`, ` `) 
+			+item(`12:05`, `Панельная дискуссия с Максимом Сорокиным, председателем совета директоров OCS Distribution`, `Панельная дискуссия`,'s','active')
 				.row
-					.col
-						.tabs-inner__caption
-							
-							.tabs-inner__btn.active 22 октября
-							.tabs-inner__btn 23 октября
 					.col-auto
-						a.btn.btn-primary(href="#") Скачать pdf
-					mixin content2()
-						.tabs-inner__content&attributes(attributes)
-							.row
-								+e.group.col-12
-									+item(`11.00 – 11.15`, `Церемония открытия.`,'Приветствие участников','l') 
-								+e.group.col-12
-									+item(`11.00 – 11.15`, `In Railway We Trust.`,'Глобальное сотрудничество в условиях неопределенности','l','','ev')
-								+e.group.col-12
-									+item(`12.45 – 12.55`, `Ведущий между сессиями`,'','l')(class="inactive")
-								+e.group.col-12.col-lg-6
-									+item(`12.55 – 14.10`, `Finance as a Masterpiece.`,'Как привлечь инвестиции в условиях кризиса?','l', 'active','ev') 
-								+e.group.col-12.col-lg-6
-									+item(`12.55 – 14.10`, `Название сессии`,'Как привлечь инвестиции в условиях кризиса?','','','ev') 
-				+content2()(class="active")
-				+content2()
+						strong.text-primary Максим Сорокин  
+						| 
+						span OCS Distribution
+					.col-auto
+						strong.text-primary Виктор Дробышев
+						| 
+						span Google inc.
+			+item(`12:30`, `Начало работы зоны EXPO`, ` `)(class="disabled") 
+			+item(`12:30`, `Прямой эфир из зоны EXPO`, ` `,'s') 
+			+item(`12:05`, `Круглый стол с Ольгой Сигаль : Digital Академия, управляющий партнер «Возможен ли цифровой прорыв для IT-гигантов?»`, `Панельная дискуссия`,'s','active') 
+			+item(`12:40`, `Начало мероприятия, приветственное слово участникам`, ` `)
+			+item(`13:40`, `Прямой эфир из зоны EXPO`, ` `,'s') 
+			+item(`13:40`, `Круглый стол с Анной Черняковой, вице-президентом OCS Distribution`, ` `)
+			+item(`13:50`, `Прямой эфир из зоны EXPO`, ` `,'s') 
+			.row.row--sm
+				- for (var x = 0; x < 20; x++)
+					+e.col.col-12
+						+itemB(`13:50`, `Название сессии от вендора в одну или несколько строк`, `Сессия`,'s')
+					
 	// end sEvents
 
 

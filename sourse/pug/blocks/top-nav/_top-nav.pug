@@ -27,11 +27,19 @@ mixin top-nav(l)
 					.nav-wrap
 						+mnu()  
 
-				.col-auto
-					+e.btn.btn-primary(href='#') Регистрация
-				.col-auto
-					+e.btn--cabinet.btn-white(href='#')
-						+icon('user')
+				if l
+					.col-auto
+						+e.btn--logout(href='#')
+							+pic("cabinet-1",'bg',0)
+							span.d-none.d-sm-inline Викторовская А.
+							+icon('log-out')
+				else
+					.col-auto
+						+e.btn.btn-primary(href='#') Регистрация
+					.col-auto
+					
+						+e.btn--cabinet.btn-white(href='#')
+							+icon('user')
 					
 	// end top-nav
 
