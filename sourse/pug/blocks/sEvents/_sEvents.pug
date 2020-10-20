@@ -1,36 +1,32 @@
 mixin sEvents()
 	// start sEvents
-	+b.sEvents.pt-0.section#sEvents&attributes(attributes)
-		.container
-				
-				//- +e.btn.btn-primary(href="#") 
-				//- 	+icon('icon-print')
-				mixin item(d,t, p, z)
-					+e.item
-						+e.star.active
-							+icon('star')
-						.row
-							.col
-								+e.head 
-									.row 
-										+e.time.col-auto.pb-1!= d 
-										block
-								.h4.fw-500: a.text-white(href="#")!= t
-								if p
-									.h6!= p
-							if z
-								.col-xl-3.col-sm-auto
-									a(href="#")
-										img(src="img/@2x/zoom.png" loading="lazy", alt="")
+	+b.sEvents.section#sEvents&attributes(attributes)
+		.container.container-large
+			.row.row--lg
+				.col-xl-3.col-lg-4.col-sm-auto
+					+b.asideCabmenu
+						ul
+							li: a.active(href="#") Профиль
+							li: a(href="#") Мое расписание
+							li: a(href="#") Чаты
+				.col
+					
+						+e.item
+							+e.star.active
+								+icon('star-active')
+							.row
+								.col
+									+e.head 
+										.row 
+											+e.time.col-auto.pb-1 12:40
+											.h4.fw-500 Круглый стол с Ольгой Сигаль : Digital Академия, управляющий партнер «Возможен ли цифровой прорыв для IT-гигантов?»
 
-				+item(`12.55 – 14.10`, `Переговорная №1`,'','z')
-					.pb-1.col-auto Встреча/переговоры
-				+item(`12.55 – 14.10`, `In Railway We Trust.`,`Глобальное сотрудничество в условиях неопределенности`) 
-					.pb-1.col-auto.text-light Пленарная дискуссия
-					.pb-1.col-auto ЗАЛ «ИННОВАЦИИ»
-				+item(`12.55 – 14.10`, `Finance as a Masterpiece.`,`Как привлечь инвестиции в условиях кризиса?`) 
-					.pb-1.col-auto.text-light Пленарная дискуссия
-					.pb-1.col-auto ЗАЛ «ИННОВАЦИИ»
+											.h6 Ольга Сигаль   
+											p OCS Distribution 	fd
+									//- if z
+								//- .col-xl-3.col-sm-auto
+
+
 
 
 mixin sEvents-12()
