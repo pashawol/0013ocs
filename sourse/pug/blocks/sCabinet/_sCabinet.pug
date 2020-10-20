@@ -1,9 +1,9 @@
-mixin sCabinet()
+mixin sCabinetBody()
 	// start sCabinet
 	+b.sCabinet&attributes(attributes)
 		.container.container-large
 			.row.row--lg
-				.col-xl-3.col-lg-4.col-sm-auto
+				.col-xl-3
 					+e.aside
 						ul
 							li: a.active(href="#") Профиль
@@ -11,33 +11,29 @@ mixin sCabinet()
 							li: a(href="#") Чаты
 				.col
 					+e.main
-						.row
-							.col-auto
-								+pic("cabinet-1",'bg',0)(class='avatar')
-							+e.col.col
-								+e.text-block
-									.h3 Викторовская Александра
-									+e.h5.strong.text-primary Представитель вендора
-									+e.company.strong Avaya
-									p Операционный директор
-									+e.city г. Москва
-									+e.link-tel(href="tel:+79859998888").text-white.strong
-										+icon(`phone`)
-										| +7 985 999 88 88
-									+e.mail(href="mailto:sample@sample.com").text-white.strong
-										+icon(`mail`)
-										| sample@sample.com
-
-								//- mixin line(t, d, te)  
-								//- 	+e.input-wrap
-								//- 		+b.input-title= t
-								//- 		+e.input
-								//- 			+e.result= d 
-								//- 			+e.result--lang= te
-								//- +line("Компания ",'Российские железные дороги','Russian Railway')
-								//- +line("Должность",'Инженер','Engineer') 
+						block
 
 	// end sCabinet
+	
+mixin sCabinet()
+	+sCabinetBody()
+		.row
+			.col-auto
+				+pic("cabinet-1",'bg',0)(class='avatar')
+			+e.col.col
+				+e.text-block
+					.h3 Викторовская Александра
+					+e.h5.strong.text-primary Представитель вендора
+					+e.company.strong Avaya
+					p Операционный директор
+					+e.city г. Москва
+					+e.link-tel(href="tel:+79859998888").text-white.strong
+						+icon(`phone`)
+						| +7 985 999 88 88
+					+e.mail(href="mailto:sample@sample.com").text-white.strong
+						+icon(`mail`)
+						| sample@sample.com
+
 	
 mixin sCabinet3()
 	// start sCabinet
