@@ -2,7 +2,7 @@
 <html lang="ru">
 	<head>
 		<meta charset="utf-8">
-		<title>Восстановление пароля</title>
+		<title>Личный кабинет</title>
 		<meta name="description" content="о чем страница">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body>
+	<body class="cabinet-page">
 		<div class="main-wrapper">
 			<!-- start top-nav-->
 			<div class="top-nav">
@@ -84,60 +84,60 @@
 			<!-- end headerBlock-->
 			<div class="page-title wow animate__fadeInUp">
 				<div class="container container-large">
-					<h1>Восстановление пароля</h1>
+					<h1>Личный кабинет</h1>
 				</div>
 			</div>
-			<div class="sLogin">
+			<div class="container"> </div>
+			<!-- start sCabinet-->
+			<div class="sCabinet">
 				<div class="container container-large">
-					<div class="row">
-						<div class="col-lg-7 section">
-							<div class="form-wrap form-wrap form-wrap--border">
-								<div class="container"> 
-									<form action="/file-upload" enctype="multipart/form-data">
-										<div class="col-lg-6 g-0 wow  animate__fadeInUp ">
-											<div class="form-wrap__input-wrap form-group">
-												<label><input class="form-wrap__input form-control" type="email" placeholder="" name="email-ocs"/> <span class="input-title">E-mail</span>
-												</label> 
-											</div>
-											<!-- +e.input-wrap-->
-											<button class="form-wrap__btn w-100 ttu" type="submit">Восстановить
-											</button>
-										</div>
-									</form>
-								</div>
+					<div class="row row--lg">
+						<div class="col-xl-3 col-lg-4 col-sm-auto">
+							<div class="sCabinet__aside">
+								<ul>
+									<li><a class="active" href="#">Профиль</a></li>
+									<li><a href="#">Мое расписание</a></li>
+									<li><a href="#">Чаты</a></li>
+								</ul>
 							</div>
 						</div>
 						<div class="col">
-							<!-- start justUpgraitIt-->
-							<section class="justUpgraitIt section" id="justUpgraitIt">
-								<div class="container">
-									<div class="animate-block-circle wow animate__fadeInUp"><img class="img-1" src="img/svg/circle-4.svg" loading="lazy" alt=""/>
-										<div class="ellipse ellipse-1 ellipse-css">
-											<div class="dot dot3"></div>
-											<div class="dot dot4"></div>
-											<div class="dot dot5"></div>
-											<div class="dot dot6"> </div>
+							<div class="sCabinet__main">
+								<div class="row">
+									<div class="col-auto">
+										<!-- picture-->
+										<picture class="avatar"> 
+											<noscript class="loading-lazy">
+												<source srcset="img/@2x/webp/cabinet-1.webp" loading="lazy" type="image/webp"/><img class="object-fit-js" src="img/@2x/cabinet-1.jpg" loading="lazy" alt=""/>
+											</noscript>
+										</picture>
+										<!-- /picture-->
+									</div>
+									<div class="sCabinet__col col">
+										<div class="sCabinet__text-block">
+											<div class="h3">Викторовская Александра</div>
+											<div class="sCabinet__h5 strong text-primary">Представитель вендора
+											</div>
+											<div class="sCabinet__company strong">Avaya
+											</div>
+											<p>Операционный директор</p>
+											<div class="sCabinet__city">г. Москва
+											</div><a class="sCabinet__link-tel text-white strong" href="tel:+79859998888">
+											<svg class="icon icon-phone ">
+												<use xlink:href="img/svg/sprite.svg#phone"></use>
+											</svg>+7 985 999 88 88</a><a class="sCabinet__mail text-white strong" href="mailto:sample@sample.com">
+											<svg class="icon icon-mail ">
+												<use xlink:href="img/svg/sprite.svg#mail"></use>
+											</svg>sample@sample.com</a>
 										</div>
-										<div class="ellipse ellipse-2 ellipse-css">
-											<div class="dot dot1"></div>
-											<div class="dot dot4"></div>
-											<div class="dot dot5"></div>
-											<div class="dot dot6"> </div>
-										</div><img class="img-3" src="img/svg/circle-3-2.svg" loading="lazy" alt=""/>
-									</div>
-									<div class="justUpgraitIt__text justUpgraitIt__text--top wow animate__fadeInUp">Just
-									</div>
-									<div class="justUpgraitIt__text justUpgraitIt__text--center wow animate__fadeInUp"><img class="res-i" src="img/svg/text.svg" loading="lazy" alt=""/>
-									</div>
-									<div class="justUpgraitIt__text justUpgraitIt__text--bot wow animate__fadeInUp">IT
 									</div>
 								</div>
-							</section>
-							<!-- end justUpgraitIt-->
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<!-- end sCabinet-->
 			<footer class="footer">
 				<div class="container wow  animate__fadeInUp ">
 					<div class="footer__head">

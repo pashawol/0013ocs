@@ -1,0 +1,128 @@
+mixin sEvents()
+	// start sEvents
+	+b.sEvents.pt-0.section#sEvents&attributes(attributes)
+		.container
+				
+				//- +e.btn.btn-primary(href="#") 
+				//- 	+icon('icon-print')
+				mixin item(d,t, p, z)
+					+e.item
+						+e.star.active
+							+icon('star')
+						.row
+							.col
+								+e.head 
+									.row 
+										+e.time.col-auto.pb-1!= d 
+										block
+								.h4.fw-500: a.text-white(href="#")!= t
+								if p
+									.h6!= p
+							if z
+								.col-xl-3.col-sm-auto
+									a(href="#")
+										img(src="img/@2x/zoom.png" loading="lazy", alt="")
+
+				+item(`12.55 – 14.10`, `Переговорная №1`,'','z')
+					.pb-1.col-auto Встреча/переговоры
+				+item(`12.55 – 14.10`, `In Railway We Trust.`,`Глобальное сотрудничество в условиях неопределенности`) 
+					.pb-1.col-auto.text-light Пленарная дискуссия
+					.pb-1.col-auto ЗАЛ «ИННОВАЦИИ»
+				+item(`12.55 – 14.10`, `Finance as a Masterpiece.`,`Как привлечь инвестиции в условиях кризиса?`) 
+					.pb-1.col-auto.text-light Пленарная дискуссия
+					.pb-1.col-auto ЗАЛ «ИННОВАЦИИ»
+
+
+mixin sEvents-12()
+	// start sEvents
+	+b.sEvents--page.section#sEvents&attributes(attributes)
+		.container
+			mixin item(d,t,k,l,c,ev)
+				+e.item(href="#")&attributes(attributes)
+					+e.row.row
+						+e.col.col
+							.small!= d
+							if l
+								+e.location ЗАЛ «ИННОВАЦИИ»
+							else
+								+e.location ЗАЛ «СТРАТЕГИИ»
+							if ev
+								+e.event Пленарная дискуссия
+						.col-auto.order-sm-last 
+							+e.star(class= c)
+								+icon('star') 
+					.h4= t
+					if k
+						+e.whatHappen= k
+			.tabs-inner
+				.row
+					.col
+						.tabs-inner__caption
+							
+							.tabs-inner__btn.active 22 октября
+							.tabs-inner__btn 23 октября
+					.col-auto
+						a.btn.btn-primary(href="#") Скачать pdf
+					mixin content2()
+						.tabs-inner__content&attributes(attributes)
+							.row
+								+e.group.col-12
+									+item(`11.00 – 11.15`, `Церемония открытия.`,'Приветствие участников','l') 
+								+e.group.col-12
+									+item(`11.00 – 11.15`, `In Railway We Trust.`,'Глобальное сотрудничество в условиях неопределенности','l','','ev')
+								+e.group.col-12
+									+item(`12.45 – 12.55`, `Ведущий между сессиями`,'','l')(class="inactive")
+								+e.group.col-12.col-lg-6
+									+item(`12.55 – 14.10`, `Finance as a Masterpiece.`,'Как привлечь инвестиции в условиях кризиса?','l', 'active','ev') 
+								+e.group.col-12.col-lg-6
+									+item(`12.55 – 14.10`, `Название сессии`,'Как привлечь инвестиции в условиях кризиса?','','','ev') 
+				+content2()(class="active")
+				+content2()
+	// end sEvents
+
+
+mixin sEvents0()
+	// start sEvents
+	+b.sEvents--main.section#sEvents&attributes(attributes)
+		.container
+			.section-title
+				.row
+					.col
+						h2 Программа
+					.col-auto
+						a.btn.btn-primary.btn-arrows(href="#") Скачать программу
+			+e.line
+				.row
+					.col-6
+						+e.date 22 октября
+					.col-6
+						+e.date 23 октября
+				//- +e.btn.btn-primary(href="#") 
+				//- 	+icon('icon-print')
+			.h5.strong.mb-4 Ближайшие сессии
+			mixin item(d,t, p, z)
+				+e.item--main
+					//- +e.star.active
+					//- 	+icon('star')
+					.row
+						.col-12
+							+e.head--main
+								.row 
+									+e.time.col-auto.pb-1!= d 
+									block
+							.h4.fw-500: a.text-white(href="#")!= t
+							if p
+								.h6!= p
+					 
+			
+			+e.row-main.row
+				.col-md-6
+					+item(`12.55 – 14.10`, `Переговорная №1`,'Глобальное сотрудничество в условиях неопределенности','z')
+						.pb-1.col-auto Встреча/переговоры
+						.pb-1.col-xl.text-xl-right ЗАЛ «СТРАТЕГИИ»
+				.col-md-6
+					+item(`12.55 – 14.10`, `In Railway We Trust.`,`Глобальное сотрудничество в условиях неопределенности`) 
+						.pb-1.col-auto.text-light Пленарная дискуссия 
+						.pb-1.col-xl.text-xl-right  ЗАЛ «СТРАТЕГИИ»
+		 
+	// end sEvents

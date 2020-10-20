@@ -17,7 +17,7 @@ html {
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-position: center 0;
+	background-position: center 28px;
 	opacity: 0;
 	// opacity: 0.7;
 }
@@ -517,5 +517,47 @@ body:not(.main-page) .main-wrapper {
 .sLogin{
 	.section{
 		padding-top: rem(40);
+	}
+}
+
+
+.custom-scroll {
+	scrollbar-color: $primary transparent;
+
+	scrollbar-width: thin;
+	scrollbar-color: $primary transparent;
+
+	&::-webkit-scrollbar-thumb {
+		opacity: 1;
+		display: block
+	}
+
+	&::-webkit-scrollbar-track {
+		border: none;
+		background-color: transparent;
+		border-color: transparent;
+		-webkit-box-shadow: none;
+	}
+
+	&::-webkit-scrollbar {
+		width: 4px;
+		height: 2px;
+		background-color: transparent;
+		// border-right: 2px;
+		/* or add it to the track */
+		border-color: transparent;
+		opacity: 0;
+		-webkit-box-shadow: none;
+
+	}
+
+	/* Add a thumb */
+	&::-webkit-scrollbar-thumb {
+		background: $primary;
+		border-radius: 2.5px;
+	}
+
+	&::-webkit-scrollbar-button {
+		display: none
 	}
 }

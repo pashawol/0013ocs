@@ -1,0 +1,169 @@
+mixin sCabinet()
+	// start sCabinet
+	+b.sCabinet&attributes(attributes)
+		.container.container-large
+			.row.row--lg
+				.col-xl-3.col-lg-4.col-sm-auto
+					+e.aside
+						ul
+							li: a.active(href="#") Профиль
+							li: a(href="#") Мое расписание
+							li: a(href="#") Чаты
+				.col
+					+e.main
+						.row
+							.col-auto
+								+pic("cabinet-1",'bg',0)(class='avatar')
+							+e.col.col
+								+e.text-block
+									.h3 Викторовская Александра
+									+e.h5.strong.text-primary Представитель вендора
+									+e.company.strong Avaya
+									p Операционный директор
+									+e.city г. Москва
+									+e.link-tel(href="tel:+79859998888").text-white.strong
+										+icon(`phone`)
+										| +7 985 999 88 88
+									+e.mail(href="mailto:sample@sample.com").text-white.strong
+										+icon(`mail`)
+										| sample@sample.com
+
+								//- mixin line(t, d, te)  
+								//- 	+e.input-wrap
+								//- 		+b.input-title= t
+								//- 		+e.input
+								//- 			+e.result= d 
+								//- 			+e.result--lang= te
+								//- +line("Компания ",'Российские железные дороги','Russian Railway')
+								//- +line("Должность",'Инженер','Engineer') 
+
+	// end sCabinet
+	
+mixin sCabinet3()
+	// start sCabinet
+	+b.sCabinet&attributes(attributes)
+		.container
+			.row.row--lg
+				.col-sm-auto
+					+e.aside
+						img.res-i.mb-5(src="img/@2x/Exhibition-1.png" loading="lazy", alt="")
+						div
+							.text-secondary.small.ttu.strong UNIVERSITÀ DEGLI STUDI DI MILANO
+				.col
+					+e.main
+						.row
+							mixin line(t,tl, d)
+								+e.item.col-lg-6
+									+b.input-title--rus= t
+									//- if tl
+									//- 	+b.input-title--eng= tl
+									+e.input= d
+							+line(" Surname", '','Abruso')
+							+line(" Name", '','Mozarpa')
+							+line("Position", '','Delegate')
+							+line("University", '','UNIVERSITÀ DEGLI STUDI DI MILANO')
+							+line("Phone", '','+7 985 668 99 88')
+							+line("E-mail", '','sample@sample.com')
+						 
+							
+						.pt-2
+							+e.btn(type="submit") Редактировать
+	// end sCabinet
+
+mixin sCabinet4()
+	// start sCabinet
+	+b.sCabinet&attributes(attributes)
+		.container
+			.public-chat-wrap
+				.row.g-0
+					+e.col-users.col-auto
+						.public-chat.d-flex.flex-column
+							input(type='hidden', value='307befb6-b8bf-469c-860e-7eb1504f594c')
+							// 
+							+b.public-chat-header
+								+b.search-block
+									input(type="text" placeholder="Поиск ")
+									button
+										+icon("search")
+								.public-chat-header-count.ml-auto.text-primary
+									| 35
+							.public-chat-pinned.ps
+								mixin item(i,t)
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src=`img/@1x/avatar-${i}.png` loading="lazy" alt="")
+										div.flex-grow-1
+											.row
+												.col
+													.public-chat-message-name= t
+												+e.time.col-auto 15:50
+											.public-chat-message-text Последнее сообщени...
+								.public-chat-messages.ps.ps--active-y
+									- for (var x = 0; x < 2; x++)
+										+item("1",'Вячеслав Чморшанский')
+										+item("2",'Юия Кирпа')
+										+item("3",'Олег Олаф')
+										+item("4",'Марина Олексеева')
+										+item("5",'Ким Кин')
+										+item("6",'Олег Вертегел')
+										+item("7",'Риза Чалиев') 
+					.col
+									.public-chat.d-flex.flex-column
+										input(type='hidden', value='307befb6-b8bf-469c-860e-7eb1504f594c')
+											
+											//- .ps__rail-x(style='left: 0px; bottom: 0px;')
+											//- 	.ps__thumb-x(tabindex='0', style='left: 0px; width: 0px;')
+											//- .ps__rail-y(style='top: 0px; right: 0px;')
+											//- 	.ps__thumb-y(tabindex='0', style='top: 0px; height: 0px;')
+										.public-chat-messages.ps.ps--active-y
+											//- .ps__rail-x(style='left: 0px; bottom: -21209px;')
+											//- 	.ps__thumb-x(tabindex='0', style='left: 0px; width: 0px;')
+											//- .ps__rail-y(style='top: 21209px; right: 0px; height: 282px;')
+											//- 	.ps__thumb-y(tabindex='0', style='top: 279px; height: 3px;')
+											- for (var x = 0; x < 1; x++)
+												.chat-message
+													.chat-message-text-wrapper.chat-message-text-wrapper--left
+														.chat-message-text
+															| MTS StartUp Hub – это платформа открытых инноваций включающая в себя акселератор
+													.chat-message-description
+														| Вячеслав, 13:06 12.04.2020
+												+b.chat-message--right
+													.chat-message-text-wrapper.chat-message-text-wrapper--right
+														.chat-message-text
+															| MTS StartUp Hub – это платформа открытых инноваций включающая в себя акселератор
+													.chat-message-description.chat-message-description--sentTo.chat-message-description--read 
+														| Вы 13:06 12.04.2020
+											.chat-message
+												+b.chat-message-file-wrapper
+													+icon("ion_document")
+													+e.caption
+														+e.name Filename.pdf
+														+e.size 12 mb 
+												.chat-message-description
+													| Вячеслав, 13:06 12.04.2020
+											+b.chat-message--right
+												+b.chat-message-file-wrapper
+													+icon("ion_document")
+													+e.caption
+														+e.name Filename.pdf
+														+e.size 12 mb
+												.chat-message-description.chat-message-description--sentTo
+													| Вы 13:06 12.04.2020
+										.d-none
+											// блок если не вошел
+											.mt-auto.px-1-5.py-1
+												| Для отправки сообщений
+												a(href='/login?_target_path=/live') Войдите
+												|  или
+												a(href='/registration') Зарегистрируйтесь
+												| .
+										form.public-chat-form
+											button.public-chat-form-btn(type='submit')
+												+icon("ion_attach-outline")
+											input.public-chat-form-input(type='text', placeholder='Написать сообщение')
+											//- button.public-chat-form-btn(type='submit')
+											//- 	+icon("uil_smile")
+											button.public-chat-form-btn(type='submit')
+												+icon("feather_send")
+	
+	// end sCabinet
