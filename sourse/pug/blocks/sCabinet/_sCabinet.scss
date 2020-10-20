@@ -18,7 +18,31 @@
 
 		&__aside{ 
 			margin-bottom: rem(30);
-			
+			ul{
+				list-style-type: none;
+				@include media-breakpoint-up(xl) {
+					display: block;
+					@include roww(30px);
+				}
+				@include roww(20px);
+						display: flex;
+				 
+				li{
+					a:not(.active){
+
+						color: #fff !important;
+					}
+						@include media-breakpoint-up(sm) {
+
+							font-size: rem(24);
+							margin-bottom: rem(34);
+						}
+						font-size: rem(18);
+						margin-bottom: rem(14);
+					line-height: (34 / 24);
+					font-weight: bold;
+				}
+			}
 			picture{ 
 				margin-bottom: rem(40);
 				position: relative;

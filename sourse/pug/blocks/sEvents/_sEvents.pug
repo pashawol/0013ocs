@@ -3,28 +3,55 @@ mixin sEvents()
 	+b.sEvents.section#sEvents&attributes(attributes)
 		.container.container-large
 			.row.row--lg
-				.col-xl-3.col-lg-4.col-sm-auto
+				.col-xl-3
 					+b.asideCabmenu
 						ul
-							li: a.active(href="#") Профиль
-							li: a(href="#") Мое расписание
+							li: a(href="#") Профиль
+							li: a.active(href="#") Мое расписание
 							li: a(href="#") Чаты
 				.col
-					
+					mixin item(d,t,l)
 						+e.item
-							+e.star.active
-								+icon('star-active')
 							.row
-								.col
-									+e.head 
-										.row 
-											+e.time.col-auto.pb-1 12:40
-											.h4.fw-500 Круглый стол с Ольгой Сигаль : Digital Академия, управляющий партнер «Возможен ли цифровой прорыв для IT-гигантов?»
+								+e.time.strong.text-primary.col-lg-auto.col.order-first!= d
+								.col-auto.order-lg-last
+									+e.star.active
+										+icon('star-active')
+								.col-md-auto.order-md-first.order-lg-0
+									+e.label-elem!= l
+								.col-lg.order-lg-first
+									+e.text-block
+										+e.title.strong!= t
+										+e.text
+											+e.speaker.text-primary.strong Ольга Сигаль
+											+e.repres OCS Distribution
+								//- .col-auto.order-lg-last
+								//- 	+e.star.active
+								//- 		+icon('star-active')
+								//- .col-md-auto.order-md-first.order-lg-0
+								//- 	+e.label-elem!= l
 
-											.h6 Ольга Сигаль   
-											p OCS Distribution 	fd
-									//- if z
-								//- .col-xl-3.col-sm-auto
+
+					+item(`12:40`, `Круглый стол с Ольгой Сигаль : Digital Академия, управляющий партнер «Возможен ли цифровой прорыв для IT-гигантов?»`, `Круглый стол`)
+					+item(`13:50`, `Круглый стол с Анной Черняковой, вице-президентом OCS Distribution`, `Круглый стол`)
+
+					+item(`13:50`, `Название сессии от вендора в одну или несколько строк`, `Сессия`)
+
+
+
+					
+						//- +e.item
+						//- 	+e.star.active
+						//- 		+icon('star-active')
+						//- 	.row
+						//- 		+e.time.col-auto 12:40
+						//- 		.col-md.h4.fw-500 Круглый стол с Ольгой Сигаль : Digital Академия, управляющий партнер «Возможен ли цифровой прорыв для IT-гигантов?»
+						//- 		.col Круглый стол
+
+						//- 		.h6 Ольга Сигаль   
+						//- 		p OCS Distribution 	fd
+						//- if z
+						//- .col-xl-3.col-sm-auto
 
 
 
