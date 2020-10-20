@@ -24,7 +24,7 @@
 					display: block;
 					@include roww(30px);
 				}
-				@include roww(20px);
+				@include roww(10px);
 						display: flex;
 				 
 				li{
@@ -37,7 +37,7 @@
 							font-size: rem(24);
 							margin-bottom: rem(34);
 						}
-						font-size: rem(18);
+						// font-size: rem(18);
 						margin-bottom: rem(14);
 					line-height: (34 / 24);
 					font-weight: bold;
@@ -200,6 +200,9 @@
 				display: block;
 			}
 		}
+		.search-block{
+			margin-top: 0;
+		}
 		@include media-breakpoint-up(xl) {}
 
 		@include media-breakpoint-up(lg) {}
@@ -304,16 +307,18 @@
 					top: 0;
 					height: 100%;
 					max-width: none;
-					background-color: #ffffff;
+					
 				}
 			}
 
 			border-right: 1px solid rgba($color: #8F9BB3, $alpha: .23);
 			position: relative;
 
-			.public-chat {
-				color: $dark;
-				background: #fff;
+			.public-chat { 
+				color: #ffffff; 
+				background: #2A2D31; 
+
+				box-shadow: 0px 53.6471px 67px -11.6235px rgba(0, 0, 0, 0.21);
 				width: rem(300);
 				text-align: left;
 			}
@@ -396,9 +401,9 @@
 
 		.chat-message-text-wrapper--left {
 			border-radius: rem(10) rem(10) rem(10) 0px;
-			background-color: #401E1F;
+			background-color:#C5351C ;
 			&::after {
-				@include triangle(12px 8px, #401E1F, up-left);
+				@include triangle(12px 8px,#C5351C , up-left);
 				left: 0;
 			}
 
@@ -468,8 +473,8 @@
 			position: relative;
 			margin-right: 1rem;
 			input {
-				background: #E1E4E9;
-				border: 1px solid #E1E4E9;
+				background:#030A0F;
+				border: 1px solid #030A0F;
 				border-radius: 4px;
 				padding: rem(10) rem(17);
 				@include media-breakpoint-up(md) {
@@ -503,8 +508,8 @@
 		}
 
   .public-chat{
-			color: #ffffff;
-			background: #161C28;
+			// color: #ffffff; 
+			// background:#151618;
 		}
 		.sCabinet__col-users .public-chat {
 			

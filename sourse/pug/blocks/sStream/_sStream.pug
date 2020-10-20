@@ -1,0 +1,196 @@
+mixin sStream()
+	// start sStream
+	+b.sStream.section.pt-0#sStream&attributes(attributes)  
+		+e.head
+			+e.btn-tab.active(type="button") ЗАЛ «ИННОВАЦИИ»
+			+e.btn-tab(type="button") ЗАЛ «СТРАТЕГИИ»
+		+e.video-wrap
+			script(src='https://broadcast.comdi.com/player/js/embed.min.js', data-comdi-event='r5ftb9xd', data-login='anonymous', data-registration='{"email":"anonymous@startupvillage.ru"}', lang='ru', async='')
+	 
+		+e.data.col.pb-2 14 сентября    09:45 – 10:45
+		h4: strong In Railway We Trust.
+			
+		.h6.fw-400 Глобальное сотрудничество в условиях неопределенности
+
+	// end sStream
+mixin sStream9()
+	// start sStream
+	+b.sStream.section.pt-0#sStream&attributes(attributes)
+		.container 
+			+e.wrap-page
+				.row
+					.col-lg
+						+e.video-wrap--page
+								script(src='https://broadcast.comdi.com/player/js/embed.min.js', data-comdi-event='r5ftb9xd', data-login='anonymous', data-registration='{"email":"anonymous@startupvillage.ru"}', lang='ru', async='')
+						p: strong Основанный в&nbsp;1863&nbsp;году, Politecnico di&nbsp;Milano предлагает программы образования в&nbsp;области инженерии, архитектуры и&nbsp;дизайна. В&nbsp;университете работают более 1200&nbsp;преподавателей, учится 40000&nbsp;студентов, распределённых по&nbsp;7&nbsp;кампусам: Милан (Леонардо и&nbsp;Бовиза), Комо, Лекко, Кремона, Мантова и&nbsp;Пьяченца.
+						p Университет сосредоточен на&nbsp;качестве преподавания, инновационных подходах в&nbsp;исследованиях, разработке технологических прогрессов. Исследования всегда связаны с&nbsp;обучением и&nbsp;представляют собой приоритет, который позволяет университету достигать высоких результатов на&nbsp;международном уровне и&nbsp;реализовывать их&nbsp;в&nbsp;деловом мире. Это обязательство развивается в&nbsp;трех основных направлениях:
+						ul
+							li: strong повышение значения исследований в&nbsp;целях обеспечения прочного международного взаимодействия;
+							li: strong развитие партнерства с&nbsp;бизнесом для того, чтобы реализовывать научные исследования;
+							li: strong изменение условий развития науки и&nbsp;технологий для молодых специалистов с&nbsp;целью их&nbsp;профессионального роста.
+						p Миланский политехнический университет признается первым итальянским университетом среди топ-десяти европейских технических университетов и&nbsp;среди топ-20&nbsp;в мире. Университет предлагает программы двойного диплома, программы обмена, 40&nbsp;программ магистратуры и&nbsp;19&nbsp;программ учёной степени полностью на&nbsp;английском языке. Студентам открыт доступ к&nbsp;200 современным и&nbsp;оборудованным лабораториям для научных исследований в&nbsp;области механики, информатики, инженерии, строительства, архитектуры, дизайна.
+					+e.col--page.col-lg-auto
+						+e.block--logo-wrap
+							
+							img(src="img/@2x/Exhibition-1.png" loading="lazy", alt="")
+						+e.block--group
+							+e.group-btn.btn-primary-light(href="#") 
+								+e.DIV.icon-wrap
+									img(src="img/svg/btn-i-1.svg" loading="lazy", alt="")
+								| Начать чат с университетом
+							+e.group-btn.btn-primary-light(href="#") 
+								+e.DIV.icon-wrap
+									img(src="img/svg/btn-i-2.svg" loading="lazy", alt="")
+								| Посетить вебинар
+							+e.group-btn.btn-primary-light.link-modal(href="#modal-signup") 
+								+e.DIV.icon-wrap
+									img(src="img/svg/btn-i-3.svg" loading="lazy", alt="")
+								| Записаться на консультацию
+						+e.block--contact
+							+e.block-head
+								+icon("bx_bxs-phone")
+								| Контакты
+							+e.block-body
+								p Италия, Эмилия-Романья, Болонья, Сан-Джорджо-ди-Пиано, Кастель-Маджоре
+								p.strong: a.text-body(href="tel:+49856689988") +4 985 668 99 88
+								p: a(href="mailto:info@infosobaka.com") info@infosobaka.com
+								p: a(href="mailto:boloncainstitute.com") boloncainstitute.com
+						+e.block--contact
+							+e.block-head
+								+icon("ant-design_file-filled")
+								| Файлы
+							+e.block-body
+								- for (var x = 0; x < 3; x++)
+									+e.file(href="#")
+										.row
+											.col
+												| Buklet 2020 Eng
+												.small.text-secondary pdf 2.3 mb
+											.col-auto
+												+icon("eva_download-outline")
+		.section
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					- for (var x = 1; x < 8; x++)
+						+e.slide.swiper-slide
+							+e.img-wrap.bg-wrap(href=`img/@2x/slide-${x}.png` data-fancybox="gal")
+								img.img-bg(src=`img/@2x/slide-${x}.png`, alt="")
+	// end sStream
+mixin sStream11()
+	// start sStream
+	+b.sStream.section.pt-0#sStream&attributes(attributes)
+		.container 
+			+e.wrap-page
+				.row
+					.col-lg
+						+pic("RUS_2331.jpg")(class="mb-3")
+						p Studiare in Italia – это организатор крупнейшей в мире выставки итальянского образования «Учись в Италии! Studiare in Italia”, которая проводится ежегодно с 2012 года в России, Казахстане, Азербайджане.
+
+						p Studiare in Italia - это также команда специалистов по зачислению студентов в учебные заведения Италии. Уже более десяти лет, в тесном сотрудничестве с итальянским посольством, мы успешно консультируем и зачисляем студентов по всем направлениям итальянского образования.
+						p Обращайтесь к нам за подробной информацией о государственных и частных вузах, школах и академиях!
+
+						ul
+							li: strong   являемся официальным представительством ведущих учебных заведений Италии
+							li: strong   помогаем с выбором программы обучения и процедурой зачисления
+							li: strong   сопровождаем на этапе апостилирования и легализации образовательных документов
+							li: strong   помогаем с получением учебной визы в Италию
+							li: strong   консультируем по получению учебного вида на жительство
+							li: strong   помогаем со сбором документов на стипендию/сокращение стоимости
+							li: strong   сопровождаем на этапе подбора места проживания в Италии
+
+						p Мы знаем все тонкости получения образования в Италии, и сделаем ваше поступление и переезд легким и комфортным!
+						p Мы будем рады встретиться с вами в одном из наших офисов или ответить на ваши вопросы по телефону, электронной почте,  WhatsApp или в социальных сетях
+
+					+e.col--page.col-lg-auto
+						//- +e.block--logo-wrap
+							
+						//- 	img(src="img/@2x/Exhibition-1.png" loading="lazy", alt="")
+						+e.block--group
+							+e.group-btn.btn-primary-light(href="#") 
+								+e.DIV.icon-wrap
+									img(src="img/svg/btn-i-1.svg" loading="lazy", alt="")
+								| Начать чат
+							//- +e.group-btn.btn-primary-light(href="#") 
+							//- 	+e.DIV.icon-wrap
+							//- 		img(src="img/svg/btn-i-2.svg" loading="lazy", alt="")
+							//- 	| Посетить вебинар
+							+e.group-btn.btn-primary-light.link-modal(href="#modal-signup") 
+								+e.DIV.icon-wrap
+									img(src="img/svg/btn-i-3.svg" loading="lazy", alt="")
+								| Записаться на консультацию
+						+e.block--contact
+							+e.block-head
+								+icon("bx_bxs-phone")
+								| Контакты
+							+e.block-body
+								p Москва и&nbsp;регионы России
+									br
+									| БЦ&nbsp;&laquo;Сибирский Альянс&raquo;
+									br
+									| ул. Летниковская, д.16, офис 503
+								p.strong: a.text-body(href="tel:+7(495)1519905") +7 (495) 151 99 05
+								p.strong: a.text-body(href="https://api.whatsapp.com/send?phone=+79778319796") WhatsApp +7 977 831 97 96
+								p: a(href="mailto:info@study-italy.ru") info@study-italy.ru 
+								hr
+								
+								p Санкт-Петербург:
+
+								p.strong: a.text-body(href="tel:+7(812)6124437") +7 (812) 612 44 37
+
+								p.strong: a.text-body(href="https://api.whatsapp.com/send?phone=+79500247042") WhatsApp +7 (950) 024 70 42
+								p: a(href="mailto:spb@study-italy.ru") spb@study-italy.ru 
+								hr
+								p БЦ «Алтын Заман»
+									br
+									| Казахстан, Алматы, ул. Сейфуллина, 498, офис 306 А
+
+
+								p.strong: a.text-body(href="tel:+7(727)2245201") +7 (727) 224 52 01
+
+								p.strong: a.text-body(href="https://api.whatsapp.com/send?phone=+7(777)7630771") WhatsApp +7 (777) 763 07 71
+								p: a(href="mailto:kz@study-italy.ru") kz@study-italy.ru 
+								hr
+
+						+e.block--contact
+							+e.block-head
+								+icon("ant-design_file-filled")
+								| Файлы
+							+e.block-body
+								- for (var x = 0; x < 3; x++)
+									+e.file(href="#")
+										.row
+											.col
+												| Buklet 2020 Eng
+												.small.text-secondary pdf 2.3 mb
+											.col-auto
+												+icon("eva_download-outline")
+		.section
+			+e.slider--js.swiper-container
+				.swiper-wrapper
+					mixin slide(x)
+						+e.slide.swiper-slide
+							+e.img-wrap.bg-wrap(href=`img/@2x/${x}.jpg` data-fancybox="gal")
+								img.img-bg(src=`img/@1x/${x}.jpg`, alt="")
+					+slide('img-1105')
+					+slide('img-1165')
+					+slide('img-1191')
+					+slide('img-1231')
+					+slide('img-1311')
+					+slide('img-1395')
+					+slide('img-1416')
+					+slide('img-1569')
+					+slide('RUS_2331')
+					+slide('RUS_2489')
+					+slide('RUS_2525')
+					+slide('RUS_2540')
+					+slide('RUS_2559')
+					+slide('RUS_2572')
+					+slide('RUS_2614')
+					+slide('RUS_2636')
+					+slide('RUS_2664')
+					+slide('RUS_2698')
+					+slide('RUS_2824')
+					+slide('RUS_2698')
+					+slide('RUS_2824')
+					+slide('RUS_3013')
+	// end sStream

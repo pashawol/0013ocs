@@ -7,7 +7,7 @@ include ../blocks/sContact/_sContact.pug
 include ../blocks/sCabinet/_sCabinet.pug
 
 block variables
-	- let  mainPage= 'cabinet-page'
+	- let  mainPage= null
 block title
 	- let  title= 'Личный кабинет'
 	title= title
@@ -15,9 +15,7 @@ block pagecontent
 	//- +mob-mnu()
 	+top-nav('l')
 	+headerBlockPage() 
-	+page-title(title)
-
-	.container 
+	+page-title(title) 
 	+sCabinet()
 	//- +sContact()
 	+footer()
