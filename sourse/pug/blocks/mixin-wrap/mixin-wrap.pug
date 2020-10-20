@@ -39,7 +39,7 @@ mixin reg(b="Зарегистрироваться")
 					.col-lg-6(class="wow  animate__fadeInUp "   )
 						+input("Ваш e-mail",'email','E-mail *')(required)
 					.col-lg-6(class="wow  animate__fadeInUp "   )
-						+input("+7 ___ ___ __ __",'tel','Телефон') 
+						+input("+7 ___ ___ __ __",'tel','Телефон*')(required)
 					.col-lg-6(class="wow  animate__fadeInUp "   )
 						+input("Город проживания",'text','Город*')(required)
 					.col-12.pt-3(class="wow  animate__fadeInUp "   )
@@ -58,15 +58,15 @@ mixin reg(b="Зарегистрироваться")
 					.col-lg-6.tab-radio-content.vendor-block(class="wow  animate__fadeInUp "   )
 						
 							// Вендоры 
-							+input("",'select','Компания-партнер')
+							+input("",'select','Компания*')
 					
 				
 					.col-lg-6.tab-radio-content.costumer-block(class="wow  animate__fadeInUp "   )
-							+input("Компания-партнер",'text','Компания-партнер')  
+							+input("Компания",'text','Компания*')  
 					.col-lg-6.tab-radio-content.ocs-block(class="wow  animate__fadeInUp "   )
-							+input("Компания-партнер",'text','Компания-партнер')(value="OCS" disabled )
+							+input("Компания",'text','Компания*')(value="OCS" disabled )
 					.col-lg-6.tab-radio-content.media-block(class="wow  animate__fadeInUp "   )
-							+input("Компания-партнер",'text','Компания-партнер')  
+							+input("Компания",'text','Компания*')  
 				 
 					
 
@@ -154,7 +154,7 @@ mixin reg(b="Зарегистрироваться")
 						.row
 							.col-lg-6
 								
-								+input("название компании без ООО и",'text','Компания','partners')( list="partners-company")
+								+input("название компании без ООО и",'text','Компания*','partners')( list="partners-company")
 									<datalist id="partners-company">
 										<option value="San Francisco">
 										<option value="New York">
