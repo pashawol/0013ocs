@@ -7,10 +7,14 @@
 	background: #000;
 	&__text{
 		font-weight: bold;
-	 @include rfs(40px);
+	 @include rfs(20px);
 	 margin-bottom: 1em;
 	 &--mx{
 		 max-width: em(180);
+		}
+		&--md{
+			@include rfs(24px);
+
 	 }
 	 line-height: 140%;
 	}
