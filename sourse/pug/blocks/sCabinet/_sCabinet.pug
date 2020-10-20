@@ -4,38 +4,39 @@ mixin sCabinet()
 		.container.container-large
 			.row.row--lg
 				.col-xl-3.col-lg-4.col-sm-auto
-
 					+e.aside
 						ul
 							li: a.active(href="#") Профиль
 							li: a(href="#") Мое расписание
 							li: a(href="#") Чаты
-						
-						 
 				.col
 					+e.main
 						.row
 							.col-auto
-								+pic("teamPers-4",'bg',0)(class='avatar ')
-									div
-										.h4.strong Виктор Моршанский
-										.small.strong.text-light Victor Morshanskiy
-										br
-										+e.city Россия, Москва
-										.small.strong.text-light Russia, Moscow
-										br
-										+e.city Участник
-										.small
-											a(href="mailto:sample@sample.com").text-white.tdu sample@sample.com
-							.col
-								mixin line(t, d, te)  
-									+e.input-wrap
-										+b.input-title= t
-										+e.input
-											+e.result= d 
-											+e.result--lang= te
-								+line("Компания ",'Российские железные дороги','Russian Railway')
-								+line("Должность",'Инженер','Engineer') 
+								+pic("cabinet-1",'bg',0)(class='avatar')
+							+e.col.col
+								+e.text-block
+									.h3 Викторовская Александра
+									+e.h5.strong.text-primary Представитель вендора
+									+e.company.strong Avaya
+									p Операционный директор
+									+e.city г. Москва
+									+e.link-tel(href="tel:+79859998888").text-white.strong
+										+icon(`phone`)
+										| +7 985 999 88 88
+									+e.mail(href="mailto:sample@sample.com").text-white.strong
+										+icon(`mail`)
+										| sample@sample.com
+
+								//- mixin line(t, d, te)  
+								//- 	+e.input-wrap
+								//- 		+b.input-title= t
+								//- 		+e.input
+								//- 			+e.result= d 
+								//- 			+e.result--lang= te
+								//- +line("Компания ",'Российские железные дороги','Russian Railway')
+								//- +line("Должность",'Инженер','Engineer') 
+
 	// end sCabinet
 	
 mixin sCabinet3()

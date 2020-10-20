@@ -1,0 +1,91 @@
+mixin sMembers()
+	// start sMembers
+	+b.sMembers&attributes(attributes)
+		.container
+			+e.filter
+				.row
+					+e.col.col-xl-auto
+						+b.search-block
+							+input('Поиск по участникам')
+							+e.btn(type="submit")
+								+icon('search')
+					+e.col-toggle.col-md.d-lg-block
+						+input("Не выбрано",'select','Должность')
+					+e.col-toggle.col-md.d-lg-block
+						+input("Не выбрано",'select','Компания')
+					+e.col-toggle.col-md.d-lg-block
+						+input("Не выбрано",'select','Город') 
+				+e.toggle.d-lg-none
+					span.show Больше фильтров
+					span.hide Скрыть
+			.row
+				mixin item(i,t)
+					.col-lg-3.col-sm-6
+						+e.item
+							+e.img-wrap.bg-wrap
+								+pic(`teamPers-${i}.jpg`,'bg',0)(class="picture-bg")
+								+e.DIV.img-inner
+									+e.DIV.btn(href="#").text-white
+										+e.DIV.icon-wrap
+											+icon("comment")
+										+e.DIV.btn-text.text-white Написать <br> сообщение 
+									+e.DIV.btn-text
+										a(href="#").text-white Открыть биографию
+							+e.DIV.title
+								a(href="#")= t
+							+e.DIV.text Управляющий партнер
+								br
+								| ООО “Моршанский
+								br
+								| банк”
+					// /.col-xl-3.col-lg-4.col-sm-6
+				+item('1','Виктория Моршанская')
+				+item('2','Виктор Моршанский')
+				+item('3','Виктория Моршанская')
+				+item('4','Виктор Моршанский')
+				+item('5','Виктор Моршанский')
+				+item('6','Виктор Моршанский')
+				+item('7','Виктор Моршанский')
+				+item('8','Виктор Моршанский')
+				+item('9','Виктория Моршанская')
+				+item('10','Виктория Моршанская')
+				+item('11','Виктория Моршанская')
+				+item('12','Виктория Моршанская')
+			+pugin()
+	// end sMembers
+
+	
+mixin sMembers10()
+	// start sMembers
+	+b.sMembers&attributes(attributes)
+		.container
+		
+			.row
+				mixin item(i,t, d, em, tel, tel0) 
+					.col-lg-3.col-md-4.col-sm-6
+						+e.item
+							+e.img-wrap--contact.bg-wrap
+								+pic(`${i}.jpg`,'bg',0)(class="picture-bg") 
+							+e.DIV.title
+								a(href="#")= t
+							+e.DIV.text= d
+							+e.DIV.text
+								a(href=`mailto:${em}`)= em
+							if tel
+								+e.DIV.text
+									block
+									a.text-body(href=`tel:${tel0}`)= tel
+							+e.DIV.text
+								a(href="№")  Написать  сообщение 
+
+					// /.col-xl-3.col-lg-4.col-sm-6
+				+item('Manakova','Екатерина Манакова', 'Общие вопросы семинара','manakova@skbkontur.ru','+7 912 048-24-64','+7912048-24-64')
+					div.mb-1 WhatsApp|Telegram 
+				+item('Matveenko','Алексей Матвеенко  ','руководитель программного комитета','matveenko@skbkontur.ru')
+				+item('Larionova','Наталья Ларионова ','Контент-менеджер','larena@skbkontur.ru')
+				+item('Sof','Евгения Софьина','куратор тем по онлайн-продажам','sofina@skbkontur.ru')
+				+item('Trapeznikova','Марина Трапезникова','куратор тем по непродуктовому блоку (консалтинг, бизнес-процессы)','trapeznikova@skbkontur.ru')
+				+item('Petrov','Сергей Петров','куратор тем по продуктовому блоку','sapetrov@skbkontur.ru')
+			//- +pugin()
+	// end sMembers
+
