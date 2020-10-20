@@ -17,16 +17,7 @@
 		}
 		&__aside{ 
 			margin-bottom: rem(30);
-			ul{
-				list-style-type: none;
-				li{
-					color: #fff !important;
-					margin-bottom: rem(34);
-					font-size: rem(24);
-					line-height: (34 / 24);
-					font-weight: bold;
-				}
-			}
+			
 			picture{ 
 				margin-bottom: rem(40);
 				position: relative;
@@ -493,3 +484,17 @@
 		.sCabinet__col-users .public-chat {
 			
 		}
+
+.asideCabmenu{
+	margin-bottom: rem(30);
+	ul{
+		list-style-type: none;
+		li{
+			color: #fff !important;
+			margin-bottom: rem(34);
+			font-size: rem(24);
+			line-height: (34 / 24);
+			font-weight: bold;
+		}
+	}
+}
