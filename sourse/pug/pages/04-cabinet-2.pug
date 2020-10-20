@@ -15,14 +15,14 @@ block title
 block pagecontent
 	//- +mob-mnu()
 	+top-nav('l')
-	//- +page-title(title)
+	+headerBlockPage()
 	+page-title(title)
 
 	.container
-		+b.page-title--lines 
+		+b.asideCabmenu
 			ul
-				li: a(href="#") Профиль
-				li: a.active(href="#") Мое расписание
+				li: a.active(href="#") Профиль
+				li: a(href="#") Мое расписание
 				li: a(href="#") Чаты
 	//- +sCabinet
 	+sEvents()
