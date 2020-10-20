@@ -188,9 +188,10 @@ mixin reg(b="Зарегистрироваться")
 							//- +e.file Выбрать фото
 					.col-lg-6.my-4(class="wow  animate__fadeInUp "   )
 						button.btn.btn-primary.btn-arrows.w-100(type="submit")= b
-					//- .col-lg-12
-					//- 	+in-c()
-					//- 		+e.SPAN.text Согласие на получение сообщений от других участников
+
+					.col-lg-12
+						+in-c()
+							+e.SPAN.text Согласие на получение сообщений от других участников
 
 					//- 	br
 					//- 	+in-c()
