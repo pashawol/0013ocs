@@ -23,26 +23,26 @@ mixin ie11()
 
 
 mixin page-title(title)
-	+b.page-title(class="wow  animate__fadeInUp "   )
+	+b.page-title
 		.container.container-large
 			h1= title
 mixin reg(b="Зарегистрироваться")
-	+b.form-wrap(class="form-wrap--border   "   )
+	+b.form-wrap(class="form-wrap--border  wow  animate__fadeInUp "   )
 			form(action='/file-upload'  enctype="multipart/form-data")
 				//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
 				.row
 					
-					.col-lg-6(class="wow  animate__fadeInUp "   )
+					.col-lg-6
 						+input("Ваша имя",'text','Имя *')(required)
-					.col-lg-6(class="wow  animate__fadeInUp "   )
+					.col-lg-6
 						+input("Ваша фамилия",'text','Фамилия *')(required)
-					.col-lg-6(class="wow  animate__fadeInUp "   )
+					.col-lg-6
 						+input("Ваш e-mail",'email','E-mail *')(required)
-					.col-lg-6(class="wow  animate__fadeInUp "   )
+					.col-lg-6
 						+input("+7 ___ ___ __ __",'tel','Телефон*')(required)
-					.col-lg-6(class="wow  animate__fadeInUp "   )
+					.col-lg-6
 						+input("Город проживания",'text','Город*')(required)
-					.col-12.pt-3(class="wow  animate__fadeInUp "   )
+					.col-12.pt-3
 						.row
 							.col-auto.pb-2
 								+in-c('radio', 'Вендор', name='type-of')(data-tab-radio="vendor-block")
@@ -55,22 +55,22 @@ mixin reg(b="Зарегистрироваться")
 								+in-c('radio', 'OCS ', name='type-of')(data-tab-radio="ocs-block")
 							.col-auto.pb-2
 								+in-c('radio', 'СМИ', name='type-of')(data-tab-radio="media-block")
-					.col-lg-6.tab-radio-content.vendor-block(class="wow  animate__fadeInUp "   )
+					.col-lg-6.tab-radio-content.vendor-block
 						
 							// Вендоры 
 							+input("",'select','Компания*')
 					
 				
-					.col-lg-6.tab-radio-content.costumer-block(class="wow  animate__fadeInUp "   )
+					.col-lg-6.tab-radio-content.costumer-block
 							+input("Компания",'text','Компания*')  
-					.col-lg-6.tab-radio-content.ocs-block(class="wow  animate__fadeInUp "   )
+					.col-lg-6.tab-radio-content.ocs-block
 							+input("Компания",'text','Компания*')(value="OCS" disabled )
-					.col-lg-6.tab-radio-content.media-block(class="wow  animate__fadeInUp "   )
+					.col-lg-6.tab-radio-content.media-block
 							+input("Компания",'text','Компания*')  
 				 
 					
 
-					.col-lg-12.pb-3.tab-radio-content.partner-block.dropdown-wrap(class="wow  animate__fadeInUp "   )
+					.col-lg-12.pb-3.tab-radio-content.partner-block.dropdown-wrap
 						// партнеры
 						+b.input-title.dropdown-toggle-js.h5.mb-5 Группы оборудования, которыми вы занимаетесь
 							span.plus
@@ -165,17 +165,17 @@ mixin reg(b="Зарегистрироваться")
 							.col-lg-6 
 								
 								+input("Менеджер в OCS",'select','Менеджер в OCS')
-					.col-lg-6(class="wow  animate__fadeInUp "   ) 
+					.col-lg-6 
 						+input("Должность*",'text','Должность*')(required)
 					.w-100
-					.col-lg-6(class="wow  animate__fadeInUp "   ) 
+					.col-lg-6 
 						+input("Пароль",'password','Пароль*')(required)
-					.col-lg-6(class="wow  animate__fadeInUp "   ) 
+					.col-lg-6 
 						+input("Повторите пароль",'password','Повторите пароль*')(required)
 					.col-lg-12.mb-3
 						+in-c()
 							+e.SPAN.text Я согласен на #[a(href="#") обработку персональных данных ]
-					.col-lg-12(class="wow  animate__fadeInUp "   )
+					.col-lg-12
 						label.dropzone-wrapper.d-block
 							+b.dropzone(action='/file-upload')
 								#dropzone
@@ -189,7 +189,7 @@ mixin reg(b="Зарегистрироваться")
 									.fallback
 										input(name='file', type='file', multiple='')
 							//- +e.file Выбрать фото
-					.col-lg-6.my-4(class="wow  animate__fadeInUp "   )
+					.col-lg-6.my-4
 						button.btn.btn-primary.btn-arrows.w-100(type="submit")= b
 
 
@@ -201,7 +201,7 @@ mixin login(b="Зарегистрироваться")
 		.container 
 			form(action='/file-upload'  enctype="multipart/form-data")
 				//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
-				.col-lg-6.g-0(class="wow  animate__fadeInUp "   )
+				.col-lg-6.g-0
 					+input("",'email',' E-mail') 
 					+input("",'password','Пароль') 
 						//- .col-lg-6.mb-4
@@ -218,6 +218,6 @@ mixin password(b="Зарегистрироваться")
 		.container 
 			form(action='/file-upload'  enctype="multipart/form-data")
 				//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
-				.col-lg-6.g-0(class="wow  animate__fadeInUp "   )
+				.col-lg-6.g-0
 					+input("",'email','E-mail') 
 					+e.btn.w-100.ttu(type="submit") Восстановить
