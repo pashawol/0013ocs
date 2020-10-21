@@ -172,9 +172,9 @@ mixin reg(b="Зарегистрироваться")
 						+input("Пароль",'password','Пароль*')(required)
 					.col-lg-6(class="wow  animate__fadeInUp "   ) 
 						+input("Повторите пароль",'password','Повторите пароль*')(required)
-					.col-lg-12
+					.col-lg-12.mb-3
 						+in-c()
-							+e.SPAN.text Я Согласен на обработку #[a(href="#") персональных данных ]
+							+e.SPAN.text Я согласен на #[a(href="#") обработку персональных данных ]
 					.col-lg-12(class="wow  animate__fadeInUp "   )
 						label.dropzone-wrapper.d-block
 							+b.dropzone(action='/file-upload')
