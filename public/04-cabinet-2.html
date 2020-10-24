@@ -44,7 +44,7 @@
 									</li>
 									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Участники</a>
 									</li>
-									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Партнеры</a>
+									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">Вендоры</a>
 									</li>
 									<li class="navMenu__item" itemprop="item"><a class="navMenu__link" href="#" itemprop="url">LIVE</a>
 									</li>
@@ -185,8 +185,39 @@
 													<div class="sEvents__title strong">Название сессии от вендора в одну или несколько строк
 													</div>
 													<div class="sEvents__text">
-														<div class="row">
-															<div class="col-auto"><strong class="text-primary">Ольга Сигаль </strong> <span>OCS Distribution</span></div> 
+														<div class="row"> 
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="sEvents__item">
+										<div class="row">
+											<div class="sEvents__time strong text-primary col-lg-auto col order-first">13:50
+											</div>
+											<div class="col-lg order-lg-first">
+												<div class="sEvents__text-block">
+													<div class="sEvents__title strong">Название сессии от вендора в одну или несколько строк
+													</div>
+													<div class="sEvents__text">
+														<div class="row"> 
+															<div class="col-12">
+																<div class="sEvents__copy-block">
+																	<div class="row">
+																		<div class="col">
+																			<div class="sEvents__link-text">https://docs.google.com/document/d/12uUxcxKaEXUW9f7X2PC-Gn_aNHgxL_g5ys_GDyPQ5oE/edit#
+																			</div>
+																		</div>
+																		<div class="col-auto">
+																			<button class="btn btn-sm btn-primary">Копировать</button>
+																		</div>
+																		<div class="col-auto">
+																			<button class="btn btn-sm btn-primary">Присоединится</button>
+																		</div>
+																	</div>
+																</div>
+															</div>
 														</div>
 													</div>
 												</div>
@@ -209,10 +240,10 @@
 								</div>
 								<div class="footer__text"><a href="mailto:FORUM@OCS.RU">FORUM@OCS.RU </a>
 								</div>
+								<div class="footer__text"><a href="tel:+7(916)0796144">+7 (916) 079 61 44</a> Маркетинг OCS
+								</div>
 							</div>
 							<div class="col-lg-auto">
-								<div class="footer__text footer__text--md">Мы в соц. сетях
-								</div>
 								<div class="soc"><a class="soc__item" href="#" target="_blank">
 									<svg class="icon icon-fb ">
 										<use xlink:href="img/svg/sprite.svg#fb"></use>
@@ -231,9 +262,8 @@
 				<div class="footer__footer">
 					<div class="container">
 						<div class="row">
-							<div class="col-xl-3 col-auto">© 2020. Все права защищены</div>
-							<div class="col-auto"><a href="#">2018 </a></div>
-							<div class="col"><a href="#">2019 </a></div>
+							<div class="col-xl-3 col-auto">© 2020. Все права защищены </div>
+							<div class="col"><a href="#">Как это было 2018 2019</a></div>
 							<div class="col-auto"><a class="text-white" href="#">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a></div>
 						</div>
 					</div>
@@ -241,7 +271,7 @@
 			</footer>
 		</div>
 		<!--  start modals-->
-		<div class="modal-win" id="modal-call" style="display: none">
+		<div class="modal-win" id="modal-ask-question" style="display: none">
 			<div class="form-wrap">
 				<form>
 					<input type="hidden" name="example-input-field"/>
@@ -250,24 +280,451 @@
 					<input class="utm_term" type="hidden" name="utm_term"/>
 					<input class="utm_medium" type="hidden" name="utm_medium"/>
 					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
-					<div class="text-center">
-						<div class="form-wrap__title form-data h3 ttu">Обратный звонок
-						</div>
-						<p class="after-headline">Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут</p>
+					<div class="form-wrap__title form-data h3 ttu">Задать вопрос
 					</div>
-					<div class="form-wrap__input-wrap form-group"><input class="form-wrap__input form-control" type="text" placeholder="Ваше Имя" name="text-ocs" required="required"/>  
+					<div class="form-wrap__input-wrap form-group">
+						<label>
+							<select class="form-wrap__input form-control" name="select-ocs">
+								<option class="d-none"></option>
+								<option value=" placeholder 1">placeholder dfssfsd dfsdfd sads 1</option>
+								<option value=" placeholder 2">placeholder dfssfsd dfsdfd sads 2</option>
+								<option value=" placeholder 3">placeholder dfssfsd dfsdfd sads 3</option>
+								<option value=" placeholder 4">placeholder dfssfsd dfsdfd sads 4</option>
+							</select><span class="input-title">Выберите спикера</span>
+						</label>
 					</div>
 					<!-- +e.input-wrap-->
-					<button class="form-wrap__btn btn" type="submit"> 
-					</button>
-					<div class="form-wrap__polite">
-						<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Согласен на обработку <a class="tdu" href="#">персональных данных</a></span>
+					<div class="form-wrap__input-wrap form-group">
+						<label><textarea class="form-wrap__input form-control" placeholder="Вопрос для спикера" name="textarea-ocs"></textarea><span class="input-title">Вопрос для спикера</span>
 						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="row">
+						<div class="col-sm-auto order-sm-last mb-2">
+							<button class="form-wrap__btn btn btn-primary btn-block" type="submit"> Отправить
+							</button>
+						</div>
+						<div class="col small mb-2">Вы можете задать любой вопрос спикеру, но прежде чем они будут им доставленны они пройдут предварительную премодерацию.</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- #modal-call -->
+		<div class="modal-win modal-win--lg" id="modal-edit" style="display: none">
+			<div class="form-wrap form-wrap form-wrap--border wow animate__fadeInUp">
+				<form action="/file-upload" enctype="multipart/form-data">
+					<div class="row">
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" type="text" placeholder="Ваша имя" name="text-ocs" required="required"/><span class="input-title">Имя *</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" type="text" placeholder="Ваша фамилия" name="text-ocs" required="required"/><span class="input-title">Фамилия *</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" type="email" placeholder="Ваш e-mail" name="email-ocs" required="required"/><span class="input-title">E-mail *</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" type="tel" placeholder="+7 ___ ___ __ __" name="tel-ocs" required="required"/><span class="input-title">Телефон*</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6">
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" type="text" placeholder="Город проживания" name="text-ocs" required="required"/><span class="input-title">Город*</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-12 pt-3">
+							<div class="row">
+								<div class="col-auto pb-2">
+									<label class="custom-input"><input class="custom-input__input" type="radio" name="type-of" data-tab-radio="vendor-block"/><span class="custom-input__lab"></span><span class="custom-input__text">Вендор</span>
+									</label>
+								</div>
+								<div class="col-auto pb-2">
+									<label class="custom-input"><input class="custom-input__input" type="radio" name="type-of" data-tab-radio="partner-block" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Партнер</span>
+									</label>
+								</div>
+								<div class="col-auto pb-2">
+									<label class="custom-input"><input class="custom-input__input" type="radio" name="type-of" data-tab-radio="costumer-block"/><span class="custom-input__lab"></span><span class="custom-input__text">Заказчик</span>
+									</label>
+								</div>
+								<div class="col-auto pb-2">
+									<label class="custom-input"><input class="custom-input__input" type="radio" name="type-of" data-tab-radio="ocs-block"/><span class="custom-input__lab"></span><span class="custom-input__text">OCS </span>
+									</label>
+								</div>
+								<div class="col-auto pb-2">
+									<label class="custom-input"><input class="custom-input__input" type="radio" name="type-of" data-tab-radio="media-block"/><span class="custom-input__lab"></span><span class="custom-input__text">СМИ</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 tab-radio-content vendor-block">
+							<!-- Вендоры -->
+							<div class="form-wrap__input-wrap form-group">
+								<label>
+									<select class="form-wrap__input form-control" name="select-ocs">
+										<option class="d-none"></option>
+										<option value=" placeholder 1">placeholder dfssfsd dfsdfd sads 1</option>
+										<option value=" placeholder 2">placeholder dfssfsd dfsdfd sads 2</option>
+										<option value=" placeholder 3">placeholder dfssfsd dfsdfd sads 3</option>
+										<option value=" placeholder 4">placeholder dfssfsd dfsdfd sads 4</option>
+									</select><span class="input-title">Компания*</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6 tab-radio-content costumer-block">
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" type="text" placeholder="Компания" name="text-ocs"/> <span class="input-title">Компания*</span>
+								</label> 
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6 tab-radio-content ocs-block">
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" type="text" placeholder="Компания" name="text-ocs" value="OCS" disabled="disabled"/><span class="input-title">Компания*</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6 tab-radio-content media-block">
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" type="text" placeholder="Компания" name="text-ocs"/> <span class="input-title">Компания*</span>
+								</label> 
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-12 pb-3 tab-radio-content partner-block dropdown-wrap">
+							<!-- партнеры-->
+							<div class="input-title dropdown-toggle-js h5 mb-5">Группы оборудования, которыми вы занимаетесь<span class="plus"></span>
+							</div>
+							<div class="dropdown-block dropdown-block--js"> 
+								<div class="dropdown-block__item"> 
+									<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Безопасность</span>
+									</label>
+									<div class="dropdown-toggle-js d-inline-block"><span class="plus"></span></div>
+									<div class="dropdown-block dropdown-block--js">
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Конференц-системы</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Пожарно-охранные комплексы</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Системы оповещения</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> СКУД</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Видеонаблюдение</span>
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="dropdown-block__item">
+									<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Бытовая техника и электроника</span>
+									</label>
+								</div>
+								<div class="dropdown-block__item"> 
+									<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Инженерная инфраструктура</span>
+									</label>
+									<div class="dropdown-toggle-js d-inline-block"><span class="plus"></span></div>
+									<div class="dropdown-block dropdown-block--js">
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Видеокарты</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Диски (HDD, SSD, ODD)</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Интерф. платы и устройства</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Комплектующие для серверов</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Корпуса</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Материнские платы</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Оперативная память</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Память флеш</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Платформы для ПК</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Процессоры</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">БП и кулеры</span>
+											</label>
+										</div>
+									</div>
+									<div class="dropdown-block__item">
+										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Мобильные системы</span>
+										</label>
+									</div>
+								</div>
+								<div class="dropdown-block__item"> 
+									<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Оборудование маркировки и автоидентификации</span>
+									</label>
+									<div class="dropdown-toggle-js d-inline-block"><span class="plus"></span></div>
+									<div class="dropdown-block dropdown-block--js">
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Мониторы, проекторы, доски</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text"> Мультимедиа</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Печать и сканирование</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Профессиональная поддержка и сервис</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Профессиональные ЖК панели и телевизоры</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Расходные материалы</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Устройства ввода</span>
+											</label>
+										</div>
+										<div class="dropdown-block__item">
+											<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Кабели, разъемы</span>
+											</label>
+										</div>
+									</div>
+									<div class="dropdown-block__item">
+										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">ПК</span>
+										</label>
+									</div>
+									<div class="dropdown-block__item">
+										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Программное обеспечение</span>
+										</label>
+									</div>
+									<div class="dropdown-block__item">
+										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Профессиональное мультимедиа и AV оборудование</span>
+										</label>
+									</div>
+									<div class="dropdown-block__item">
+										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Серверы</span>
+										</label>
+									</div>
+									<div class="dropdown-block__item">
+										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Сетевое оборудование и системы связи</span>
+										</label>
+									</div>
+									<div class="dropdown-block__item">
+										<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">СХД</span>
+										</label>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form-wrap__input-wrap form-group">
+										<label><input class="form-wrap__input form-control" type="text" placeholder="название компании без ООО и" name="partners" list="partners-company"/><datalist id="partners-company">
+<option value="San Francisco">
+<option value="New York">
+<option value="Seattle">
+<option value="Los Angeles">
+<option value="Chicago">
+</datalist><span class="input-title">Компания*</span>
+										</label><datalist id="partners-company">
+<option value="San Francisco">
+<option value="New York">
+<option value="Seattle">
+<option value="Los Angeles">
+<option value="Chicago">
+</datalist>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+								<div class="col-lg-6"> 
+									<div class="form-wrap__input-wrap form-group">
+										<label>
+											<select class="form-wrap__input form-control" name="select-ocs">
+												<option class="d-none"></option>
+												<option value=" placeholder 1">placeholder dfssfsd dfsdfd sads 1</option>
+												<option value=" placeholder 2">placeholder dfssfsd dfsdfd sads 2</option>
+												<option value=" placeholder 3">placeholder dfssfsd dfsdfd sads 3</option>
+												<option value=" placeholder 4">placeholder dfssfsd dfsdfd sads 4</option>
+											</select><span class="input-title">Менеджер в OCS</span>
+										</label>
+									</div>
+									<!-- +e.input-wrap-->
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6"> 
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" type="text" placeholder="Должность*" name="text-ocs" required="required"/><span class="input-title">Должность*</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="w-100"></div>
+						<div class="col-lg-6"> 
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" type="password" placeholder="Пароль" name="password-ocs" required="required"/><span class="input-title">Пароль*</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-6"> 
+							<div class="form-wrap__input-wrap form-group">
+								<label><input class="form-wrap__input form-control" type="password" placeholder="Повторите пароль" name="password-ocs" required="required"/><span class="input-title">Повторите пароль*</span>
+								</label>
+							</div>
+							<!-- +e.input-wrap-->
+						</div>
+						<div class="col-lg-12 mb-3">
+							<label class="custom-input"><input class="custom-input__input" type="checkbox" name="checkbox"/><span class="custom-input__lab"></span><span class="custom-input__text">Я согласен на <a href="#">обработку персональных данных </a></span>
+							</label>
+						</div>
+						<div class="col-lg-12">
+							<label class="dropzone-wrapper d-block">
+								<div class="dropzone" action="/file-upload">
+									<div id="dropzone">
+										<div class="dropzone__prev-wrap">
+											<svg class="icon icon-user-drop ">
+												<use xlink:href="img/svg/sprite.svg#user-drop"></use>
+											</svg><span class="text-primary">добавить<br/>фото</span>
+										</div>
+										<div class="fallback">
+											<input name="file" type="file" multiple=""/>
+										</div>
+									</div>
+								</div>
+							</label>
+						</div>
+						<div class="col-lg-6 my-4">
+							<button class="btn btn-primary btn-arrows w-100" type="submit">Сохранить</button>
+						</div>
 					</div>
 				</form>
 			</div>
 		</div>
 		<!-- #modal-call-->
+		<div class="modal-win" id="modal-reg" style="display: none">
+			<div class="text-center"> 
+				<div class="h5">Чат будет доступен в&nbsp;день мероприятия. А&nbsp;сейчас&nbsp;Вы можете 	зарегистрироваться </div><a class="btn btn-danger" href="#">Регистрация</a>
+			</div>
+		</div>
+		<!-- #modal-call-->
+		<div class="modal-win" id="modal-signup" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<input type="hidden" name="example-input-field"/>
+					<input class="order" type="hidden" name="order" value="Заявка  с сайта"/>
+					<input class="utm_source" type="hidden" name="utm_source"/>
+					<input class="utm_term" type="hidden" name="utm_term"/>
+					<input class="utm_medium" type="hidden" name="utm_medium"/>
+					<input class="utm_campaign" type="hidden" name="utm_campaign"/>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="input-title">Страна</span>
+							<select class="form-wrap__input form-control">
+								<option>Россия</option>
+								<option>Казахстан</option>
+								<option>Азербайджан</option>
+							</select>
+						</label>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="input-title">Дата</span>
+							<select class="form-wrap__input form-control">
+								<option>16 октября  </option>
+								<option>17 октября</option>
+							</select>
+						</label>
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="input-title">Время</span>
+							<select class="form-wrap__input form-control">
+								<option>14:00</option>
+								<option>14:30</option>
+								<option>15:00</option>
+								<option>15:30</option>
+								<option>16:00</option>
+								<option>16:30</option>
+								<option>17:00</option>
+								<option>17:30</option>
+							</select>
+						</label>
+					</div>
+					<button class="form-wrap__btn" type="submit">Записаться
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="modal-win modal-content" id="modal-content" style="display: none">
+			<div class="modal-inner"></div>
+		</div>
+		<div class="modal-welocome" id="modal-welcome" style="display: none">
+			<div class="modal-welocome__head">
+				<div class="row">
+					<div class="modal-welocome__col col-sm-auto"><img src="img/@1x/man.png" alt=""/>
+					</div>
+					<div class="col">
+						<div class="h6">ОБРАЩЕНИЕ ГЕНЕРАЛЬНОГО ДИРЕКТОРА - ПРЕДСЕДАТЕЛЯ ПРАВЛЕНИЯ ОАО «РЖД»              
+							<div class="strong">ОЛЕГА БЕЛОЗЁРОВА</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="modal-welocome__body">
+				<p><strong>Уважаемые коллеги!</strong></p>
+				<p>От имени ОАО «РЖД» приглашаю вас принять участие в первом международном транспортно-логистическом форуме «PRO//Движение.1520».</p>
+				<p>Обращение генерального директора - председателя правления ОАО «РЖД» Олега Белозёрова Сегодня в мировой экономике наилучшие успехи имеют те бизнесы, которые готовы трансформироваться и постоянно аккумулировать синергетические эффекты от взаимодействия с идеями и технологиями других отраслей. Для российского транспорта ...</p>
+				<p>От имени ОАО «РЖД» приглашаю вас принять участие в первом международном транспортно-логистическом форуме «PRO//Движение.1520».</p>
+				<p>Обращение генерального директора - председателя правления ОАО «РЖД» Олега Белозёрова Сегодня в мировой экономике наилучшие успехи имеют те бизнесы, которые готовы трансформироваться и постоянно аккумулировать синергетические эффекты от взаимодействия с идеями и технологиями других отраслей. Для российского транспорта ...</p>
+			</div>
+		</div>
+		<!-- #modal-call -->
 		<!-- end modals-->
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<script src="libs/jquery/jquery.min.js"></script>

@@ -2,14 +2,77 @@
 mixin modal() 
 	//  start modals
 
-	+b.modal-win(id="modal-call" class=" " style="display: none" )
+	+b.modal-win(id="modal-ask-question" class=" " style="display: none" )
 		+form-wrap
-			.text-center
-				+e.title.form-data.h3.ttu Обратный звонок
-				p.after-headline Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течение 15&nbsp;минут
-			+input("Ваше Имя")(required)  
-			+e.BUTTON.btn.btn(type="submit"  ) 
-			+polite()
+			+e.title.form-data.h3.ttu Задать вопрос
+ 
+			+input("Не выбрано",'select','Выберите спикера')
+			+input("Вопрос для спикера",'textarea','Вопрос для спикера')
+			.row
+
+				.col-sm-auto.order-sm-last.mb-2
+					+e.BUTTON.btn.btn.btn-primary.btn-block(type="submit"  )  Отправить
+				.col.small.mb-2 Вы можете задать любой вопрос спикеру, но прежде чем они будут им доставленны они пройдут предварительную премодерацию.
+	// #modal-call 
+	+b.modal-win--lg(id="modal-edit" class=" " style="display: none" )
+		+reg('Сохранить')
 	// #modal-call
 	
+	+b.modal-win(id="modal-reg" class=" " style="display: none" )
+			.text-center 
+				.h5 Чат будет доступен в&nbsp;день мероприятия. А&nbsp;сейчас&nbsp;Вы можете 	зарегистрироваться 
+				a.btn.btn-danger(href="#") Регистрация
+	// #modal-call
+	
+	+b.modal-win(id="modal-signup" class=" " style="display: none" )
+		+form-wrap
+			+e.input-wrap.form-group
+				label
+					+b.SPAN.input-title Страна
+					+e.SELECT.input.form-control
+						option Россия
+						option Казахстан
+						option Азербайджан
+			+e.input-wrap.form-group
+				label
+					+b.SPAN.input-title Дата
+					+e.SELECT.input.form-control
+						option 16 октября  
+						option 17 октября
+			+e.input-wrap.form-group
+				label
+					+b.SPAN.input-title Время
+					+e.SELECT.input.form-control
+						option 14:00
+						option 14:30
+						option 15:00
+						option 15:30
+						option 16:00
+						option 16:30
+						option 17:00
+						option 17:30
+			+e.btn(type="submit") Записаться
+
+
+	+b.modal-win(id="modal-content" class="modal-content" style="display: none" )
+		.modal-inner
+	+b.modal-welocome(id="modal-welcome"  style="display: none" )
+		+e.head
+			.row
+				+e.col.col-sm-auto
+					img(src="img/@1x/man.png", alt="")
+				.col
+					.h6 ОБРАЩЕНИЕ ГЕНЕРАЛЬНОГО ДИРЕКТОРА - ПРЕДСЕДАТЕЛЯ ПРАВЛЕНИЯ ОАО «РЖД»              
+						.strong ОЛЕГА БЕЛОЗЁРОВА
+		+e.body
+			p: strong Уважаемые коллеги!
+			p От имени ОАО «РЖД» приглашаю вас принять участие в первом международном транспортно-логистическом форуме «PRO//Движение.1520».
+
+			p Обращение генерального директора - председателя правления ОАО «РЖД» Олега Белозёрова Сегодня в мировой экономике наилучшие успехи имеют те бизнесы, которые готовы трансформироваться и постоянно аккумулировать синергетические эффекты от взаимодействия с идеями и технологиями других отраслей. Для российского транспорта ...
+			p От имени ОАО «РЖД» приглашаю вас принять участие в первом международном транспортно-логистическом форуме «PRO//Движение.1520».
+
+			p Обращение генерального директора - председателя правления ОАО «РЖД» Олега Белозёрова Сегодня в мировой экономике наилучшие успехи имеют те бизнесы, которые готовы трансформироваться и постоянно аккумулировать синергетические эффекты от взаимодействия с идеями и технологиями других отраслей. Для российского транспорта ...
+	 
+
+	// #modal-call 
 	// end modals

@@ -260,6 +260,31 @@
 			min-height: calc(100% - 16px);
 		}
 	}
+	
+	&__copy-block{
+		max-width: 550px;
+		margin-top: 1rem;
+		.col{
+			
+			max-width: rem(300);
+		}
+		.row{
+			// flex-wrap: nowrap;
+			@include roww(10px);
+		}
+	}
+	&__link-text{
+		
+	}
+	&__link-text{
+		@include ellips;
+		padding: rem(5) rem(4);
+		background-color: $secondary;
+		// maxw
+		// height: rem(34);
+		font-size: $small; 
+		margin-bottom: rem(10);
+	}
 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

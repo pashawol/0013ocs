@@ -343,6 +343,10 @@ function eventHandler() {
 	// 			$('[data-tab-rad='+thtab+']').prop('checked', false);
 	//  })
 	// /табы на радиокнопках
+
+	$(document).on('click', '[href="#modal-content"]', function () {
+		$('#modal-content .modal-inner').html($(this).next().html());
+	});
 }
 
 ;
