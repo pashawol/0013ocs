@@ -42,6 +42,7 @@ $output-bourbon-deprecation-warnings: false;
 
 .pagination-wrapper ul {
 	@extend .pagination;
+	padding-top: 1rem;
 	justify-content: center;
 }
 
