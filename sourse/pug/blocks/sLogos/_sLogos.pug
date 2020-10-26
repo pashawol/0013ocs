@@ -80,3 +80,42 @@ mixin sLogos09()
 			+group("Информационная поддержка")
 	// end sLogos
 
+
+
+mixin sLogos()
+	// start sLogos
+	+b.SECTION.sLogos.section#sLogos&attributes(attributes)
+		.container 
+			+b.section-title.text-center(class="wow  animate__fadeInUp "   )
+				h2 Экспо-партнеры
+			mixin group(t)
+				h3(class="wow  animate__fadeInUp "   )= t
+				.row(class="wow  animate__fadeInUp "   )
+					- for (var x = 1; x < 13; x++)
+						+e.col.col-xl.col-md-3.col-sm-4.col-6
+							//- (class="wow  animate__fadeInUp "   )
+							a.link-modal(href="#modal-content")
+								+pic(`partner-${x}.png`,'','') 
+							+e.hidden.d-none
+								+b.modal-row.row.pt-4
+									.col-sm-3
+										.sPartners__img-wrap.mb-2
+											+pic(`partner-${x}.png`,'','') 
+										.sPartners__title.mw-100 РЖД 
+									+e.textCol.col.pt-0
+										+e.title.text-primary.mb-2.ttu РЖД 
+										p ОАО «Российские железные дороги» является одной из самых крупных в мире железнодорожных компаний с колоссальными объемами грузовых и пассажирских перевозок, обладающей высокими финансовыми рейтингами, квалифицированными специалистами во всех областях железнодорожного транспорта, большой научно-технической базой, проектными и строительными мощностями, значительным опытом международного сотрудничества. Компания эксплуатирует одну из крупнейших железнодорожных систем мира длиной 85,5 тыс. км, занимая лидирующие позиции по протяженности электрифицированных линий – 43,7 тыс. км. В транспортной системе России ОАО «РЖД» обеспечивает свыше 45% совокупного грузооборота (с учетом трубопроводного транспорта) и около 25% пассажирооборота.
+										a.strong(href="#") rzd.ru
+			 
+					+e.col.col-xl.col-md-3.col-sm-4.col-6
+						//- (class="wow  animate__fadeInUp "   )
+						+pic(`partner-8`,'','') 
+					+e.col.col-xl.col-md-3.col-sm-4.col-6
+						//- (class="wow  animate__fadeInUp "   )
+						+pic(`partner-10`,'','') 
+			+group("Генеральные партнеры")
+			+group("Партнеры форума")
+			+group("Информационная поддержка")
+	// end sLogos
+
+	
