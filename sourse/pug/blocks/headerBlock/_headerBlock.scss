@@ -278,6 +278,7 @@
 		}
 	}
 	&--start{
+		padding-top: rem(10) !important;
 		.animate-block-circle{
 			top: -250px;
 			left: 200px;

@@ -1,0 +1,38 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug  
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sTrackPlan/_sTrackPlan.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sLogos/_sLogos.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sEvents/_sEvents.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Спикер'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+headerBlockPage() 
+	+page-title('','a')
+	//- +sSpeakers 
+	+sContent
+	.container.container-large
+		h3 Сессии в которых учавствует
+		+sEvents().--page
+	
+	//- +sLive()
+	//- +sSpeakers()
+	//- +sQuestions()
+	//- +sTrackPlan()
+	//- +sLogos
+	//- +sContact()
+	+footer()
+
+
+	

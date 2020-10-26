@@ -244,15 +244,17 @@ ul {
 
 .control-wrap {
 	position: relative;
+	width: rem(68);
+	height: rem(18);
 }
 
 .swiper-button-hand {
-	width: var(--swiperArrowSize);
-	height: var(--swiperArrowSize);
+	width: rem(20);
+	height: rem(20);
 	border-radius: 50%;
 	background-color: var(--swiperBgDef);
 	border: 2px solid var(--swiperBorderColorDef);
-	color: var(--swiperColorDef);
+	color: $primary;
 	@include bgs;
 	z-index: 300;
 	outline: none !important;
@@ -270,7 +272,10 @@ ul {
 	}
 
 	.icon {
-		font-size: rem(12);
+		font-size: rem(20);
+		fill: transparent;
+		stroke: currentColor;
+		stroke-width: 2px;
 	}
 
 	&::after {
@@ -430,11 +435,35 @@ iframe {
 
 
 .page-title {
-	padding-top: 1rem;
+	padding-top: rem(30);
+	padding-bottom: rem(30);
 	h1{
 		@include rfs(40px);
 		line-height: (56 / 40); 
 	}
+		&__link {
+			color: #fff;
+			display: inline-block;
+			position: relative;
+
+			@include media-breakpoint-up(sm) {
+
+				top: rem(5);
+				top: rem(15);
+			}
+
+			top: rem(1);
+
+
+			.icon {
+				// fill: $primary;
+				// c$pr
+				// stroke: $primary;
+				// stroke-width: 3px;
+				font-size: rem(24);
+
+			}
+		}
 }
 
 .dropzone-wrapper{
@@ -559,5 +588,41 @@ body:not(.main-page) .main-wrapper {
 
 	&::-webkit-scrollbar-button {
 		display: none
+	}
+}
+
+.w-xl-100{
+	width: 100%;
+}
+
+.main-row{
+	--sTPB: #{rem(30)};
+}
+@include media-breakpoint-up(xxl) {
+
+	.row--lg{
+		--bs-gutter-x: #{rem(48)};
+	}
+}
+
+.btn-outline-primary{
+	color: #ffffff;
+}
+
+.modal-row{
+	&__slide{
+
+	}
+	&__img-wrap{
+			@include block(256, 333);
+			margin-bottom: 1rem;
+			img{
+				@include a-cent;
+				object-fit: cover;
+				object-position: top;
+				width: 100%;
+				height: 100%;
+				filter: saturate(0);
+			}
 	}
 }

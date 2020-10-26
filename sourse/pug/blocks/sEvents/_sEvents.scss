@@ -1,6 +1,8 @@
 	// start .sEvents
 .sEvents {
-
+	&--page{
+		max-width: rem(1170);
+	}
 	padding-top: rem(20);
 	padding-bottom: rem(136);
 
@@ -264,9 +266,12 @@
 	&__copy-block{
 		max-width: 550px;
 		margin-top: 1rem;
-		.col{
+		.col-sm {
 			
-			max-width: rem(300);
+			@include media-breakpoint-up(sm) {
+
+				max-width: rem(300);
+			}
 		}
 		.row{
 			// flex-wrap: nowrap;

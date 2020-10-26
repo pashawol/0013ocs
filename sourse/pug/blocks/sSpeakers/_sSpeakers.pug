@@ -1,41 +1,17 @@
 mixin sSpeakersCard(i,name,t,btn)
-	+b.sSpeakersCard
-		+e.front
-			+e.img-wrap.bg-wrap
-				if i
-					+pic(`speaker-${i}`,'','')
-			+e.text-wrap
-				+e.title= name
-				+e.text!= t
-			if btn
-				+e.btn.d-sm-none(href="#") Написать сообщение
-			else
-				+e.btn.link-modal.d-sm-none(href="#modal-content") Открыть биографию
-		//- +e.back
+	+b.sSpeakersCard 
+		+e.img-wrap.bg-wrap
+			if i
+				+pic(`speaker-${i}`,'','')
+		+e.text-wrap
 			+e.title= name
 			+e.text!= t
-			if btn
-				+e.btn(href="#") Написать сообщение
-			else
-				+e.btn.link-modal(href="#modal-content") Открыть биографию
-				+e.forModal
-					+b.modal-row.row
-						+e.imgCol.col-md.d-none.d-md-block
-							+e.imgWrap
-								if i
-									+pic(`speaker-${i}`,'','')
-						+e.textCol.col
-							+e.title.text-primary= name
-							+e.text!= t
-							p Окончил Санкт-Петербургский университет экономики и&nbsp;финансов (1992).
-							p #[strong 2000-2001 гг. –] Аппарат полномочного представителя Президента Российской Федерации в&nbsp;Северо&nbsp;&mdash; Западном федеральном округе, начальник финансово-экономического отдела.
-							p #[strong 2001-2002 гг. –] ОАО &laquo;ЛОМО&raquo;, заместитель директора по&nbsp;управлению корпоративным имуществом.
-							p #[strong 2002-2004 гг. –] ОАО &laquo;Российская топливная компания&raquo;, генеральный директор.
-							p #[strong 2004-2009 гг. –] Федеральное дорожное агентство, заместитель руководителя, руководитель.
-							p #[strong 2009-2015 гг. –] Министерство транспорта Российской Федерации, заместитель, первый заместитель министра.
-							p #[strong С 2011 г.] действительный государственный советник Российской Федерации 1&nbsp;класса.
-							p #[strong 20 августа 2015 г. –] назначен на&nbsp;должность президента ОАО&nbsp;&laquo;РЖД&raquo;.
-							p #[strong 17 ноября 2017 г. –] распоряжением Правительства Российской Федерации назначен генеральным директором&nbsp;&mdash; председателем правления ОАО &laquo;РЖД&raquo;. Председатель Международного союза железных дорог, сопредседатель Совета делового сотрудничества Россия-Франция.
+			.small.text-light Product designer
+		//- if btn
+		//- 	+e.btn.d-sm-none(href="#") Написать сообщение
+		//- else
+		//- 	+e.btn.link-modal.d-sm-none(href="#modal-content") Открыть биографию
+
 
 mixin sSpeakers()
 	// start sSpeakers
@@ -44,45 +20,23 @@ mixin sSpeakers()
 			if block
 				block
 			else
-				+e.search
-					+input('Найти спикера','search')
-					+e.btnSearch(type='submit')
-						+icon('search')
-				.row
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('1.png','Алексей Гром','Генеральный директор, председатель правления АО «Объединенная транспортно- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('2.png','Олег Белозеров',`Генеральный директор&#8209;председатель правления ОАО&nbsp;"РЖД"`)
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('3.png','Сергей Малозёмов','Автор и ведущий программ, НТВ')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('4.png','Люк Надаль','председатель правления, Группа GEFCO')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('5.png','Алексей Шило','Заместитель генерального директора ОАО «РЖД» ...')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('6.png','Сабрина Суссан','Сименс Мобильность')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('4.png','Люк Надаль','председатель правления, Группа GEFCO')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('6.png','Сабрина Суссан','Сименс Мобильность')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('2.png','Олег Белозеров',`Генеральный директор&#8209;председатель правления ОАО&nbsp;"РЖД"`)
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('7.png','Евгений Дитрих','Министр транспорта Российской Федерации')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('1.png','Алексей Гром','Генеральный директор, председатель правления АО «Объединенная транспортно- Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('2.png','Олег Белозеров','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('8.png','Жоэль Жантиль','Старший вице-президент по контейнерной и интермодальной логистике, CMA CGM')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('4.png','Люк Надаль','председатель правления, Группа GEFCO')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('6.png','Сабрина Суссан','Сименс Мобильность')
-					.col-sm-6.col-lg-3
-						+sSpeakersCard('5.png','Алексей Шило','Заместитель генерального директора ОАО «РЖД» ...')
-
-				+pugin()
+				//- +e.search
+				//- 	+input('Найти спикера','search')
+				//- 	+e.btnSearch(type='submit')
+				//- 		+icon('search')
+				.row.row--lg
+					.col-sm-6.col-lg-3.col-xl-4
+						+sSpeakersCard('1.png','Алексей Гром','Google inc')
+					.col-sm-6.col-lg-3.col-xl-4
+						+sSpeakersCard('2.png','Олег Белозеров',`Министерство образования и науки Российской Федерации`)
+					.col-sm-6.col-lg-3.col-xl-4
+						+sSpeakersCard('3.png','Сергей Малозёмов','Google inc')
+					.col-sm-6.col-lg-3.col-xl-4
+						+sSpeakersCard('4.png','Люк Надаль','Google inc')
+					.col-sm-6.col-lg-3.col-xl-4
+						+sSpeakersCard('5.png','Алексей Шило','Google inc')
+				
+				//- +pugin()
 	// end sSpeakers
 mixin sSpeakers0()
 	// start sSpeakers

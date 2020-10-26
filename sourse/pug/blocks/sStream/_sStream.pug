@@ -1,18 +1,323 @@
 mixin sStream()
 	// start sStream
-	+b.sStream.section.pt-0#sStream&attributes(attributes)  
-		+e.head
-			+e.btn-tab.active(type="button") ЗАЛ «ИННОВАЦИИ»
-			+e.btn-tab(type="button") ЗАЛ «СТРАТЕГИИ»
-		+e.video-wrap
-			script(src='https://broadcast.comdi.com/player/js/embed.min.js', data-comdi-event='r5ftb9xd', data-login='anonymous', data-registration='{"email":"anonymous@startupvillage.ru"}', lang='ru', async='')
-	 
-		+e.data.col.pb-2 14 сентября    09:45 – 10:45
-		h4: strong In Railway We Trust.
-			
-		.h6.fw-400 Глобальное сотрудничество в условиях неопределенности
+	+b.sStream.section.pt-0#sStream&attributes(attributes)
+		.container.container-large
+			+e.wrap
+				.row
+					.col-xl-8
+						+e.video-wrap
+								script(src='https://broadcast.comdi.com/player/js/embed.min.js', data-comdi-event='r5ftb9xd', data-login='anonymous', data-registration='{"email":"anonymous@startupvillage.ru"}', lang='ru', async='')
+
+					+e.col.col-xl
+						.public-chat.d-flex.flex-column
+							input(type='hidden', value='307befb6-b8bf-469c-860e-7eb1504f594c')
+							// 
+							.public-chat-header
+								h2.public-chat-header-title
+									| Чат 
+							 
+								//- .ps__rail-x(style='left: 0px; bottom: 0px;')
+								//- 	.ps__thumb-x(tabindex='0', style='left: 0px; width: 0px;')
+								//- .ps__rail-y(style='top: 0px; right: 0px;')
+								//- 	.ps__thumb-y(tabindex='0', style='top: 0px; height: 0px;')
+							.public-chat-messages.ps.ps--active-y
+								//- .ps__rail-x(style='left: 0px; bottom: -21209px;')
+								//- 	.ps__thumb-x(tabindex='0', style='left: 0px; width: 0px;')
+								//- .ps__rail-y(style='top: 21209px; right: 0px; height: 282px;')
+								//- 	.ps__thumb-y(tabindex='0', style='top: 279px; height: 3px;')
+								.public-chat-message
+									.public-chat-message-date
+										| 19:10
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/f5/a3fa6ca16b99cc2a2a39f2f20a10d0.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Polina Gulyaeva
+											.public-chat-message-text
+												| Здравствуйте, запускаю НЕЗАВИСИМЫЙ НАУЧНЫЙ АКСЕЛЕРАТОР!   Если вам интересно стать частью комплексного емкого интеллектуального проекта, присоединяйтесь!   Если Вы молодой ученый или у вас инновационные крутые идеи, напишите мне - этот проект для Вас!   Если Вы СМИ, инфоресурс и хотите написать о нас — мы с радостью поделимся идеей и миссией!   Если Вы могли бы стать для нас ментором или организовать взаимодействие с Вашей средой доверия, мы оправдаем ожидания и вложенное время.   С уважением и огромным желанием делать полезное дело!
+								.public-chat-message
+									.public-chat-message-date
+										| 19:12
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/f5/a3fa6ca16b99cc2a2a39f2f20a10d0.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Polina Gulyaeva
+											.public-chat-message-text
+												| Ищем стартапы для 2 инвесторов, организуем коммуникацию предпринимателей Москвы с Правительством Столицы, ищем коммуникации с госорганами и институтами развития, а также менторство и любую поддержку!
+								.public-chat-message
+									.public-chat-message-date
+										| 19:50
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/7e/be89ceb9f9848458c370d04e34cc81.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Pavel Kalmaev
+											.public-chat-message-text
+												| Делаем глобального AI робота - виртуального помощника в тревеле, и несколько стартапов в VR с полностью готовым продуктом. Инфо в моем ФБ и линкедине
+								.public-chat-message
+									.public-chat-message-date
+										| 20:00
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/aa/5539ab1c0c8b54855a623881841bc2.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Alexander Skalov
+											.public-chat-message-text
+												| Планирую создание франшизы «Парк инновационных развлечений AeroJunkY». Упор на сверхлегкую авиацию, технологии, развлечения для всей семьи.
+								.public-chat-message
+									.public-chat-message-date
+										| 22:46
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/fd/e53404518cc5389de37e213e0642b1.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Radmir Khusnutdinov
+											.public-chat-message-text Здравствуйте, Polina Gulyaeva! С Вами можно как-то обменяться информацией?
+								.public-chat-message
+									.public-chat-message-date
+										| 08:39
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/90/4779f42f2e14dc9b55c81985638252.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Ирина Гаврикова
+											.public-chat-message-text
+												| Радмир, добрый день! Всем участникам можно написать личное сообщение. Найдите контакт в разделе "Участники" и напишите сообщение."
+								.public-chat-message
+									.public-chat-message-date
+										| 09:32
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/c3/eaade79a77cd2861648b80c45f66a4.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Nikolay Chernov
+											.public-chat-message-text
+												| Добрый день. Наш проект плазмнно вихревая утилизация углерод содержащих отходов. Кому интересно милости просим
+								.public-chat-message
+									.public-chat-message-date
+										| 09:43
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/39/8d484553c0d6c04c5b51a038680c73.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Vadim Evgrafov
+											.public-chat-message-text
+												| Всем хорошего дня, удачных походов в мир виртуальной реальности, тут есть что спрятано из реальности! Найдите друг друга...и Мир улыбнётся нам всем!
+								.public-chat-message
+									.public-chat-message-date
+										| 10:03
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/f0/3787b947cb11a34199bd130246c101.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Evgeniy Potemkin
+											.public-chat-message-text Посмотрим, посмотрим...:)
+								.public-chat-message
+									.public-chat-message-date
+										| 10:06
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/17/faaacc64428d3061293aa9a4513d47.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Md. Anisur Rahman
+											.public-chat-message-text Have a nice day. Our project is smart solution for Digital Health
+								.public-chat-message
+									.public-chat-message-date
+										| 10:06
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/37/fa99db2a6377dd7eb2195d86b9ddc3.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Oleg Belyaev
+											.public-chat-message-text Всем привет!
+								.public-chat-message
+									.public-chat-message-date
+										| 10:11
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/5c/1e2697ff9735f5022186c9818e5a02.jpeg')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Yevgeniy Obleskov
+											.public-chat-message-text Приветствую!
+								.public-chat-message
+									.public-chat-message-date
+										| 10:11
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/f5/a3fa6ca16b99cc2a2a39f2f20a10d0.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Polina Gulyaeva
+											.public-chat-message-text
+												| Независимый Научный Акслелератор: подберем стартап инвестору под Ваши требования и задачи!
+								.public-chat-message
+									.public-chat-message-date
+										| 10:11
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/9d/f7337bd53225b3d817f6c85d4a20f2.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| ANTON KURKIN
+											.public-chat-message-text Доброе утро друзья и коллеги! Всем хорошего настроения и удачного дня!!! ;-)
+								.public-chat-message
+									.public-chat-message-date
+										| 10:12
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/96/ca3070d415f0888e8ef4a0c6d24b42.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Organizer
+											.public-chat-message-text Пожалуйста, присылайте вопросы в разделе «Вопросы спикерам».
+								.public-chat-message
+									.public-chat-message-date
+										| 10:12
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/08/b77066f8fc2982b2fc840d7cb1c093.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Ekaterina Calzavara
+											.public-chat-message-text Доброе утро!
+								.public-chat-message
+									.public-chat-message-date
+										| 10:12
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/96/a36da058f7c8a93859708cc39e2913.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Sergei Ershov
+											.public-chat-message-text Всем Hello!))
+								.public-chat-message
+									.public-chat-message-date
+										| 10:12
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/41/1e1e78f1639ea72661db163fdb73cb.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Tatiana Indina
+											.public-chat-message-text Привет привет!
+								.public-chat-message
+									.public-chat-message-date
+										| 10:13
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/42/9c5cb598efd204e2b2d5122afed605.jpeg')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Pavel Kozlov
+											.public-chat-message-text 🙂 
+								.public-chat-message
+									.public-chat-message-date
+										| 10:14
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/9d/f7337bd53225b3d817f6c85d4a20f2.png')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| ANTON KURKIN
+											.public-chat-message-text
+												| Подскажите пожалуйста, насколько реально в рамках данной площадки предложить инвесторам свой проект?!
+								.public-chat-message
+									.public-chat-message-date
+										| 10:14
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/55/dc3c125175c5a2679fb0d50dad88d4.jpeg')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Viktoriya Skrylʹnikova
+											.public-chat-message-text Всем привет!!!
+								.public-chat-message
+									.public-chat-message-date
+										| 10:14
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/55/dc3c125175c5a2679fb0d50dad88d4.jpeg')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Viktoriya Skrylʹnikova
+											.public-chat-message-text Реально
+								.public-chat-message
+									.public-chat-message-date
+										| 10:14
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/55/dc3c125175c5a2679fb0d50dad88d4.jpeg')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Viktoriya Skrylʹnikova
+											.public-chat-message-text Пишите во вкладке СПИКЕРЫ
+								.public-chat-message
+									.public-chat-message-date
+										| 10:14
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/5c/1e2697ff9735f5022186c9818e5a02.jpeg')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Yevgeniy Obleskov
+											.public-chat-message-text спросили на сколько)
+								.public-chat-message
+									.public-chat-message-date
+										| 10:14
+									.d-flex.mw-100
+										.public-chat-message-photo-wrapper
+											img.public-chat-message-photo(src='https://storage.yandexcloud.net/sv-2020/uploads/02/a5f41ce89b1eac66138653c22edd94.jpeg')
+										div(style='width: calc(100% - 3.75rem);')
+											.public-chat-message-name
+												| Manas Dzhanybekov
+											.public-chat-message-text
+												| Добрый день ! Ищу интересные стартапы в сфере IT. Предложения присылайте на почту light
+ 
+							.d-none
+								// блок если не вошел
+								.mt-auto.px-1-5.py-1
+									| Для отправки сообщений
+									a(href='/login?_target_path=/live') Войдите
+									|  или
+									a(href='/registration') Зарегистрируйтесь
+									| .
+							form.public-chat-form 
+								input.public-chat-form-input(type='text', placeholder='Написать сообщение')
+								button.public-chat-form-btn(type='submit')
+									+icon("uil_smile")
+								button.public-chat-form-btn(type='submit')
+									+icon("feather_send")
+			 
+			.col-xl-8.g-0
+				+e.line.row
+					.col.h3.strong.pb-1 Название Трека в одну строку
+
+					.col-sm-auto
+						+e.like-wrap.d-flex.align-items-center.small
+							.live-track-info-vote.d-flex.align-items-center.voted.text-secondary
+								img(src='img/live/dislike-lg.svg')
+								| 5
+							.live-track-info-vote.d-flex.align-items-center.text-secondary
+								img(src='img/live/like-lg.svg')
+								| 13 
+				+e.text Станет виртуальным событием и главным бесплатным техноло гическим мероприятием   станет виртуальным событием  станет виртуальным событием и главным бесплатным Станет виртуальным событием и главным бесплатным техноло гическим мероприятием   
+				+e.data.h5.strong.text-primary 18.08.2020 14:30
 
 	// end sStream
+
 mixin sStream9()
 	// start sStream
 	+b.sStream.section.pt-0#sStream&attributes(attributes)

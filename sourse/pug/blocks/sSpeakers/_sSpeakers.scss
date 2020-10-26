@@ -1,6 +1,6 @@
 // start .sSpeakers
 .sSpeakers {
-	margin-top: rem(-43);
+	// margin-top: rem(-43);
 	padding-top: 0;
 	&__search {
 		position: relative;
@@ -9,7 +9,7 @@
 	}
 
 	&__input {
-		background-color: #161C28 !important;
+		// background-color: #161C28 !important;
 		border: none;
 		padding-left: rem(20);
 		padding-top: rem(14);
@@ -38,6 +38,9 @@
 	.row {
 		@include roww(40px);
 	}
+	img{
+		filter: saturate(0);
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
@@ -61,7 +64,7 @@
 
 	&--main{
 		// --STPB: #{rem(30)};
-		background-image: url(../img/@2x/speaker-bg.png);
+		// background-image: url(../img/@2x/speaker-bg.png);
 	}
 	&__slide{
 		&:nth-child(4n + 1) {
@@ -82,92 +85,33 @@
 	display: flex;
 	flex-direction: column;
 	transform-origin: center center;
-	@include media-breakpoint-down(sm) {
-		background: #161C28;
-		box-shadow: 0px 23px 28px -10px rgba(10, 15, 24, 0.78);
-		border-radius: 4px;
-	}
-	// @include media-breakpoint-up(sm) {
-	// 	min-height: 480px;
-	// }
-	// @include media-breakpoint-up(md) {
-	// 	min-height: 585px;
-	// }
-	// @include media-breakpoint-up(lg) {
-	// 	min-height: 420px;
-	// }
-	// @include media-breakpoint-up(xl) {
-	// 	min-height: 490px;
-	// }
+ 
 	min-height: calc(100% - 35px);
 	margin-bottom: 35px;
 	perspective: 1000px;
 
 	&__title {
-		max-width: rem(110);
-		margin-bottom: rem(8);
-		text-transform: uppercase;
+		max-width: rem(150);
+		margin-bottom: rem(8); 
+		@include rfs(24px);
+		line-height: 140%;
 	}
-
-	&__front, &__back {
-		// overflow: hidden;
-		@include media-breakpoint-up(sm) {
-			background: #161C28;
-			box-shadow: 0px 23px 28px -10px rgba(10, 15, 24, 0.78);
-			border-radius: 4px;
-		}
-	}
-	&__front{
-		position: relative;
-		min-height: 100%;
-		@include mt(.5);
-		backface-visibility: hidden;
-		// height: 100%;
-		flex-grow: 1;
-	}
-	
  
-	&__front {
-		.sSpeakersCard__text{
-			// @include ell(3);
-		}
-	}
-
-	// @include media-breakpoint-up(sm) {
-	// 	&:hover &__front, &:focus &__front, &:active &__front{
-	// 		transform: rotateY(180deg);
-	// 	}
-	// 	&:hover &__back, &:focus &__back, &:active &__back{
-	// 		transform: rotateY(360deg);
-	// 	}
-	// }
-
 	&__img-wrap {
-		background: #242E42;
+		background: #000;
 		overflow: hidden;
-		@include block(260,343);
+		@include block(256,333);
 		img {
 			width: 100%;
 			height: 100%;
 			@include a-cent;
 			z-index: 1;
 			object-fit: cover;
-		}
-
-		&::after {
-			content: '';
-			width: rem(151);
-			height: rem(89);
-			@include a-cent;
-			background-image: url('../img/svg/cardLogo.svg');
-			background-size: 100%;
-			background-repeat: no-repeat;
-			background-position: center;
-		}
+		} 
 	}
 
 	&__text-wrap {
-		padding: rem(17) rem(20) rem(15) rem(22);
+		padding: rem(17) 0 rem(15) ;
 	}
 
 	.bg-wrap {

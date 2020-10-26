@@ -256,7 +256,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = 'main.jpg';
+	screenName = '06.jpg';
 
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after("<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -285,17 +285,7 @@ function eventHandler() {
 			loadPrevNext: true
 		},
 		watchOverflow: true
-	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defineProperty(_defaultSl, "navigation", {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev'
-	}), _defineProperty(_defaultSl, "pagination", {
-		el: ' .swiper-pagination',
-		type: 'bullets',
-		clickable: true // renderBullet: function (index, className) {
-		// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-		// }
-
-	}), _defaultSl);
+	}, _defineProperty(_defaultSl, "spaceBetween", 0), _defineProperty(_defaultSl, "loop", true), _defaultSl);
 	var swiper4 = new Swiper('.sBanners__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
 		slidesPerView: 'auto',
 		freeMode: true,
@@ -304,6 +294,24 @@ function eventHandler() {
 		slideToClickedSlide: true,
 		freeModeMomentum: true
 	})); // modal window
+
+	$(".sLogos__col-page ").on('click', '.link-modal', function () {
+		setTimeout(function () {
+			var swiper5 = new Swiper('.modal-content .modal-row__slider--js', _objectSpread(_objectSpread({}, defaultSl), {}, {
+				slidesPerView: '1',
+				spaceBetween: 30,
+				navigation: {
+					nextEl: '.modal-content .swiper-button-next',
+					prevEl: '.modal-content .swiper-button-prev'
+				},
+				breakpoints: {
+					480: {
+						slidesPerView: '2'
+					}
+				}
+			}));
+		}, 100);
+	}); // modal window
 
 	var wow = new WOW({
 		mobile: false,

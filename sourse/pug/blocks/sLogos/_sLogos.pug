@@ -33,3 +33,50 @@ mixin sLogos()
 			+group("Партнеры форума")
 			+group("Информационная поддержка (лого СМИ)")
 	// end sLogos
+
+	
+mixin sLogos09()
+	// start sLogos
+	+b.SECTION.sLogos.section#sLogos&attributes(attributes)
+		.container.container-large  
+			mixin group(t)
+				h3(class="wow  animate__fadeInUp "   )= t
+				.row.justify-content-start(class="wow  animate__fadeInUp "   )
+					- for (var x = 1; x < 10; x++)
+						+e.col-page.col-xl-2.col-md-3.col-sm-4.col-6
+							//- (class="wow  animate__fadeInUp "   )
+							a.link-modal(href="#modal-content")
+								+pic(`logo-${x}.png`,'','') 
+							+e.hidden.d-none
+								+b.modal-row.row.py-5
+									.col
+										.pb-1
+											+pic(`logo-${x}.png`,'','') 
+										h5 CYBERPOWER - МИРОВОЙ ПОСТАВЩИК РЕШЕНИЙ ПО УПРАВЛЕНИЮ ЭЛЕКТРОПИТАНИЕМ. МОДЕЛЬНЫЙ РЯД ВКЛЮЧАЕТ ИБП, PDU, АКБ,BMS, ПО КОНТРОЛЯ И УПРАВЛЕНИЯ ЭНЕРГОПИТАНИЕМ
+										p Компания CyberPower является ведущим мировым поставщиком профессиональных решений и имеет более 200 международных патентов в области защиты электропитания. Модельный ряд включает полную линейку источников бесперебойного питания (ИБП) для рынка систем промышленной автоматизации, ЖКХ комплекса, телекоммуникационных, офисных и компьютерных систем. Кроме этого, в продуктовой линейке представлены PDU, стабилизаторы, аккумуляторные батареи, программное обеспечение управления энергопитанием – все, что позволяет компании предлагать законченные решения. CyberPower осуществляет полный цикл создания продукции, начиная от инженерных разработок и заканчивая массовым производством.
+										a(href="#") Example.com
+									// если нет слайдера, скрывай весь col-lg-6
+									.col-lg-6 
+										.row.pt-2.pb-5
+											.col
+												.h4 Спикеры
+											.col-auto
+												.control-wrap
+													+arrow()
+										+e.slider--js.swiper-container
+											.swiper-wrapper
+												- for (var x = 1; x < 5; x++)
+													+e.slide.swiper-slide
+														+e.item
+															+e.img-wrap
+																//- +pic(`teamPers-${x}.jpg`,'bg',0)(class="picture-bg") 
+																img.res-i.swiper-lazy(src=`img/@2x/teamPers-${x}.jpg`, alt="") 
+															.h4
+																a.text-dark(href="#") Виктор Барышников
+															.pb-1.text-secondary Google inc
+															.pb-1 Product designer
+			+group("Генеральные партнеры")
+			+group("Партнеры форума")
+			+group("Информационная поддержка (лого СМИ)")
+	// end sLogos
+

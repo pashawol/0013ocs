@@ -244,7 +244,7 @@ function eventHandler() {
 	// добавляет подложку для pixel perfect
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.jpg';
+	screenName = '06.jpg';
 	if (screenName && x === "localhost:3000") {
 		$(".footer").after(`<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -277,18 +277,7 @@ function eventHandler() {
 		watchOverflow: true,
 		spaceBetween: 0,
 		loop: true,
-		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: ' .swiper-pagination',
-			type: 'bullets',
-			clickable: true,
-			// renderBullet: function (index, className) {
-			// 	return '<span class="' + className + '">' + (index + 1) + '</span>';
-			// }
-		},
+	
 	}
 
 	const swiper4 = new Swiper('.sBanners__slider--js', {
@@ -302,6 +291,28 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+	// modal window
+	$(".sLogos__col-page ").on('click', '.link-modal', function () {
+		setTimeout(() => {
+			const swiper5 = new Swiper('.modal-content .modal-row__slider--js', {
+				// slidesPerView: 5,
+				...defaultSl,
+				slidesPerView: '1', 
+			spaceBetween: 30,
+			navigation: {
+				nextEl: '.modal-content .swiper-button-next',
+				prevEl: '.modal-content .swiper-button-prev',
+				},
+			
+				breakpoints: { 
+					480: {
+						slidesPerView: '2', 
+					} 
+				}
+		});
+			
+		}, 100);
+})
 	// modal window
 
 	var wow = new WOW({

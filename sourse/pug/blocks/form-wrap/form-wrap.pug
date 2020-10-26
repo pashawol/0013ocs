@@ -30,6 +30,35 @@ mixin input(placeholder,  t='text', label, name=`${t}-ocs`)
 			block
 		block
 	// +e.input-wrap
+	
+mixin input2(placeholder,  t='text', label, name=`${t}-ocs`)
+	mixin t(t='text',placeholder, name= t)
+		if t== "textarea"
+			+e.TEXTAREA.input.form-control(placeholder= placeholder name= name)&attributes(attributes)
+		else if t== "select"
+			+e.SELECT.input.form-control( name= name)&attributes(attributes)
+				option= placeholder
+				- for (var x = 1; x < 5; x++)
+					option(value=` placeholder ${x}`)= `placeholder dfssfsd dfsdfd sads ${x}`
+		else if t=='file'
+			+e.INPUT.input.form-control(type= t  name= name)&attributes(attributes)
+			
+		else if t=='number'
+			+e.INPUT.input.form-control(type= t placeholder= placeholder step='any' name= name)&attributes(attributes)
+		else
+			+e.INPUT.input.form-control(type= t placeholder= placeholder  name= name)&attributes(attributes)
+	+e.input-wrap.form-group
+		if label
+			label
+				+t(t,placeholder, name)&attributes(attributes)
+				block
+				+b.SPAN.input-title= label
+		else
+			+t(t,placeholder, name)&attributes(attributes)
+			block
+		block
+	// +e.input-wrap
+
 mixin select(label,pl,...items)
 	+e.input-wrap
 		label

@@ -1,6 +1,38 @@
 
 	// start .sMembers
 	.sMembers {
+		.search-block {
+			position: relative;
+			margin-right: 0;
+
+			@include media-breakpoint-up(xl) {
+
+				// width: rem(360);
+				// margin-top: em(30);
+			}
+
+			&__btn {
+				color: #fff;
+				border: none;
+				background: none;
+				position: absolute;
+				// left: rem(19);
+				right: rem(12);
+				top: rem(4);
+				
+				.icon {
+					color: #fff;
+					font-size: rem(24);
+
+				}
+			}
+
+			input {
+				border: 2px solid #2A2D31;
+				border-radius: 0;
+				background-color: transparent;
+			}
+		}
 		padding-bottom: var(--sPB);
 		position: relative;
 		z-index: 3;
@@ -11,7 +43,7 @@
 			}
 		}
 		&__filter{
-			padding-bottom: rem(6);
+			padding-bottom: rem(20);
 			.input-title{
 				font-size: rem(11);
 			}
@@ -22,18 +54,69 @@
 			color: $body-color !important;
 			min-height: calc(100% - 30px);
 			margin-bottom: 30px;
+			position: relative;
 	}
+	@include media-breakpoint-up(xl) { 
+		--sp: #{rem(20)} #{rem(40)} #{rem(40)};
+	}
+	--sp: #{rem(20)} #{rem(20)} #{rem(40)}; 
 	&__caption{
 		position: absolute;
 		left: 0;
 		bottom: 0;
 		width: 100%;
-		background: linear-gradient(0.48deg, #000000 0.7%, rgba(0, 0, 0, 0.64) 34.1%,  rgba(255, 87, 0, 0) 69.09%);
-		height: rem(240);
+		background: linear-gradient(0.48deg, #000000 0.7%, rgba(0, 0, 0, 0.64) 34.54%, rgba(0, 0, 0, 0.26) 60.18%, rgba(0, 0, 0, 0) 69.09%);
+		min-height: rem(260);
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
-		padding: rem(10) rem(40) rem(20);
+		z-index: 2; 
+		padding: var(--sp);
+		@include mt;
+		
+	}
+	&__item--hovered{
+		@include media-breakpoint-down(md) {
+			min-height: calc(100% - 180px);
+			margin-bottom: 180px;
+		}
+	}
+	&__toggle-block{
+		// margin-top: auto;
+		@include media-breakpoint-down(md) {
+			margin-bottom: -170px;
+			padding-top: 2rem;
+		}
+		@include media-breakpoint-up(md) {
+
+			height: 1px;
+			transform: scaleY(0);
+			@include mt;
+			transform-origin: 100% 100%;
+		}
+	}
+	&__item:hover img{
+		@include media-breakpoint-up(md){
+				opacity: 0.4;
+		}	
+	}
+	&__item:hover  &__caption{
+		@include media-breakpoint-up(md){
+			padding-top: rem(60);
+			min-height: 100%;
+			justify-content: space-between;
+		}
+		// background: linear-gradient(0.48deg, #000000 0.7%, rgba(0, 0, 0, 0.64) 34.1%, rgba(0, 0, 0, 0.78) 69.09%);
+	
+	}
+	&__item:hover &__toggle-block{
+		@include media-breakpoint-up(md){
+
+			height: rem(102);
+			transform: scaleY(1);
+		}
+		// margin-top: auto;
+		
 	}
 	&__img-wrap{
 		@include block(259, 304);
@@ -42,6 +125,7 @@
 		img{
 			object-position: top;
 			filter: saturate(0);
+			@include mt;
 		}
 		// &::after{
 		// 	content: '';
@@ -123,9 +207,28 @@
 	&__text{
 		opacity: 0.5;
 		font-size: $small;
+		&--md{
+			font-size: 1rem;
+			margin-bottom: 0;
+		}
 		line-height: 140%;
 		max-width: 200px;
 		margin-bottom: rem(8);
+	}
+	.btn-more{
+		width: 256px;
+	}
+	&__labels{
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 5;
+		padding: var(--sp);
+		display: flex;
+		width: 100%;
+	}
+	&__label{
+		padding: rem(2) rem(10);
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -146,6 +249,7 @@
 	@include media-breakpoint-down(xl) {}
 	@include media-breakpoint-down(lg) {}
 	@include media-breakpoint-down(lg) {
+		
 		&__col-toggle{
 			display: none;
 			&.active{
@@ -190,25 +294,3 @@
 	@include media-breakpoint-down(sm) {}
 
 } // end.sMembers
-
-.search-block{
-	position: relative;
-		@include media-breakpoint-up(xl) {
-
-			width: rem(360);
-			margin-top: em(30);
-		}
-	&__btn{
-		color: $primary;
-		border: none;
-		background: none;
-		position: absolute;
-		// left: rem(19);
-		right: rem(19);
-		top: rem(12);
-		.icon{
-			font-size: rem(18);
-
-		}
-	}
-}

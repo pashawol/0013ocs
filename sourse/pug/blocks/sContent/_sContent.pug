@@ -1,9 +1,18 @@
 mixin sContent()
 	// start sContent
-	+b.SECTION.sContent.section#sContent&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sContent
-				
+	+b.sContent.section.pt-0#sContent&attributes(attributes)
+		.container.container-large
 			.row
+				.col-md.pb-3
+					+pic("speaker")
+				.col-md
+					h2 Виктор Александрович Барышников
+					.h3.text-secondary  Google inc
+					.h3.text-secondary  Аккаунт менеджер
+				.col-xl-4
+					p 2020 год оказался беспрецедентным и подарил нам парадигму «новой нормальности», в которой работа, общение, жизнь навсегда и кардинально видоизменились. В процессе ускоренной трансформации и адаптации к новому режиму людям открылась совершенно новая реальность, которая оказалась существенно глубже и противоречивей, чем существовавшие до этого представления о ней.
+
+					p Теперь наша задача – научиться быстро находить ответы новым вызовам и видеть новые технологические возможности, чтобы текущий цифровой апгрейд позволил выстроить
+					
+
 	// end sContent

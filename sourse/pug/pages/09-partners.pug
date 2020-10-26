@@ -1,0 +1,33 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug  
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sTrackPlan/_sTrackPlan.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sLogos/_sLogos.pug
+include ../blocks/sMembers/_sMembers.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Партнеры форума'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+headerBlockPage() 
+	+page-title(title)
+	//- +sSpeakers 
+	//- +sMembers8
+	//- +sLive()
+	//- +sSpeakers()
+	//- +sQuestions()
+	//- +sTrackPlan()
+	+sLogos09
+	//- +sContact()
+	+footer()
+
+
+	

@@ -11,9 +11,9 @@ include components/btn.pug
 
 mixin arrow()
 	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('arror-left')
+		+icon('arrow-left')
 	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('arror-right')
+		+icon('arrow-right')
 //- /arrow for swiper-slider
 
 mixin ie11()
@@ -22,10 +22,19 @@ mixin ie11()
 	<!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 
 
-mixin page-title(title)
+mixin page-title(title, ar)
 	+b.page-title
 		.container.container-large
-			h1= title
+			.row
+				if ar
+					.col-auto
+						+e.link(href="#") 
+							+icon("arrow-back")
+				.col
+					if title
+						h1= title
+				block
+			
 mixin reg(b="Зарегистрироваться")
 	+b.form-wrap(class="form-wrap--border  wow  animate__fadeInUp "   )
 			form(action='/file-upload'  enctype="multipart/form-data")

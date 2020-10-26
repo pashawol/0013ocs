@@ -26,19 +26,26 @@
 			
 				padding-top: rem(15);
 		 }
+		 &__col{
+			 	 @include media-breakpoint-up(xl) {
+			 	 	flex: 0 0 (100% / 7);
+			 	 	max-width: (100% / 7);
+			 	 }
+					padding-top: rem(15);
+		 }
+		 &__col-page{
+			 padding-bottom: rem(30);
+		 }
+		 &__col-page,
 		 &__col{ 
 			 text-align: center;
-			 padding-top: rem(15);
 			 @include mt;
 			 filter: saturate(0); 
 			 &:hover{
 				filter: saturate(1);
 
 			 }
-			 @include media-breakpoint-up(xl) {
-				 flex: 0 0 (100% / 7);
-				 max-width: (100% / 7);
-			 }
+		
 			 
 		 }
 	@include media-breakpoint-up(xl) {}

@@ -1,0 +1,27 @@
+mixin sTrackPlan()
+	// start sTrackPlan
+	+b.SECTION.sTrackPlan.section#sTrackPlan&attributes(attributes)
+		.container
+			+b.section-title
+				h3 Программа трека
+			.row.row--lg
+				mixin item(d,t,p)
+					+e.col.col-lg-3.col-sm-6
+						+e.item
+							+e.img-wrap(href="#")
+								+pic("sTrackPlan.png",'bg')
+							+e.DIV.text-block
+								+e.DIV.dt
+									+e.DIV.date!= d
+									+e.time!= t
+								+e.DIV.descr!= p
+
+				+item(`22 мая`, `18:00`, `Название сессии в несколько строк для наглядности`)
+				+item(`22 мая`, `18:00`, `Название сессии в несколько строк для наглядности`)
+				+item(`22 мая`, `18:00`, `Название сессии в несколько строк для наглядности`)
+				+item(`22 мая`, `18:00`, `Название сессии в несколько строк для наглядности`)
+				
+
+
+
+	// end sTrackPlan

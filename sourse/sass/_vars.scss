@@ -69,7 +69,7 @@ $success: $green !default;
 $info: $cyan !default;
 $warning: $yellow !default;
 $danger: $red !default;
-$light: $gray-100 !default;
+$light: #DCDDDE !default;
 $dark: $gray-800 !default;
 
 // scss-docs-start theme-colors-map
@@ -314,7 +314,7 @@ $line-height-lg: 2 !default;
 $h1-font-size: $font-size-base * 2.5 !default;
 $h2-font-size: rem(40) !default;
 $h3-font-size: rem(30) !default;
-$h4-font-size: $font-size-base * 1.5 !default;
+$h4-font-size: rem(24) !default;
 $h5-font-size: rem(20) !default;
 $h6-font-size: $font-size-base !default;
 
@@ -483,7 +483,7 @@ $btn-link-color: $link-color !default;
 $btn-link-hover-color: $link-hover-color !default;
 $btn-link-disabled-color: $gray-600 !default;
 
-$btn-block-spacing-y: .5rem !default;
+$btn-block-spacing-y: rem(20) !default;
 
 // Allows for customizing button radius independently from global border radius
 $btn-border-radius: $border-radius !default;
@@ -544,7 +544,7 @@ $input-focus-color: $input-color !default;
 $input-focus-width: $input-btn-focus-width !default;
 $input-focus-box-shadow: none !default;
 
-$input-placeholder-color: rgba($color: #939598, $alpha: .2) !default;
+$input-placeholder-color: rgba($color: #fff, $alpha: .5) !default;
 $input-plaintext-color: $body-color !default;
 
 $input-height-border: $input-border-width * 2 !default;

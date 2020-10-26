@@ -1,0 +1,45 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug  
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sTrackPlan/_sTrackPlan.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sLogos/_sLogos.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'LIVE'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav()
+	+headerBlockPage() 
+	+page-title(title," arr")
+	+sStream 
+	.container.container-large
+		+b.main-row.row.row--lg
+
+			.col-12.section-title
+				.row
+					.col
+						h2 Спикеры
+					.col-xl-2.col-auto
+						a.btn.btn-primary.w-xl-100.link-modal(href="#modal-ask-question") Задать Вопросы
+			+e.speakers-col.col-xl-6
+				+sSpeakers
+			+e.questions-col.col-xl-6
+				+sQuestions
+
+	//- +sLive()
+	//- +sSpeakers()
+	//- +sQuestions()
+	//- +sTrackPlan()
+	//- +sLogos
+	//- +sContact()
+	+footer()
+
+
+	

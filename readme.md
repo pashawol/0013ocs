@@ -8,3 +8,9 @@
 1. <https://pashawol.github.io/0013ocs/public/04-cabinet-2.html>
 1. <https://pashawol.github.io/0013ocs/public/04-cabinet-3.html>
 1. <https://pashawol.github.io/0013ocs/public/05-program.html>
+1. <https://pashawol.github.io/0013ocs/public/06-live.html>
+1. <https://pashawol.github.io/0013ocs/public/07-speakers.html>
+1. <https://pashawol.github.io/0013ocs/public/07-speaker-1.html>
+1. <https://pashawol.github.io/0013ocs/public/08-members.html>
+1. <https://pashawol.github.io/0013ocs/public/09-partners.html>
+1. <https://pashawol.github.io/0013ocs/public/10-about.html>
