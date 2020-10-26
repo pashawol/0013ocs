@@ -1,0 +1,60 @@
+
+	// start .s2d
+	.s2d {
+		--sPT:0;
+		.search-block{
+			margin-bottom: rem(40);
+			margin-right: 0;
+			.icon{
+				color: #ffffff;
+			}
+		}
+		.search-block__input{
+			border: 2px solid #2A2D31;
+		}
+		&__item{
+			// height: rem(320);
+			min-height: calc(100% - 42px);
+			margin-bottom: 42px;
+			background-color: #ffffff;
+			// display: flex;
+			// display: block;
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			@extend .text-dark;
+			@include media-breakpoint-up(lg) {
+
+				padding: rem(70) rem(30);
+			}
+			padding: rem(30) rem(15);
+		}
+		&__img-wrap{
+			height: rem(100);
+			line-height: rem(100);
+			vertical-align: middle;
+			// margin-bottom: rem(60);
+			margin-bottom: auto;
+			img{
+				max-height: 100%;
+			}
+		}
+		&__title{
+			@include media-breakpoint-up(sm) {
+
+				margin-top: rem(30);
+			}
+			margin-top: rem(15);
+		}
+		 
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.s2d

@@ -1,0 +1,24 @@
+mixin s2d(data)
+	// start s2d
+	+b.s2d.section#s2d&attributes(attributes)
+		.container.container-large
+			.row
+				.col-xl-6(class="wow  animate__fadeInUp "   )
+					+b.search-block
+						+input('Поиск по названию')
+						+e.btn(type="submit")
+							+icon('search')
+			.row
+				mixin item(i)
+					+e.col.col-xl-3.col-md-4.col-sm-6(class="wow  animate__fadeInUp "   )
+						+e.item(href="#")
+							+e.DIV.img-wrap
+								+pic(`s2d-${i}.png`)
+							+e.DIV.title Аквариус
+				+item(1)
+				+item(2)
+				- for (var x = 0; x < 14; x++)
+					+item(1)
+			div(class="wow  animate__fadeInUp "   )
+				+pugin()
+	// end s2d

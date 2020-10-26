@@ -1,9 +1,24 @@
 mixin sArchive(data)
 	// start sArchive
-	+b.SECTION.sArchive.section#sArchive&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sArchive
-				
+	+b.sArchive.section#sArchive&attributes(attributes)
+		.container.container-large
 			.row
+				mixin item(i ,d)
+					+e.col.col-lg-6
+						+e.item(href="#").bg-wrap
+							+pic(`archive-${i}`,'bg')(class="picture-bg")
+							+e.head
+								.row
+									.col
+										.h3 ФОРУМ ИННОВАЦИЙ 
+											| И ИНФОРМАЦИИ
+											| ДЛЯ IT-КОМПАНИЙ
+									.col-auto
+										+e.date= d
+							+e.footer
+								+pic('logo-archive.png')
+					// +e.col.col-lg-6
+				+item('1','2018')
+				+item('2','2019')
+
 	// end sArchive

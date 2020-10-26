@@ -14,3 +14,5 @@
 1. <https://pashawol.github.io/0013ocs/public/08-members.html>
 1. <https://pashawol.github.io/0013ocs/public/09-partners.html>
 1. <https://pashawol.github.io/0013ocs/public/10-about.html>
+1. <https://pashawol.github.io/0013ocs/public/11-archive.html>
+1. <https://pashawol.github.io/0013ocs/public/12-2d.html>
