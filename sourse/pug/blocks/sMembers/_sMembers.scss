@@ -95,12 +95,12 @@
 			transform-origin: 100% 100%;
 		}
 	}
-	&__item:hover img{
+	&__item--hovered:hover img{
 		@include media-breakpoint-up(md){
 				opacity: 0.4;
 		}	
 	}
-	&__item:hover  &__caption{
+	&__item--hovered:hover  &__caption{
 		@include media-breakpoint-up(md){
 			padding-top: rem(60);
 			min-height: 100%;
@@ -109,7 +109,7 @@
 		// background: linear-gradient(0.48deg, #000000 0.7%, rgba(0, 0, 0, 0.64) 34.1%, rgba(0, 0, 0, 0.78) 69.09%);
 	
 	}
-	&__item:hover &__toggle-block{
+	&__item--hovered:hover &__toggle-block{
 		@include media-breakpoint-up(md){
 
 			height: rem(102);
@@ -229,6 +229,16 @@
 	}
 	&__label{
 		padding: rem(2) rem(10);
+	}
+
+	.swiper-button-hand{
+		--swiperArrowSize: #{rem(40)};
+		// --swiperArrowPosition: #{rem(-20)};
+		border: 1px solid $primary;
+		background-color: rgba($color: #ffffff, $alpha: .5);
+		&:hover{
+			background-color: $primary;
+		}
 	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

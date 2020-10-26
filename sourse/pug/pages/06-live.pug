@@ -20,17 +20,14 @@ block pagecontent
 	+page-title(title," arr")
 	+sStream 
 	.container.container-large
-		+b.main-row.row.row--lg
-
-			.col-12.section-title
-				.row
-					.col
-						h2 Спикеры
-					.col-xl-2.col-auto
-						a.btn.btn-primary.w-xl-100.link-modal(href="#modal-ask-question") Задать Вопросы
+		+b.main-row.row.row--lg 
 			+e.speakers-col.col-xl-6
+				.section-title
+					h2 Спикеры
 				+sSpeakers
 			+e.questions-col.col-xl-6
+				.section-title
+					+e.btn.btn-primary.link-modal(href="#modal-ask-question") Задать Вопрос
 				+sQuestions
 
 	//- +sLive()

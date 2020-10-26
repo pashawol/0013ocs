@@ -249,9 +249,9 @@ ul {
 }
 
 .swiper-button-hand {
-	width: rem(20);
-	height: rem(20);
-	border-radius: 50%;
+	width: var(--swiperArrowSize);
+	height: var(--swiperArrowSize);
+	// border-radius: 50%;
 	background-color: var(--swiperBgDef);
 	border: 2px solid var(--swiperBorderColorDef);
 	color: $primary;
@@ -597,6 +597,15 @@ body:not(.main-page) .main-wrapper {
 
 .main-row{
 	--sTPB: #{rem(30)};
+	&__btn{
+		@extend .btn;
+		display: block;
+		max-width: rem(256);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(16);
+		margin-left: auto;
+		}
+	}
 }
 @include media-breakpoint-up(xxl) {
 

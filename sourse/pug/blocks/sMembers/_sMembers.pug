@@ -20,28 +20,30 @@ mixin sMembers()
 			//- 	+e.toggle.d-lg-none
 			//- 		span.show Больше фильтров
 			//- 		span.hide Скрыть
-			.row(class="wow  animate__fadeInUp "   )
-				mixin item(i,t)
-					.col-lg-3.col-sm-6
-						+e.item
-							+e.img-wrap.bg-wrap
-								+pic(`teamPers-${i}.jpg`,'bg',0)(class="picture-bg")
-								//- +e.DIV.img-inner
-								//- 	+e.DIV.btn(href="#").text-white
-								//- 		+e.DIV.icon-wrap
-								//- 			+icon("comment")
-								//- 		+e.DIV.btn-text.text-white Написать <br> сообщение 
-								//- 	+e.DIV.btn-text
-								//- 		a(href="#").text-white Открыть биографию
-								+e.caption
-									+e.DIV.title
-										a(href="#")= t
-									+e.DIV.text Управляющий партнер 
-					// /.col-xl-3.col-lg-4.col-sm-6
-				+item('1','Виктория Моршанская')
-				+item('2','Виктор Моршанский')
-				+item('5','Виктория Моршанская')
-				+item('4','Виктор Моршанский')
+			+e.slider--js.swiper-container(class="wow  animate__fadeInUp "   )
+				.swiper-wrapper
+					mixin item(i,t)
+						+e.slide.swiper-slide 
+							+e.item
+								+e.img-wrap.bg-wrap
+									+pic(`teamPers-${i}.jpg`,'bg',0)(class="picture-bg")
+									//- +e.DIV.img-inner
+									//- 	+e.DIV.btn(href="#").text-white
+									//- 		+e.DIV.icon-wrap
+									//- 			+icon("comment")
+									//- 		+e.DIV.btn-text.text-white Написать <br> сообщение 
+									//- 	+e.DIV.btn-text
+									//- 		a(href="#").text-white Открыть биографию
+									+e.caption
+										+e.DIV.title
+											a(href="#")= t
+										+e.DIV.text Управляющий партнер 
+						// /+e.slide.swiper-slide 
+					+item('1','Виктория Моршанская')
+					+item('2','Виктор Моршанский')
+					+item('5','Виктория Моршанская')
+					+item('4','Виктор Моршанский')
+				+arrow
 			.text-center.pt-2
 				a.btn.btn-primary.px-3(href="#") Все спикеры
 			//- 	+item('5','Виктор Моршанский')
@@ -92,15 +94,14 @@ mixin sMembers7()
 									.small Product designer
 								+e.toggle-block
 									a.btn.btn-outline-primary.btn-block.mb-2(href="#") Написать #[span.d-none.d-md-inline сообщение]
-									a.btn.btn-outline-primary.btn-block(href="#") Биография
+									a.btn.btn-outline-primary.btn-block(href="#") О спикере
 					// /.col-xl-3.col-lg-4.col-sm-6
 				- for (var x = 0; x < 3; x++)
 					+item('1','Виктория Моршанская')
 					+item('2','Виктор Моршанский')
 					+item('5','Виктория Моршанская')
 					+item('4','Виктор Моршанский')
-			.text-center.pt-2(class="wow  animate__fadeInUp "   )
-				a.btn.btn-outline-primary.btn-more(href="#") Показать еще
+			+pugin()
 			//- 	+item('5','Виктор Моршанский')
 			//- 	+item('6','Виктор Моршанский')
 			//- 	+item('7','Виктор Моршанский')
@@ -124,8 +125,8 @@ mixin sMembers8()
 								+icon('search')
 					.col-md
 						+input2("Компания",'select')
-					.col-md
-						+input2("Должность",'select') 
+					//- .col-md
+					//- 	+input2("Должность",'select') 
 					.col-md
 						+input2("Город",'select') 
 			.row

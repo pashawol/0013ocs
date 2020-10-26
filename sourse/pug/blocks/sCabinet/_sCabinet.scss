@@ -232,6 +232,9 @@
 		@include media-breakpoint-down(md) {}
 
 		@include media-breakpoint-down(sm) {
+			.public-chat-header{
+				display: none;
+			}
 			.chat-message {
 				padding-right: 0;
 			}
@@ -325,6 +328,8 @@
 
 			.col {
 				max-width: calc(100% - 70px);
+				
+
 			}
 
 			.public-chat-message-name {
@@ -509,7 +514,13 @@
 
   .public-chat{
 			// color: #ffffff; 
-			// background:#151618;
+			background:#151618;
+			.icon{
+				color: #ffffff;
+			}
+		}
+		.public-chat-form-input{
+			background-color: transparent;
 		}
 		.sCabinet__col-users .public-chat {
 			

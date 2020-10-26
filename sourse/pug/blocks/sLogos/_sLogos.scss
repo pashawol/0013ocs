@@ -40,9 +40,9 @@
 		 &__col{ 
 			 text-align: center;
 			 @include mt;
-			 filter: saturate(0); 
+			//  filter: saturate(0); 
 			 &:hover{
-				filter: saturate(1);
+				// filter: saturate(1);
 
 			 }
 		

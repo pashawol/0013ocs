@@ -305,7 +305,7 @@ function eventHandler() {
 				},
 			
 				breakpoints: { 
-					480: {
+					576: {
 						slidesPerView: '2', 
 					} 
 				}
@@ -314,6 +314,32 @@ function eventHandler() {
 		}, 100);
 })
 	// modal window
+
+	const swiper6 = new Swiper('.sMembers__slider--js', {
+		// slidesPerView: 5,
+		...defaultSl,
+		slidesPerView: '1',
+		spaceBetween: 30,
+		navigation: {
+			nextEl: '.sMembers .swiper-button-next',
+			prevEl: '.sMembers .swiper-button-prev',
+		},
+
+		breakpoints: {
+			576: {
+				slidesPerView: '2',
+			},
+			
+			992: {
+				slidesPerView: '3',
+			},
+			1200: {
+				slidesPerView: '4',
+			},
+
+		}
+	});
+
 
 	var wow = new WOW({
 		mobile: false,

@@ -210,15 +210,15 @@ mixin login(b="Зарегистрироваться")
 		.container 
 			form(action='/file-upload'  enctype="multipart/form-data")
 				//- .dropzone(action='/file-upload'  enctype="multipart/form-data")
-				.col-lg-6.g-0
+				.col-xxl-6.col-lg-8.g-0
 					+input("",'email',' E-mail') 
 					+input("",'password','Пароль') 
 						//- .col-lg-6.mb-4
 					+e.btn.w-100.ttu.mb-3(type="submit") Войти
-					.pb-2 Нет аккаунта? 
+					.h5.py-4 Нет аккаунта? 
 						| 
 						a(href="#") Зарегистрироваться
-					.pb-2
+					.h5.pb-2
 						a(href="#") Восстановить пароль
 
 	 

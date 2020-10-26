@@ -13,7 +13,7 @@ include ../blocks/sMembers/_sMembers.pug
 //- include ../blocks/sExhibition/_sExhibition.pug
 //- include ../blocks/sPartners/_sPartners.pug
 //- include ../blocks/sWelcome/_sWelcome.pug
-//- include ../blocks/sEvents/_sEvents.pug
+include ../blocks/sEvents/_sEvents.pug
 //- include ../blocks/sSpeakers/_sSpeakers.pug
 
 
@@ -26,7 +26,11 @@ block pagecontent
 	+top-nav()
 	+headerBlock1()
 	+sMembers
-	+sWelcome
+	.section.container.container-large
+		.section-title.text-center
+			h2 Программа
+		+sEvents
+
 	+justUpgraitIt
 	
 	//- +sWelcome
