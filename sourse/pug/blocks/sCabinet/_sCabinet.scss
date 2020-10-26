@@ -233,7 +233,7 @@
 
 		@include media-breakpoint-down(sm) {
 			.public-chat-header{
-				display: none;
+				// display: none;
 			}
 			.chat-message {
 				padding-right: 0;

@@ -174,3 +174,53 @@ mixin sEvents0()
 						.pb-1.col-xl.text-xl-right  ЗАЛ «СТРАТЕГИИ»
 		 
 	// end sEvents
+
+
+mixin sEvents7()
+	// start sEvents
+	+b.sEvents&attributes(attributes)
+		mixin item(d,t,l, star )
+			+e.item
+				.row
+					+e.time.strong.text-primary.col.order-first!= d
+					if !star
+						.col-auto
+							+e.star.active
+								+icon('star-active')
+						.col-md-auto.order-md-first.order-lg-0
+							+e.label-elem!= l
+					.col-lg-12
+						+e.text-block
+							+e.title.strong
+								a(href="#").text-body!= t
+							+e.text
+								.row
+									if block
+										block
+									else
+										.col-auto
+											strong.text-primary Ольга Сигаль 
+											| 
+											span OCS Distribution
+					//- .col-auto.order-lg-last
+					//- 	+e.star.active
+					//- 		+icon('star-active')
+					//- .col-md-auto.order-md-first.order-lg-0
+					//- 	+e.label-elem!= l
+
+
+		+item(`12:40`, `Круглый стол с Ольгой Сигаль : Digital Академия, управляющий партнер «Возможен ли цифровой прорыв для IT-гигантов?»`, `Круглый стол`)
+		+item(`13:50`, `Круглый стол с Анной Черняковой, вице-президентом OCS Distribution`, `Круглый стол`)
+
+		//- +item(`13:50`, `Название сессии от вендора в одну или несколько строк`, `Сессия`) 
+		//- +item(`13:50`, `Название сессии от вендора в одну или несколько строк`, ``,"st") 
+		//- 	.col-12
+		//- 		+e.copy-block
+		//- 			.row
+		//- 				.col-sm
+		//- 					+e.link-text https://docs.google.com/document/d/12uUxcxKaEXUW9f7X2PC-Gn_aNHgxL_g5ys_GDyPQ5oE/edit#
+		//- 				.col-auto
+		//- 					button.btn.btn-sm.btn-primary Копировать
+		//- 				.col-auto
+		//- 					button.btn.btn-sm.btn-primary Присоединится
+
