@@ -1,6 +1,9 @@
 
 	// start .sContent
 	.sContent {
+		&__name{
+			max-width: rem(400);
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
