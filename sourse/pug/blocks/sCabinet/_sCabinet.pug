@@ -33,19 +33,19 @@ mixin sCabinet()
 					+e.mail(href="mailto:sample@sample.com").text-white.strong
 						+icon(`mail`)
 						| sample@sample.com
-					+e.h4.strong Управление видеоконференциями
-					+e.h5.strong.text-primary Войти в демо-зону
+					.h4.strong Управление видеоконференциями
+					.h6.strong.text-primary Войти в демо-зону
 					.row
 						.col-auto
 							+in-c("radio", 'вкл','comin' )(checked)
 						.col-auto
 							+in-c("radio", 'выкл','comin' )
-					+e.h5.strong.text-primary Поговори с вендером
+					.h6.strong.text-primary Поговори с вендером
 					.row
 						.col-auto
-							+in-c("radio", 'вкл','comin' )
+							+in-c("radio", 'вкл','se' )
 						.col-auto
-							+in-c("radio", 'выкл','comin' )(checked)
+							+in-c("radio", 'выкл','se' )(checked)
 	
 mixin sCabinet4()
 	+sCabinetBody()

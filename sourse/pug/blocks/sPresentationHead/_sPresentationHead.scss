@@ -1,6 +1,9 @@
 
 	// start .sPresentationHead
 	.sPresentationHead {
+		@include tear(em(1920px));
+		margin-top: -400px;
+		padding-top: 400px;
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
@@ -15,9 +18,6 @@
 } // end.sPresentationHead
 
 .canvas-block{
-	// @include tear(em(1920px));
-	margin-top: -400px;
-	padding-top: 400px;
 }
 
 .canvas-block{
@@ -56,7 +56,7 @@
 		// align-items: center;
 		line-height: em(102);
 		text-align: center;
-		margin-top: em(-103px);
+		margin-top: em(-97px);
 		margin-top: em(-163px);
 		// left: em(9px);
 		margin-bottom: em(43);
