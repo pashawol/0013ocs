@@ -1,0 +1,38 @@
+mixin sPresentationHead(data)
+	// start sPresentationHead
+	+b.sPresentationHead.section#sPresentationHead&attributes(attributes)
+		+pic('presentation-bg.png')(class="picture-bg")
+		+b.canvas-block.bg-wrap
+			
+			.container
+				+e.block--logo
+					+pic("logo-block.png")
+				.row
+					.col-auto 
+						+e.block--aside.--left
+							+e.count 150
+							+e.stand
+							+pic("left-banner.png")
+					.col
+						+e.block--video-banner
+							script(src='https://broadcast.comdi.com/player/js/embed.min.js', data-comdi-event='r5ftb9xd', data-login='anonymous', data-registration='{"email":"anonymous@startupvillage.ru"}', lang='ru', async='')
+					.col-auto
+						+e.block--aside.--slider
+
+				+e.block--btn
+					mixin btn(i,t)
+						+e.btn(href="#")
+							+e.icon-wrap
+								block
+								
+							+e.btn-title!= t
+					+btn('1',`Пройти <br> опрос`)
+						img(src=`img/svg/btn-1.svg`, alt="")
+					+btn('2',`Смотреть <br> презентация`)
+						+icon('btn-2')
+					+btn('3',`Поговори  <br> с вендором`)
+						+icon('btn-3')
+					+btn('4',`Войти <br> в демо-зону`)
+						+icon('btn-4')
+
+	// end sPresentationHead

@@ -1,0 +1,39 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug  
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sTrackPlan/_sTrackPlan.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sLogos/_sLogos.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sArchive/_sArchive.pug
+include ../blocks/s2d/_s2d.pug
+include ../blocks/sPresentationHead/_sPresentationHead.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Avaya'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav('l')
+	+headerBlockPage() 
+	+page-title(title,'ar')  
+	+sPresentationHead
+	//- render_gold
+	//- +sSpeakers 
+	//- +sMembers8
+	//- +sLive()
+	//- +sSpeakers()
+	//- +sQuestions()
+	//- +sTrackPlan()
+	//- +sLogos09
+	//- +sContact()
+	+footer()
+
+
+	
