@@ -1,38 +1,53 @@
 mixin sPresentationHead(data)
 	// start sPresentationHead
-	+b.sPresentationHead.section.bg-wrap#sPresentationHead&attributes(attributes)
-		+pic('presentation-bg.png')(class="picture-bg")
-		+b.canvas-block
-			
-			.container
-				+e.block--logo
-					+pic("logo-block.png")
-				.row
-					.col-auto 
-						+e.block--aside.--left
-							+e.count 150
-							+e.stand
-							+pic("left-banner.png")
-					.col
-						+e.block--video-banner
-							script(src='https://broadcast.comdi.com/player/js/embed.min.js', data-comdi-event='r5ftb9xd', data-login='anonymous', data-registration='{"email":"anonymous@startupvillage.ru"}', lang='ru', async='')
-					.col-auto
-						+e.block--aside.--slider
+	+b.sPresentationHead#sPresentationHead&attributes(attributes)
+		+e.inner.bg-wrap
+			picture.picture-bg
+				source(srcset='img/@2x/webp/presentation-bg.webp'   type='image/webp')
+				img(src='img/@2x/presentation-bg.png' alt='')
 
-				+e.block--btn
-					mixin btn(i,t)
-						+e.btn(href="#")
-							+e.icon-wrap
+			+b.canvas-block
+				
+				.container-fluid
+					+e.block--logo
+						+pic("logo-block.png",'',0)
+					.row
+						.col-auto 
+							+e.block--aside.--left
+								+e.count 150
+								+e.stand
+								+pic("left-banner.png",'',0)
+						.col
+							+e.block--video-banner
+								script(src='https://broadcast.comdi.com/player/js/embed.min.js', data-comdi-event='r5ftb9xd', data-login='anonymous', data-registration='{"email":"anonymous@startupvillage.ru"}', lang='ru', async='')
+						.col-auto
+							+e.block--aside.--slider
+								+e.slider--js.swiper-container
+									+arrow
+									.swiper-wrapper
+										- for (var x = 0; x < 3; x++)
+											+e.slide.swiper-slide
+												+e.caption
+													+e.name!= `Виктор <br> Барышников ${x + 1}`
+													+e.prof Product owner
+												+e.slide-img-wrap
+													img.swiper-lazy(src=`img/@2x/speaker-${x + 1}.png`, alt="")
+												+e.btn-title(href="#") Начать <br> чат
+					+e.block--btn
+						mixin btn(i,t,img)
+							+e.btn(href="#")&attributes(attributes)
+								+e.icon-wrap
+									if i 
+										+icon(`btn-`+ i)
+									else
+										img(src=`img/svg/btn-1.svg`, alt="")
+									
+								+e.btn-title!= t
 								block
-								
-							+e.btn-title!= t
-					+btn('1',`Пройти <br> опрос`)
-						img(src=`img/svg/btn-1.svg`, alt="")
-					+btn('2',`Смотреть <br> презентация`)
-						+icon('btn-2')
-					+btn('3',`Поговори  <br> с вендором`)
-						+icon('btn-3')
-					+btn('4',`Войти <br> в демо-зону`)
-						+icon('btn-4')
-
+						+btn('',`Пройти <br> опрос`)
+						+btn('2',`Смотреть <br> презентация`) 
+						+btn('3',`Поговори  <br> с вендором`) 
+						+btn('4',`Войти <br> в демо-зону`)(class="disabled") 
+							+e.caption
+								+e.title Я&nbsp;пока занят, напишите пожалйста в&nbsp;чат
 	// end sPresentationHead

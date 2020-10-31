@@ -25,7 +25,7 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body>
+	<body class="page-presentation">
 		<div class="main-wrapper">
 			<!-- start top-nav-->
 			<div class="top-nav">
@@ -102,75 +102,182 @@
 				</div>
 			</div>
 			<!-- start sPresentationHead-->
-			<div class="sPresentationHead section bg-wrap" id="sPresentationHead">
-				<!-- picture-->
-				<picture class="picture-bg"> 
-					<noscript class="loading-lazy">
-						<source srcset="img/@2x/webp/presentation-bg.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
-						<source srcset="img/@1x/webp/presentation-bg.webp" loading="lazy" type="image/webp"/>
-						<source srcset="img/@2x/presentation-bg.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
-						<source srcset="img/@1x/presentation-bg.png" loading="lazy" type="image/png"/><img src="img/@2x/presentation-bg.png" loading="lazy" alt=""/>
-					</noscript>
-				</picture>
-				<!-- /picture-->
-				<div class="canvas-block">
-					<div class="container">
-						<div class="canvas-block__block canvas-block__block--logo">
-							<!-- picture-->
-							<picture> 
-								<noscript class="loading-lazy">
-									<source srcset="img/@2x/webp/logo-block.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
-									<source srcset="img/@1x/webp/logo-block.webp" loading="lazy" type="image/webp"/>
-									<source srcset="img/@2x/logo-block.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
-									<source srcset="img/@1x/logo-block.png" loading="lazy" type="image/png"/><img src="img/@2x/logo-block.png" loading="lazy" alt=""/>
-								</noscript>
-							</picture>
-							<!-- /picture-->
-						</div>
-						<div class="row">
-							<div class="col-auto"> 
-								<div class="canvas-block__block canvas-block__block--aside canvas-block__block--left">
-									<div class="canvas-block__count">150
+			<div class="sPresentationHead" id="sPresentationHead">
+				<div class="sPresentationHead__inner bg-wrap">
+					<picture class="picture-bg">
+						<source srcset="img/@2x/webp/presentation-bg.webp" type="image/webp"/><img src="img/@2x/presentation-bg.png" alt=""/>
+					</picture>
+					<div class="canvas-block">
+						<div class="container-fluid">
+							<div class="canvas-block__block canvas-block__block--logo">
+								<!-- picture-->
+								<picture> 
+									<noscript class="loading-lazy">
+										<source srcset="img/@2x/webp/logo-block.webp" loading="lazy" type="image/webp"/><img src="img/@2x/logo-block.png" loading="lazy" alt=""/>
+									</noscript>
+								</picture>
+								<!-- /picture-->
+							</div>
+							<div class="row">
+								<div class="col-auto"> 
+									<div class="canvas-block__block canvas-block__block--aside canvas-block__block--left">
+										<div class="canvas-block__count">150
+										</div>
+										<div class="canvas-block__stand">
+										</div>
+										<!-- picture-->
+										<picture> 
+											<noscript class="loading-lazy">
+												<source srcset="img/@2x/webp/left-banner.webp" loading="lazy" type="image/webp"/><img src="img/@2x/left-banner.png" loading="lazy" alt=""/>
+											</noscript>
+										</picture>
+										<!-- /picture-->
 									</div>
-									<div class="canvas-block__stand">
+								</div>
+								<div class="col">
+									<div class="canvas-block__block canvas-block__block--video-banner">
+										<script src="https://broadcast.comdi.com/player/js/embed.min.js" data-comdi-event="r5ftb9xd" data-login="anonymous" data-registration="{&quot;email&quot;:&quot;anonymous@startupvillage.ru&quot;}" lang="ru" async=""></script>
 									</div>
-									<!-- picture-->
-									<picture> 
-										<noscript class="loading-lazy">
-											<source srcset="img/@2x/webp/left-banner.webp" loading="lazy" type="image/webp" media="(min-width:576px)"/>
-											<source srcset="img/@1x/webp/left-banner.webp" loading="lazy" type="image/webp"/>
-											<source srcset="img/@2x/left-banner.png" loading="lazy" type="image/png" media="(min-width:576px)"/>
-											<source srcset="img/@1x/left-banner.png" loading="lazy" type="image/png"/><img src="img/@2x/left-banner.png" loading="lazy" alt=""/>
-										</noscript>
-									</picture>
-									<!-- /picture-->
+								</div>
+								<div class="col-auto">
+									<div class="canvas-block__block canvas-block__block--aside canvas-block__block--slider">
+										<div class="canvas-block__slider canvas-block__slider--js swiper-container">
+											<div class="swiper-button-hand swiper-button-hand-prev swiper-button-prev">
+												<svg class="icon icon-chevron-left ">
+													<use xlink:href="img/svg/sprite.svg#chevron-left"></use>
+												</svg>
+											</div>
+											<div class="swiper-button-hand swiper-button-hand-next swiper-button-next">
+												<svg class="icon icon-chevron-right ">
+													<use xlink:href="img/svg/sprite.svg#chevron-right"></use>
+												</svg>
+											</div>
+											<div class="swiper-wrapper">
+												<div class="canvas-block__slide swiper-slide">
+													<div class="canvas-block__caption">
+														<div class="canvas-block__name">Виктор <br> Барышников 1
+														</div>
+														<div class="canvas-block__prof">Product owner
+														</div>
+													</div>
+													<div class="canvas-block__slide-img-wrap"><img class="swiper-lazy" src="img/@2x/speaker-1.png" alt=""/>
+													</div><a class="canvas-block__btn-title" href="#">Начать <br> чат</a>
+												</div>
+												<div class="canvas-block__slide swiper-slide">
+													<div class="canvas-block__caption">
+														<div class="canvas-block__name">Виктор <br> Барышников 2
+														</div>
+														<div class="canvas-block__prof">Product owner
+														</div>
+													</div>
+													<div class="canvas-block__slide-img-wrap"><img class="swiper-lazy" src="img/@2x/speaker-2.png" alt=""/>
+													</div><a class="canvas-block__btn-title" href="#">Начать <br> чат</a>
+												</div>
+												<div class="canvas-block__slide swiper-slide">
+													<div class="canvas-block__caption">
+														<div class="canvas-block__name">Виктор <br> Барышников 3
+														</div>
+														<div class="canvas-block__prof">Product owner
+														</div>
+													</div>
+													<div class="canvas-block__slide-img-wrap"><img class="swiper-lazy" src="img/@2x/speaker-3.png" alt=""/>
+													</div><a class="canvas-block__btn-title" href="#">Начать <br> чат</a>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="col">
-								<div class="canvas-block__block canvas-block__block--video-banner">
-									<script src="https://broadcast.comdi.com/player/js/embed.min.js" data-comdi-event="r5ftb9xd" data-login="anonymous" data-registration="{&quot;email&quot;:&quot;anonymous@startupvillage.ru&quot;}" lang="ru" async=""></script>
-								</div>
+							<div class="canvas-block__block canvas-block__block--btn"><a class="canvas-block__btn" href="#"><span class="canvas-block__icon-wrap"><img src="img/svg/btn-1.svg" alt=""/></span><span class="canvas-block__btn-title">Пройти <br> опрос</span></a><a class="canvas-block__btn" href="#"><span class="canvas-block__icon-wrap">
+								<svg class="icon icon-btn-2 ">
+									<use xlink:href="img/svg/sprite.svg#btn-2"></use>
+								</svg></span><span class="canvas-block__btn-title">Смотреть <br> презентация</span> </a><a class="canvas-block__btn" href="#"><span class="canvas-block__icon-wrap">
+								<svg class="icon icon-btn-3 ">
+									<use xlink:href="img/svg/sprite.svg#btn-3"></use>
+								</svg></span><span class="canvas-block__btn-title">Поговори  <br> с вендором</span> </a><a class="canvas-block__btn disabled" href="#"><span class="canvas-block__icon-wrap">
+								<svg class="icon icon-btn-4 ">
+									<use xlink:href="img/svg/sprite.svg#btn-4"></use>
+								</svg></span><span class="canvas-block__btn-title">Войти <br> в демо-зону</span> <span class="canvas-block__caption"><span class="canvas-block__title">Я&nbsp;пока занят, напишите пожалйста в&nbsp;чат</span></span></a>
 							</div>
-							<div class="col-auto">
-								<div class="canvas-block__block canvas-block__block--aside canvas-block__block--slider">
-								</div>
-							</div>
-						</div>
-						<div class="canvas-block__block canvas-block__block--btn"><a class="canvas-block__btn" href="#"><span class="canvas-block__icon-wrap"><img src="img/svg/btn-1.svg" alt=""/></span><span class="canvas-block__btn-title">Пройти <br> опрос</span></a><a class="canvas-block__btn" href="#"><span class="canvas-block__icon-wrap">
-							<svg class="icon icon-btn-2 ">
-								<use xlink:href="img/svg/sprite.svg#btn-2"></use>
-							</svg></span><span class="canvas-block__btn-title">Смотреть <br> презентация</span></a><a class="canvas-block__btn" href="#"><span class="canvas-block__icon-wrap">
-							<svg class="icon icon-btn-3 ">
-								<use xlink:href="img/svg/sprite.svg#btn-3"></use>
-							</svg></span><span class="canvas-block__btn-title">Поговори  <br> с вендором</span></a><a class="canvas-block__btn" href="#"><span class="canvas-block__icon-wrap">
-							<svg class="icon icon-btn-4 ">
-								<use xlink:href="img/svg/sprite.svg#btn-4"></use>
-							</svg></span><span class="canvas-block__btn-title">Войти <br> в демо-зону</span></a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<!-- end sPresentationHead-->
+			<div class="sContent sContent--presentation section">
+				<div class="container">
+					<div class="row">
+						<div class="col order-first">
+							<h2>AVAYA&nbsp;&mdash; ОДИН ИЗ&nbsp;КРУПНЕЙШИХ ПОСТАВЩИКОВ БАТАРЕЙ</h2>
+							<p>26&nbsp;лет назад наша компания была создана командой людей, хорошо знакомых с&nbsp;ИТ-каналом и&nbsp;понимавших, каким должен быть хороший дистрибьютор. Эти знания, преданность идеям крепкого партнерства и&nbsp;желание развивать рынок помогли нам вырасти и&nbsp;стать теми, кто мы&nbsp;есть сегодня.</p>
+							<p>В&nbsp;нашем портфеле почти 500 продуктовых линеек&nbsp;&mdash; от&nbsp;инфраструктур в&nbsp;коробке до наушников и&nbsp;детских конструкторов. В&nbsp;команде почти 2500 специалистов&nbsp;&mdash; от&nbsp;тех, кто знает слово &laquo;конвергентный&raquo;, до&nbsp;тех, кто покажет как управлять гироскутером. У&nbsp;нас 27 городов присутствия в&nbsp;России, и&nbsp;если менеджер в&nbsp;одном офисе спит, то&nbsp;в&nbsp;другом скорее всего уже работает. Наш партнерский канал насчитывает почти 7500</p>
+						</div>
+						<div class="col-xxl-4 col-lg-6">
+							<h4>Сессии в которых учавствует</h4>
+							<!-- start sEvents-->
+							<div class="sEvents sEvents--speaker">
+								<div class="sEvents__item">
+									<div class="row">
+										<div class="sEvents__time strong text-primary col order-first">12:40
+										</div>
+										<div class="col-auto">
+											<div class="sEvents__star active">
+												<svg class="icon icon-star-active ">
+													<use xlink:href="img/svg/sprite.svg#star-active"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="col-md-auto order-md-first order-lg-0">
+											<div class="sEvents__label-elem">Круглый стол
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="sEvents__text-block">
+												<div class="sEvents__title strong"><a class="text-body" href="#">Круглый стол с Ольгой Сигаль : Digital Академия, управляющий партнер «Возможен ли цифровой прорыв для IT-гигантов?»</a>
+												</div>
+												<div class="sEvents__text">
+													<div class="row">
+														<div class="col-auto"><strong class="text-primary">Ольга Сигаль </strong> <span>OCS Distribution</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="sEvents__item">
+									<div class="row">
+										<div class="sEvents__time strong text-primary col order-first">13:50
+										</div>
+										<div class="col-auto">
+											<div class="sEvents__star active">
+												<svg class="icon icon-star-active ">
+													<use xlink:href="img/svg/sprite.svg#star-active"></use>
+												</svg>
+											</div>
+										</div>
+										<div class="col-md-auto order-md-first order-lg-0">
+											<div class="sEvents__label-elem">Круглый стол
+											</div>
+										</div>
+										<div class="col-lg-12">
+											<div class="sEvents__text-block">
+												<div class="sEvents__title strong"><a class="text-body" href="#">Круглый стол с Анной Черняковой, вице-президентом OCS Distribution</a>
+												</div>
+												<div class="sEvents__text">
+													<div class="row">
+														<div class="col-auto"><strong class="text-primary">Ольга Сигаль </strong> <span>OCS Distribution</span></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-xxl-2 order-xxl-first"></div>
+					</div>
+				</div>
+			</div>
 			<footer class="footer">
 				<div class="container wow  animate__fadeInUp ">
 					<div class="footer__head">
