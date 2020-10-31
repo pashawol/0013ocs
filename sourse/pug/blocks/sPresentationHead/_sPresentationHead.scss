@@ -1,6 +1,10 @@
 
 	// start .sPresentationHead
 	.sPresentationHead {
+		@media (min-width: 370px) {
+			font-size: rem(13);
+		}
+		
 		@include media-breakpoint-up(sm) {
 			font-size: 1rem;
 		}

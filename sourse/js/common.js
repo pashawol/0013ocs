@@ -231,7 +231,7 @@ function eventHandler() {
 			var myDivInner = $(".sPresentationHead__inner");
 			var scrollto = myDiv.offset().left + (myDiv.width() / 2);
 			myDiv.animate({ scrollLeft: scrollto });
-			console.log(scrollto);
+			// console.log(scrollto);
 
 		}, 100);
 	}

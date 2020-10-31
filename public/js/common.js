@@ -226,18 +226,6 @@ function eventHandler() {
 		} else {
 			$('.top-nav  ').removeClass('fixed');
 		}
-
-		if (window.matchMedia("(max-width: 768px)").matches) {
-			setTimeout(function () {
-				var myDiv = $(".sPresentationHead");
-				var myDivInner = $(".sPresentationHead__inner");
-				var scrollto = myDiv.offset().left + myDiv.width() / 2;
-				myDiv.animate({
-					scrollLeft: scrollto
-				});
-				console.log(scrollto);
-			}, 100);
-		}
 	}
 
 	window.addEventListener('resize', function () {
@@ -246,6 +234,18 @@ function eventHandler() {
 		passive: true
 	});
 	whenResize();
+
+	if (window.matchMedia("(max-width: 768px)").matches) {
+		setTimeout(function () {
+			var myDiv = $(".sPresentationHead");
+			var myDivInner = $(".sPresentationHead__inner");
+			var scrollto = myDiv.offset().left + myDiv.width() / 2;
+			myDiv.animate({
+				scrollLeft: scrollto
+			}); // console.log(scrollto);
+		}, 100);
+	}
+
 	var defaultSl = (_defaultSl = {
 		spaceBetween: 0,
 		lazy: {
