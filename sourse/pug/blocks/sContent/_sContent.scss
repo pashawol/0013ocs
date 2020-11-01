@@ -12,6 +12,9 @@
 		&__name{
 			max-width: rem(400);
 		}
+		h2{
+			margin-bottom: 1em;
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

@@ -3,8 +3,8 @@ mixin sPresentationHead(data)
 	+b.sPresentationHead#sPresentationHead&attributes(attributes)
 		+e.inner.bg-wrap
 			picture.picture-bg
-				source(srcset='img/@2x/webp/presentation-bg.webp'   type='image/webp')
-				img(src='img/@2x/presentation-bg.png' alt='')
+				source(srcset=`img/@2x/webp/${data.img}.webp`   type='image/webp')
+				img(src=`img/@2x/${data.img}.png` alt='')
 
 			+b.canvas-block
 				
@@ -45,7 +45,7 @@ mixin sPresentationHead(data)
 								+e.btn-title!= t
 								block
 						+btn('',`Пройти <br> опрос`)
-						+btn('2',`Смотреть <br> презентация`) 
+						+btn('2',`Скачать <br> материалы`) 
 						+btn('3',`Поговори  <br> с вендором`) 
 						+btn('4',`Войти <br> в демо-зону`)(class="disabled") 
 							+e.caption

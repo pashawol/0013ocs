@@ -141,7 +141,8 @@
 		&.disabled{
 			.canvas-block__icon-wrap,
 			.canvas-block__btn-title{
-				opacity: 0.1;
+				opacity: 0.2;
+				transform: scale(0.82);
 			}
 		}
 		&:hover .canvas-block__caption {

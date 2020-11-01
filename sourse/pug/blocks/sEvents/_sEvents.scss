@@ -173,7 +173,10 @@
 	}
 
 	.tabs__content{
-		padding-left: rem(50);
+		// padding-left: rem(50);
+	}
+	.tabs__caption{
+		margin-bottom: 2rem;
 	}
 	.tabs-inner{
 		&__content{
