@@ -122,7 +122,7 @@
 	&__block--btn{
 		margin-left: auto;
 		margin-right: auto;
-		max-width: em(580px);
+		max-width: em(620px);
 		position: relative;
 		left: em(10);
 		display: flex;
@@ -137,6 +137,11 @@
 		position: relative;
 		&:nth-child(2){
 			margin-left: em(10);
+		}
+		&:nth-child(3){
+			// margin-left: em(20);
+			position: relative;
+			left: rem(20);
 		}
 		&.disabled{
 			.canvas-block__icon-wrap,
