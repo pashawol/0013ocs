@@ -1,93 +1,13 @@
-mixin sLogos()
-	// start sLogos
-	+b.SECTION.sLogos.section#sLogos&attributes(attributes)
-		.container 
-			+b.section-title.text-center(class="wow  animate__fadeInUp "   )
-				h2 Экспо-партнеры
-			mixin group(t)
-				h3(class="wow  animate__fadeInUp "   )= t
-				.row(class="wow  animate__fadeInUp "   )
-					- for (var x = 1; x < 13; x++)
-						+e.col.col-xl.col-md-3.col-sm-4.col-6
-							//- (class="wow  animate__fadeInUp "   )
-							a.link-modal(href="#modal-content")
-								+pic(`partner-${x}.png`,'','') 
-							+e.hidden.d-none
-								+b.modal-row.row.pt-4
-									.col-sm-3
-										.sPartners__img-wrap.mb-2
-											+pic(`partner-${x}.png`,'','') 
-										.sPartners__title.mw-100 РЖД 
-									+e.textCol.col.pt-0
-										+e.title.text-primary.mb-2.ttu РЖД 
-										p ОАО «Российские железные дороги» является одной из самых крупных в мире железнодорожных компаний с колоссальными объемами грузовых и пассажирских перевозок, обладающей высокими финансовыми рейтингами, квалифицированными специалистами во всех областях железнодорожного транспорта, большой научно-технической базой, проектными и строительными мощностями, значительным опытом международного сотрудничества. Компания эксплуатирует одну из крупнейших железнодорожных систем мира длиной 85,5 тыс. км, занимая лидирующие позиции по протяженности электрифицированных линий – 43,7 тыс. км. В транспортной системе России ОАО «РЖД» обеспечивает свыше 45% совокупного грузооборота (с учетом трубопроводного транспорта) и около 25% пассажирооборота.
-										a.strong(href="#") rzd.ru
-			 
-					+e.col.col-xl.col-md-3.col-sm-4.col-6
-						//- (class="wow  animate__fadeInUp "   )
-						+pic(`partner-8`,'','') 
-					+e.col.col-xl.col-md-3.col-sm-4.col-6
-						//- (class="wow  animate__fadeInUp "   )
-						+pic(`partner-10`,'','') 
-			+group("Генеральные партнеры")
-			+group("Партнеры форума")
-			+group("Информационная поддержка")
-	// end sLogos
 
-	
 mixin sLogos09()
-	// start sLogos
-	+b.SECTION.sLogos.section#sLogos&attributes(attributes)
-		.container.container-large  
-			mixin group(t)
-				h3(class="wow  animate__fadeInUp "   )= t
-				.row.justify-content-start(class="wow  animate__fadeInUp "   )
-					- for (var x = 1; x < 10; x++)
-						+e.col-page.col-xl-2.col-md-3.col-sm-4.col-6
-							//- (class="wow  animate__fadeInUp "   )
-							a.link-modal(href="#modal-content")
-								+pic(`logo-${x}.png`,'','') 
-							+e.hidden.d-none
-								+b.modal-row.row.py-5
-									.col
-										.pb-1
-											+pic(`logo-${x}.png`,'','') 
-										h5 CYBERPOWER - МИРОВОЙ ПОСТАВЩИК РЕШЕНИЙ ПО УПРАВЛЕНИЮ ЭЛЕКТРОПИТАНИЕМ. МОДЕЛЬНЫЙ РЯД ВКЛЮЧАЕТ ИБП, PDU, АКБ,BMS, ПО КОНТРОЛЯ И УПРАВЛЕНИЯ ЭНЕРГОПИТАНИЕМ
-										p Компания CyberPower является ведущим мировым поставщиком профессиональных решений и имеет более 200 международных патентов в области защиты электропитания. Модельный ряд включает полную линейку источников бесперебойного питания (ИБП) для рынка систем промышленной автоматизации, ЖКХ комплекса, телекоммуникационных, офисных и компьютерных систем. Кроме этого, в продуктовой линейке представлены PDU, стабилизаторы, аккумуляторные батареи, программное обеспечение управления энергопитанием – все, что позволяет компании предлагать законченные решения. CyberPower осуществляет полный цикл создания продукции, начиная от инженерных разработок и заканчивая массовым производством.
-										a(href="#") Example.com
-									// если нет слайдера, скрывай весь col-lg-6
-									.col-lg-6 
-										.row.pt-2.pb-5
-											.col
-												.h4 Спикеры
-											.col-auto
-												.control-wrap
-													+arrow()
-										+e.slider--js.swiper-container
-											.swiper-wrapper
-												- for (var x = 1; x < 5; x++)
-													+e.slide.swiper-slide
-														+e.item
-															+e.img-wrap
-																//- +pic(`teamPers-${x}.jpg`,'bg',0)(class="picture-bg") 
-																img.res-i.swiper-lazy(src=`img/@2x/teamPers-${x}.jpg`, alt="") 
-															.h4
-																a.text-dark(href="#") Виктор Барышников
-															.pb-1.text-secondary Google inc
-															.pb-1 Product designer
-			+group("Генеральные партнеры")
-			+group("Партнеры форума")
-			+group("Информационная поддержка")
-	// end sLogos
-
-
+	+sLogos()
 
 mixin sLogos()
 	// start sLogos
-	+b.SECTION.sLogos.section#sLogos&attributes(attributes)
+	+b.sLogos.section#sLogos&attributes(attributes)
 		.container 
-			+b.section-title.text-center(class="wow  animate__fadeInUp "   )
-				h2 Экспо-партнеры
+			//- +b.section-title.text-center(class="wow  animate__fadeInUp "   )
+			//- 	h2 Экспо-партнеры
 			mixin group(t)
 				h3(class="wow  animate__fadeInUp "   )= t
 				.row(class="wow  animate__fadeInUp "   )
@@ -96,16 +16,7 @@ mixin sLogos()
 							//- (class="wow  animate__fadeInUp "   )
 							a.link-modal(href="#modal-content")
 								+pic(`partner-${x}.png`,'','') 
-							+e.hidden.d-none
-								+b.modal-row.row.pt-4
-									.col-sm-3
-										.sPartners__img-wrap.mb-2
-											+pic(`partner-${x}.png`,'','') 
-										.sPartners__title.mw-100 РЖД 
-									+e.textCol.col.pt-0
-										+e.title.text-primary.mb-2.ttu РЖД 
-										p ОАО «Российские железные дороги» является одной из самых крупных в мире железнодорожных компаний с колоссальными объемами грузовых и пассажирских перевозок, обладающей высокими финансовыми рейтингами, квалифицированными специалистами во всех областях железнодорожного транспорта, большой научно-технической базой, проектными и строительными мощностями, значительным опытом международного сотрудничества. Компания эксплуатирует одну из крупнейших железнодорожных систем мира длиной 85,5 тыс. км, занимая лидирующие позиции по протяженности электрифицированных линий – 43,7 тыс. км. В транспортной системе России ОАО «РЖД» обеспечивает свыше 45% совокупного грузооборота (с учетом трубопроводного транспорта) и около 25% пассажирооборота.
-										a.strong(href="#") rzd.ru
+							+formodal(x)
 			 
 					+e.col.col-xl.col-md-3.col-sm-4.col-6
 						//- (class="wow  animate__fadeInUp "   )
@@ -114,8 +25,38 @@ mixin sLogos()
 						//- (class="wow  animate__fadeInUp "   )
 						+pic(`partner-10`,'','') 
 			+group("Генеральные партнеры")
-			+group("Партнеры форума")
+			+group("Партнеры")
+			+group("Экспо-партнеры")
 			+group("Информационная поддержка")
 	// end sLogos
 
 	
+mixin formodal(y)
+	+e.hidden.d-none
+		+b.modal-row.row.py-5
+			.col
+				.pb-1
+					+pic(`partner-${y}.png`,'','') 
+				h5 CYBERPOWER - МИРОВОЙ ПОСТАВЩИК РЕШЕНИЙ ПО УПРАВЛЕНИЮ ЭЛЕКТРОПИТАНИЕМ. МОДЕЛЬНЫЙ РЯД ВКЛЮЧАЕТ ИБП, PDU, АКБ,BMS, ПО КОНТРОЛЯ И УПРАВЛЕНИЯ ЭНЕРГОПИТАНИЕМ
+				p Компания CyberPower является ведущим мировым поставщиком профессиональных решений и имеет более 200 международных патентов в области защиты электропитания. Модельный ряд включает полную линейку источников бесперебойного питания (ИБП) для рынка систем промышленной автоматизации, ЖКХ комплекса, телекоммуникационных, офисных и компьютерных систем. Кроме этого, в продуктовой линейке представлены PDU, стабилизаторы, аккумуляторные батареи, программное обеспечение управления энергопитанием – все, что позволяет компании предлагать законченные решения. CyberPower осуществляет полный цикл создания продукции, начиная от инженерных разработок и заканчивая массовым производством.
+				a(href="#") Example.com
+			//- // если нет слайдера, скрывай весь col-lg-6
+			//- .col-lg-6 
+			//- 	.row.pt-2.pb-5
+			//- 		.col
+			//- 			.h4 Спикеры
+			//- 		.col-auto
+			//- 			.control-wrap
+			//- 				+arrow()
+			//- 	+e.slider--js.swiper-container
+			//- 		.swiper-wrapper
+			//- 			- for (var x = 1; x < 5; x++)
+			//- 				+e.slide.swiper-slide
+			//- 					+e.item
+			//- 						+e.img-wrap
+			//- 							//- +pic(`teamPers-${x}.jpg`,'bg',0)(class="picture-bg") 
+			//- 							img.res-i.swiper-lazy(src=`img/@2x/teamPers-${x}.jpg`, alt="") 
+			//- 						.h4
+			//- 							a.text-dark(href="#") Виктор Барышников
+			//- 						.pb-1.text-secondary Google inc
+			//- 						.pb-1 Product designer

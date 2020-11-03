@@ -260,7 +260,7 @@ function eventHandler() {
 	});
 
 	// modal window
-	$(".sLogos__col-page ").on('click', '.link-modal', function () {
+	$(".sLogos__col-page, .sLogos__col ").on('click', '.link-modal', function () {
 		setTimeout(() => {
 			const swiper5 = new Swiper('.modal-content .modal-row__slider--js', {
 				// slidesPerView: 5,

@@ -22,14 +22,14 @@
 			 padding-bottom: 2rem;
 			// justify-content: space-around;
 				// justify-content: space-between;
-				justify-content: center;
+				// justify-content: center;
 			
 				padding-top: rem(15);
 		 }
 		 &__col{
 			 	 @include media-breakpoint-up(xl) {
-			 	 	flex: 0 0 (100% / 7);
-			 	 	max-width: (100% / 7);
+			 	 	flex: 0 0 (100% / 6);
+			 	 	max-width: (100% / 6);
 			 	 }
 					padding-top: rem(15);
 		 }
