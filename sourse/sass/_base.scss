@@ -436,7 +436,9 @@ iframe {
 
 
 .page-title {
-	padding-top: rem(30);
+		@include media-breakpoint-up(sm){
+			padding-top: rem(30);
+		}
 	padding-bottom: rem(30);
 	position: relative;
 	z-index: 4;
@@ -455,7 +457,7 @@ iframe {
 				top: rem(15);
 			}
 
-			top: rem(1);
+			top: rem(6);
 
 
 			.icon {
@@ -467,6 +469,28 @@ iframe {
 
 			}
 		}
+	.tabs{
+		&__caption{
+			display: flex;
+		}
+		&__btn{
+			@extend .btn;
+				@include media-breakpoint-up(xxl) {
+					font-size: rem(16);
+					padding: em(13) em(20);
+				}
+				font-size: rem(12);
+			padding: em(10) em(5);
+			background: rgba(255, 87, 0, 0.4);
+			/* 5 */
+
+			border: 1px solid #FF5700;
+			&:hover,
+			&.active{
+				background-color: #FF5700;
+			}
+		}
+	}
 }
 .page-presentation{
 	.headerBlock,
@@ -553,7 +577,17 @@ body:not(.main-page) .main-wrapper {
 				filter: blur(100px);
 				animation: blinkingText 3.2s infinite;
 			}
-}
+		}
+		.page-show{
+			background: #01090E;
+			.main-wrapper{ 
+				&::before,
+				&::after{
+					z-index: 10;
+					pointer-events: none;
+				}
+			}
+		}
 
 .sLogin{
 	.section{

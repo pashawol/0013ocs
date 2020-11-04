@@ -1,0 +1,55 @@
+mixin sShow(data)
+	.tabs__wrap
+	.tabs__content.active
+		// start sShow
+		+b.sShow&attributes(attributes)
+			+e.inner.bg-wrap
+				+pic2('show.png','',0)(class="picture-bgg")
+				+b.canvas-block-show
+					- for (var x = 0; x < 10; x++)
+						+e.logo-block(href="#")
+							img(src="img/@2x/logo-block.png", alt="")
+					+e.center-logo
+						img(src="img/svg/logo-center.png", alt="")
+
+		// end sShow
+		
+	.tabs__content
+		// start sShow
+		+b.sShow&attributes(attributes)
+			+e.inner.bg-wrap
+				+pic2('show.png','',0)(class="picture-bgg")
+				+b.canvas-block-show
+					- for (var x = 0; x < 10; x++)
+						+e.logo-block(href="#")
+							img(src="img/@2x/logo-block.png", alt="")
+					+e.center-logo
+						img(src="img/svg/logo-center.png", alt="")
+
+		// end sShow
+	.tabs__content.tabs__content--3
+		// start sShow
+		+b.sShow&attributes(attributes)
+			+e.inner.bg-wrap
+				+pic2('show-2.png','',0)(class="picture-bgg")
+				+b.canvas-block-show
+					- for (var x = 0; x < 3; x++)
+						+e.logo-block(href="#")
+							img(src="img/@2x/logo-block.png", alt="")
+					+e.center-logo
+						img(src="img/svg/logo-center.png", alt="")
+
+		// end sShow
+	.tabs__content.tabs__content--4
+		// start sShow
+		+b.sShow&attributes(attributes)
+			+e.inner.bg-wrap
+				+pic2('show-3.png','',0)(class="picture-bgg")
+				+b.canvas-block-show
+					- for (var x = 0; x < 4; x++)
+						+e.logo-block(href="#")
+							img(src="img/@2x/logo-block.png", alt="")
+					+e.center-logo
+						img(src="img/svg/logo-center.png", alt="")
+
+		// end sShow

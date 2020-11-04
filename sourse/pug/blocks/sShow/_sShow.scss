@@ -1,0 +1,234 @@
+
+	
+	.container-fluid{
+		max-width: em(1760px);
+	}
+	.back{
+		.icon{
+
+			font-size: rem(18);
+		}
+		color: #ffffff ;
+	}
+	// start .sShow
+	.sShow {
+		@include media-breakpoint-up(xl) {
+			margin-top: rem(-200);
+		}
+		@include media-breakpoint-up(lg) {
+			margin-top: rem(-160);
+		}
+		margin-top: rem(-60);
+		.picture-bgg {
+			width: em(1920px);
+			margin-left: em(-1920 / 2);
+			left: 50%;
+			position: absolute;
+			height: 100%;
+			top: 0;
+			> img{
+				margin-left: 1px;
+			}
+			// margin-left: 1px;
+		}
+		
+		font-size: var(--fz);
+		@media (min-width: 1440px) {
+			--fz: 1rem;
+		}
+		
+		@media (min-width: 1500px) {
+				--fz: #{rem(16)};
+		}
+		@include media-breakpoint-up(xl) {
+				--fz: #{rem(13)};
+		} 
+			--fz: #{rem(10)};
+		overflow-x: auto;
+ 
+
+		// margin-top: em(-190px);
+
+		&__inner {
+			// padding-top: em(79);
+			min-width: em(1600);
+			position: relative;
+			overflow: hidden;
+			height: em(960);
+		}
+	
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sShow
+
+.canvas-block-show{
+	width: em(1440px);
+	min-height: 1px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+
+	&__logo-block {
+		// position: relative;
+		position: absolute;
+		z-index: 10;
+		
+		background: #FFFFFF;
+		// display: block;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		img{
+			max-width: 80%;
+			max-height: 80%;
+		}
+		width: var(--lineW);
+		height: var(--lineH);
+		top: var(--lineY);
+		--lineX: 0;
+		--lineY:0;  
+		--lineW:#{em(112px)};
+		--lineH:#{em(61.5)};
+
+		
+		&:nth-child(odd){
+			left: var(--lineX);
+			transform: rotate(-1deg) skew(4deg, 0);
+			// transform: matrix(-1, 0, 0, 1, 0, 0);
+		}
+		&:nth-child(even){
+			transform: rotate(0deg) skew(-4deg, 0);
+			// transform: rotate(3deg);
+			right: var(--lineX); 
+		}
+		&:nth-child(1),
+		&:nth-child(2) {
+			--lineX: #{em(28)};
+			--lineY: #{em(537)};
+		}
+		&:nth-child(2) {
+			--lineY: #{em(536)};
+				--lineX: #{em(33)};
+			}
+
+		&:nth-child(3),
+		&:nth-child(4) {
+			// transform: rotate(2deg) skew(2deg, 0);
+			--lineX: #{em(240)};
+			--lineY: #{em(374)};
+			--lineW:#{em(80)};
+			--lineH:#{em(44)};
+		}
+		&:nth-child(5),
+		&:nth-child(6) {
+			--lineX: #{em(374)};
+			--lineY: #{em(290)};
+			--lineW:#{em(59)};
+			--lineH:#{em(32)};
+		}
+		&:nth-child(5){
+			transform: rotate(-1deg) skew(2deg, 0);
+		}
+		&:nth-child(6){
+			// --lineX: #{em(326 - 146)};
+			--lineX: #{em(379)};
+		}
+		&:nth-child(7),
+		&:nth-child(8) {
+			--lineX: #{em(490)};
+			--lineY: #{em(248)};
+			--lineW:#{em(50)};
+			--lineH:#{em(27)};
+			transform: rotate(0) skew(0, 0);
+		}
+		&:nth-child(8){
+			--lineX: #{em(492)};
+		}
+		&:nth-child(9),
+		&:nth-child(10) {
+			transform: rotate(0) skew(0, 0);
+			--lineX: #{em(755 - 125)};
+			--lineY: #{em(231)};
+			--lineW:#{em(45)};
+			--lineH:#{em(25)};
+		}
+		&:nth-child(10){
+			--lineX: #{em(755 - 123)};
+			// --lineX: #{em(756 - 146)};
+			// --lineX: #{em(526)}; 
+		}
+	}
+	&__center-logo{
+		width: em(119);
+		height: em(52);
+		@include a-cent(x);
+		top: em(345);
+		img{
+			max-width: 100%;
+			height: auto;
+		}
+	}
+ 
+}
+.tabs__content--4,
+.tabs__content--3{
+	.canvas-block-show{
+			&__center-logo{
+				top: em(316);
+
+			}
+			&__logo-block{
+						&:nth-child(1),
+						&:nth-child(2) {
+							--lineX: #{em(108)};
+							--lineY: #{em(490)};
+							// --lineW:#{em(80)};
+							// --lineH:#{em(44)};
+						}
+						
+						&:nth-child(2) {
+							--lineY: #{em(492)};
+							--lineX: #{em(123)};
+							// --lineY: #{em(536)};
+							// --lineX: #{em(33)};
+						}
+
+						&:nth-child(3)  {
+							transform: rotate(0) skew(0, 0);
+							--lineY: #{em(500)};
+							--lineX: #{em(666)};
+							--lineW:#{em(110)};
+							--lineH:#{em(60)};
+						}
+			}
+	}
+}
+.tabs__content--4{
+	.canvas-block-show{
+		 
+			&__logo-block{
+					 
+						&:nth-child(3) ,
+						&:nth-child(4) ,
+						 {
+							transform: rotate(0) skew(0, 0);
+							--lineY: #{em(500)};
+							--lineX: #{em(506)};
+							--lineW:#{em(110)};
+							--lineH:#{em(60)};
+						}
+						&:nth-child(4){
+							--lineX: #{em(512)};
+
+					 }
+			}
+	}
+}

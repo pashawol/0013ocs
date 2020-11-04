@@ -1,0 +1,61 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug  
+include ../blocks/sSpeakers/_sSpeakers.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sTrackPlan/_sTrackPlan.pug
+include ../blocks/sStream/_sStream.pug
+include ../blocks/sLogos/_sLogos.pug
+include ../blocks/sMembers/_sMembers.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sArchive/_sArchive.pug
+include ../blocks/s2d/_s2d.pug
+include ../blocks/sShow/_sShow.pug
+include ../blocks/sEvents/_sEvents.pug
+
+block variables
+	- let  mainPage= 'page-show'
+block title
+	- let  title= 'Avaya'
+	title= title
+block pagecontent
+	//- +mob-mnu()
+	+top-nav('l')
+	//- +headerBlockPage() 
+	.tabs
+		
+	+page-title(title,'ar')
+		.col-md-auto
+			.tabs__caption
+				.tabs__btn.active Мониторинговые системы
+				.tabs__btn Еще вкладка
+				.tabs__btn Третья вкладка
+				.tabs__btn Чектвертая вкладка
+	+sShow({img: 'presentation-bg'})
+	//- +b.sContent--presentation.section
+	//- 	.container.container-large
+	//- 		.row
+	//- 			.col.order-first
+	//- 				h2 AVAYA&nbsp;&mdash; ОДИН ИЗ&nbsp;КРУПНЕЙШИХ ПОСТАВЩИКОВ БАТАРЕЙ
+	//- 				p 26&nbsp;лет назад наша компания была создана командой людей, хорошо знакомых с&nbsp;ИТ-каналом и&nbsp;понимавших, каким должен быть хороший дистрибьютор. Эти знания, преданность идеям крепкого партнерства и&nbsp;желание развивать рынок помогли нам вырасти и&nbsp;стать теми, кто мы&nbsp;есть сегодня.
+
+	//- 				p В&nbsp;нашем портфеле почти 500 продуктовых линеек&nbsp;&mdash; от&nbsp;инфраструктур в&nbsp;коробке до наушников и&nbsp;детских конструкторов. В&nbsp;команде почти 2500 специалистов&nbsp;&mdash; от&nbsp;тех, кто знает слово &laquo;конвергентный&raquo;, до&nbsp;тех, кто покажет как управлять гироскутером. У&nbsp;нас 27 городов присутствия в&nbsp;России, и&nbsp;если менеджер в&nbsp;одном офисе спит, то&nbsp;в&nbsp;другом скорее всего уже работает. Наш партнерский канал насчитывает почти 7500
+	//- 				p: a(href="#") Example.com
+	//- 			.col-xxl-4.col-lg-6
+	//- 				h4 Полезные ссылки
+	//- 				+sEvents7().--speaker
+	//- 			.col-xxl-2.order-xxl-first
+	//- render_gold
+	//- +sSpeakers 
+	//- +sMembers8
+	//- +sLive()
+	//- +sSpeakers()
+	//- +sQuestions()
+	//- +sTrackPlan()
+	//- +sLogos09
+	//- +sContact()
+	+footer()
+
+
+	
