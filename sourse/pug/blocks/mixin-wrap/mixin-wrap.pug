@@ -163,14 +163,28 @@ mixin reg(b="Зарегистрироваться")
 						.row
 							.col-lg-6
 								
-								+input("название компании без ООО и",'text','Компания*','partners')( list="partners-company")
-									<datalist id="partners-company">
-										<option value="San Francisco">
-										<option value="New York">
-										<option value="Seattle">
-										<option value="Los Angeles">
-										<option value="Chicago">
-									</datalist>
+								//- +input("название компании без ООО и",'text','Компания*','partners')( list="partners-company")
+								//- 	<datalist id="partners-company">
+								//- 		<option value="San Francisco">
+								//- 		<option value="New York">
+								//- 		<option value="Seattle">
+								//- 		<option value="Los Angeles">
+								//- 		<option value="Chicago">
+								//- 	</datalist>
+								+e.input-wrap.form-group
+									label.autocomplete
+										+e.INPUT.input.form-control(data-autocomplete-dom='#categories' data-best-match='' placeholder="название компании без ООО и")
+										.suggest.menu(data-menu='')
+											ol
+										+b.SPAN.input-title Компания*
+									.btn.btn-primary.btn-select.d-none
+										span.ki-icon.ki-icon-carat-down
+										select#categories
+											option(value='Foo') Foo
+											option(value='Bar') Bar
+											option(value='Baz') Baz
+											option(value='Bak') Bak
+
 							.col-lg-6 
 								
 								+input("Менеджер в OCS",'select','Менеджер в OCS')

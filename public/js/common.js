@@ -349,6 +349,7 @@ function eventHandler() {
 	$(document).on('click', '[href="#modal-content"]', function () {
 		$('#modal-content .modal-inner').html($(this).next().html());
 	});
+	$(document).trigger("enhance");
 }
 
 ;

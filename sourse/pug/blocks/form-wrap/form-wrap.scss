@@ -15,6 +15,9 @@
 }
 .form-wrap{
 	margin-bottom: rem(28);
+	.autocomplete-spokenvalue{
+		display: none !important;
+	}
 	&__input-wrap{
 		margin-bottom: rem(20);
 		margin-bottom: 2rem;
@@ -83,7 +86,33 @@
 	 textarea{
 		 min-height: 10em;
 	 }
- 
+	 .autocomplete{
+		 position: relative;
+	 }
+ .suggest{
+	 position: absolute;
+	 left: 0;
+	 top: 100%;
+	 width: 100%;
+	 border: .12346rem solid #2a2d31;
+	 background-color: $dark;
+	 font-size: 1rem;
+	 ol{
+		 margin: 0;
+		 padding: 0;
+		 list-style: none;
+		 margin-top: -2px;
+		}
+		li{
+			padding: .741rem 1.48148rem;
+			background-color: #000000;
+			@include mt;
+			&:hover{
+				background-color: $dark;
+
+		 }
+	 }
+ }
 }
 .form-group{
 	

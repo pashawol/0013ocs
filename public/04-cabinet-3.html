@@ -725,22 +725,20 @@
 							<div class="row">
 								<div class="col-lg-6">
 									<div class="form-wrap__input-wrap form-group">
-										<label><input class="form-wrap__input form-control" type="text" placeholder="название компании без ООО и" name="partners" list="partners-company"/><datalist id="partners-company">
-<option value="San Francisco">
-<option value="New York">
-<option value="Seattle">
-<option value="Los Angeles">
-<option value="Chicago">
-</datalist><span class="input-title">Компания*</span>
-										</label><datalist id="partners-company">
-<option value="San Francisco">
-<option value="New York">
-<option value="Seattle">
-<option value="Los Angeles">
-<option value="Chicago">
-</datalist>
+										<label class="autocomplete"><input class="form-wrap__input form-control" data-autocomplete-dom="#categories" data-best-match="" placeholder="название компании без ООО и" type="text"/>
+											<div class="suggest menu" data-menu="">
+												<ol></ol>
+											</div><span class="input-title">Компания*</span>
+										</label>
+										<div class="btn btn-primary btn-select d-none"><span class="ki-icon ki-icon-carat-down"></span>
+											<select id="categories">
+												<option value="Foo">Foo</option>
+												<option value="Bar">Bar</option>
+												<option value="Baz">Baz</option>
+												<option value="Bak">Bak</option>
+											</select>
+										</div>
 									</div>
-									<!-- +e.input-wrap-->
 								</div>
 								<div class="col-lg-6"> 
 									<div class="form-wrap__input-wrap form-group">
@@ -873,7 +871,13 @@
 		<script src="libs/wowjs/wow.min.js"></script>
 		<script src="libs/swiper/js/swiper.min.js"></script>
 		<!-- /slider libs-->
-		<script src="libs/inputmask/inputmask.min.js"></script>
+		<script src="libs/inputmask/inputmask.min.js"></script><script src="js/lib/shoestring-dev.js"></script>
+<script src="js/lib/ext/menu.js"></script>
+<script src="js/src/core.js"></script>
+<!-- optional if you're not using a DOM source for data -->
+<script src="js/src/dom.js"></script>
+<script src="js/src/init.js"></script>
+<link rel="stylesheet" href="js/lib/ext/menu.css">
 		<script src="js/common.js"></script>
 	</body>
 </html>

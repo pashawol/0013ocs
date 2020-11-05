@@ -369,6 +369,8 @@ function eventHandler() {
 	});
 
 
+	$(document).trigger("enhance");
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
