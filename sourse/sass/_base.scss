@@ -469,18 +469,24 @@ iframe {
 
 			}
 		}
+		.page-show .page-title{}
 	.tabs{
 		&__caption{
 			display: flex;
+			justify-content: flex-end;
 		}
 		&__btn{
 			@extend .btn;
-				@include media-breakpoint-up(xxl) {
+			@include media-breakpoint-up(md) {
+				width: rem(80);
+				}
+				@include media-breakpoint-up(xl) {
+					width: rem(150);
 					font-size: rem(16);
 					padding: em(13) em(20);
 				}
 				font-size: rem(12);
-			padding: em(10) em(5);
+			padding: em(10) em(20);
 			background: rgba(255, 87, 0, 0.4);
 			/* 5 */
 
