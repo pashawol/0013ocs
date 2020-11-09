@@ -371,6 +371,10 @@ function eventHandler() {
 
 	$(document).trigger("enhance");
 
+	// $(".sEvents__item").hover(
+	// 	function() { 
+	// 		$(this).find('.toggle-text').slideToggle();
+	// 	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

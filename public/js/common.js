@@ -349,7 +349,10 @@ function eventHandler() {
 	$(document).on('click', '[href="#modal-content"]', function () {
 		$('#modal-content .modal-inner').html($(this).next().html());
 	});
-	$(document).trigger("enhance");
+	$(document).trigger("enhance"); // $(".sEvents__item").hover(
+	// 	function() { 
+	// 		$(this).find('.toggle-text').slideToggle();
+	// 	})
 }
 
 ;

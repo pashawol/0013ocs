@@ -26,6 +26,11 @@
 		margin-bottom: 9px;
 		// margin-bottom: 1rem;
 		font-size: rem(20);
+		// word-break: ;
+		hyphens: auto;
+		-webkit-hyphens: auto;
+		-moz-hyphens: auto;
+		-ms-hyphens: auto; 
 	}
 	&__speaker{
 		margin-right: rem(13);
@@ -147,6 +152,22 @@
 				transparent 16px,
 			#2A2D31 16px,
 			#2A2D31 17px);
+		}
+		.toggle-text {
+			display: none;
+			transform: skewY(0);
+			transform-origin: 0 0;
+			left: 0;
+			top: 0;
+			@include mt(.6);
+			opacity: 0;
+		}
+		&:hover{
+		.toggle-text{
+			opacity: 1;
+			display: block;
+				transform: skewY(1); 
+		}
 		}
 	}
 
