@@ -167,14 +167,28 @@
 		}
 	}
 	&__center-logo{
+		.row{
+			@include roww(em(10));
+			align-items: center;
+		}
 		width: em(119);
 		height: em(52);
 		@include a-cent(x);
-		top: em(345);
-		img{
-			max-width: 100%;
-			height: auto;
+		top: em(330);
+		.logo-1{
+			width: em(44 * .8);
 		}
+		.logo-2{
+			width: em(48 * .8);
+		}
+
+	}
+	&__center-text{
+		text-align: center;
+		font-size: em(9);
+		line-height: 108%;
+		margin-top: em(5);
+		font-weight: bold;
 	}
  
 }

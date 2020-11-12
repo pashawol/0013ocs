@@ -1,3 +1,11 @@
+mixin centerLogo()
+	+e.center-logo
+		.row
+			.col
+				img.logo-1(src="img/svg/logo-1.svg", alt="")
+			.col-auto
+				img.logo-2(src="img/svg/logo-2.png", alt="")
+			+e.center-text  III Глобальный технологический форум OCS Distribution IT-ОСЬ 2020
 mixin sShow(data)
 	.tabs__wrap
 	.tabs__content.active
@@ -9,8 +17,7 @@ mixin sShow(data)
 					- for (var x = 0; x < 10; x++)
 						+e.logo-block(href="#")
 							img(src="img/@2x/logo-block.png", alt="")
-					+e.center-logo
-						img(src="img/svg/logo-center.png", alt="")
+					+centerLogo()
 
 		// end sShow
 	- for (var x = 0; x < 3; x++)
@@ -23,8 +30,7 @@ mixin sShow(data)
 						- for (var x = 0; x < 10; x++)
 							+e.logo-block(href="#")
 								img(src="img/@2x/logo-block.png", alt="")
-						+e.center-logo
-							img(src="img/svg/logo-center.png", alt="")
+						+centerLogo()
 
 			// end sShow
 	 
@@ -37,7 +43,6 @@ mixin sShow(data)
 					- for (var x = 0; x < 4; x++)
 						+e.logo-block(href="#")
 							img(src="img/@2x/logo-block.png", alt="")
-					+e.center-logo
-						img(src="img/svg/logo-center.png", alt="")
+					+centerLogo()
 
 		// end sShow
