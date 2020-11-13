@@ -17,7 +17,10 @@
 				background: none;
 				position: absolute;
 				// left: rem(19);
-				right: rem(12);
+				@include media-breakpoint-up(md) {
+
+					right: rem(12);
+				}
 				top: rem(4);
 				
 				.icon {
