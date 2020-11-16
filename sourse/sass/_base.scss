@@ -499,9 +499,18 @@ iframe {
 	}
 }
 .page-presentation{
+	h1{
+		min-height: 4em;
+		margin-bottom: -2em;
+		// margin-top: -1em;
+	}
 	.headerBlock,
 	 .page-title{
-
+		 margin-top: -2rem;
+			max-width: calc(50% - #{rem(120)});
+			// position: absolute;
+			left: 0;
+			top: 0;
 		 @include media-breakpoint-down(lg) {
 			 display: none;
 			}
