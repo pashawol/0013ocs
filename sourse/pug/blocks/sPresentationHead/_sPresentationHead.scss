@@ -216,6 +216,10 @@
 		overflow: visible;
 		margin-top: em(-22);
 		left: em(2);
+		.swiper-wrapper{
+			align-items: flex-end;
+			max-height: em(300);
+		}
 	}
 	&__caption{
 		background: #FFFFFF;
@@ -225,7 +229,7 @@
 		color: $dark;
 		@include tear(em(166));
 		margin-bottom: em(20);
-		height: em(77);
+		min-height: em(77);
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -253,7 +257,7 @@
 		width: 100%;
 	}
 	.swiper-slide:not(.swiper-slide-active){
-		opacity: 0;
+		opacity: 0 !important;
 	}
 	&__slide-img-wrap{
 		width: em(132);
