@@ -31,6 +31,15 @@
 		-webkit-hyphens: auto;
 		-moz-hyphens: auto;
 		-ms-hyphens: auto; 
+		a{
+			display: inline-block;
+			max-width: 100%;
+			hyphens: auto;
+			-webkit-hyphens: auto;
+			-moz-hyphens: auto;
+			-ms-hyphens: auto; 
+
+		}
 	}
 	&__speaker{
 		margin-right: rem(13);
@@ -112,6 +121,7 @@
 		position: relative;
 		background:#2A2D31;
 		@include mt;
+		width: 100%;
 		&:hover {
 			background: rgba($color: #161C28, $alpha: 0.5);
 		}
@@ -136,7 +146,7 @@
 			font-weight: 300;
 		}
 		&--main{
-			min-height: calc(100% - 14px);
+			 height: calc(100% - 14px);
 		}
 		&.inactive {
 			background: #10151F;
@@ -172,6 +182,7 @@
 					}
 				}
 		}
+		min-height: rem(224);
 	}
 
 	&__star{
@@ -268,17 +279,18 @@
 	}
 	
 	&__col{
+		min-width: rem(280);
 		@include media-breakpoint-up(xxl) {
 			--size: calc(100% / 5)
 		}
 		@include media-breakpoint-up(xl) {
-			--size: calc(100% / 4)
-		}
-		@include media-breakpoint-up(lg) {
+			// --size: calc(100% / 4)
 			--size: calc(100% / 3)
 		}
-		@include media-breakpoint-up(sm) {
+		@include media-breakpoint-up(lg) {
 			--size: calc(100% / 2)
+		}
+		@include media-breakpoint-up(md) {
 		}
 		flex: 0 0 var(--size);
 		max-width: var(--size);
@@ -293,7 +305,8 @@
 	.row--sm{
 		@include roww(16px);
 		.sEvents__item{
-			min-height: calc(100% - 16px);
+			min-height: calc(248);
+			 height: calc(100% - 16px);
 		}
 	}
 	
@@ -327,6 +340,20 @@
 		// height: rem(34);
 		font-size: $small; 
 		margin-bottom: rem(10);
+	}
+
+	&__logo-wrap{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #ffffff;
+		@include media-breakpoint-up(md) {
+
+			width: rem(240);
+		}
+		// height: calc(100% - 16px);
+		height:  rem(224);
+		margin-bottom: 16px;
 	}
 
 	@include media-breakpoint-up(xl) {}

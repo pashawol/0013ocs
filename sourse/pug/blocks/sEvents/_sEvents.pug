@@ -94,7 +94,8 @@ mixin sEvents-12()
 								+e.label-elem!= l
 						.col-12
 							+e.text-block
-								+e.title.strong!= t
+								+e.title.strong
+									a(href="#").text-white!= t
 								if block
 									block
 								else
@@ -112,7 +113,7 @@ mixin sEvents-12()
 					.tabs__btn.btn.btn-outline-primary.active Программа 
 					.tabs__btn.btn.btn-outline-primary Включение из демо-зон
 			.tabs__wrap
-				.tabs__content.active
+				.tabs__content
 					+item(`12:05`, `Круглый стол с Ольгой Сигаль : Digital Академия, управляющий партнер «Возможен ли цифровой прорыв для IT-гигантов?»`, `Панельная дискуссия`,'s','active','Рынок ИТ отличает высокая динамика, и когда появляются очередные изменения в технологиях или бизнес-моделях, сразу возникает очередная дискуссия о том, как эти изменения повлияют на дистрибуцию. Появление ПК, массовое распространение Интернета, интернет-коммерция, облачные технологии – все эти явления должны были уничтожить дистрибуцию как бизнес не один раз, но она еще жива и, вопреки предсказаниям скептиков, чувствует себя совсем неплохо. В чем же феномен долголетия ИТ-дистрибуции?') 
 					+item(`12:05`, `Панельная дискуссия с Максимом Сорокиным, председателем совета директоров OCS Distribution`, `Панельная дискуссия`,'s','active')
 						.row
@@ -135,13 +136,280 @@ mixin sEvents-12()
 						- for (var x = 0; x < 20; x++)
 							+e.col.col-12
 								+itemB(`13:50`, `Название сессии от вендора в одну или несколько строк`, `Сессия`,'s')
-				.tabs__content
-					- for (var y = 0; y < 5; y++)
-						.row.row--sm
-							- for (var x = 0; x < 5; x++)
-								+e.col.col-12
-									+itemB(`13:50`, ` Высокопроизводительные решения для умного бизнеса  `, `Сессия`,'s')
-					
+				.tabs__content.active 
+						mixin line(i)
+							.row.row--sm 
+								+e.col-logo.col-md-auto(class="wow  animate__fadeInUp "   )
+									+e.logo-wrap
+										+pic(i,'',0)
+								.col
+									.row.row--sm 
+										block
+						+line('Unify.png')
+							+e.col.col-12
+								+itemB(`13:00 - 14:00 `, ` Демонстрация возможности Web Collaboration`, ``,'') 
+							+e.col.col-12
+								+itemB(`15:00 - 16:00  `, ` Демонстрация возможности OpenScape Contact Cente`, ``,'') 
+						+line('baumInform.png')
+							+e.col.col-12
+								+itemB(`14:00 -14:20  `, ` Показ базовой настройки СХД BAUM-Inform`, ``,'') 
+							+e.col.col-12
+								+itemB(`15:00 -15:20 `, ` Показ базовой настройки СХД BAUM-Inform`, ``,'') 
+						+line('checkPoint.jpg')
+							+e.col.col-12
+								+itemB(`15:00 - 16:00  `, `Демонстрация Check Point Infinity SOC`, ``,'') 
+							+e.col.col-12
+								+itemB(`16:00 - 16:30`, `Демонстрация Sandblast Agent Management Platform`, ``,'') 
+						+line('citrix.jpg')
+							+e.col.col-12
+								+itemB(`12:00 - 13:00  `, `Демонстрация работы Citrix Unified Gateway в различных сценариях входа пользователя на основе предварительного анализа его устройства `, ``,'') 
+							+e.col.col-12
+								+itemB(`14:00 - 15:00 `, `Демонстрация работы Citrix Unified Gateway в различных сценариях входа пользователя на основе предварительного анализа его устройства`, ``,'') 
+							+e.col.col-12
+								+itemB(`16:00 - 16:30  `, `Демонстрация работы Citrix Unified Gateway в различных сценариях входа пользователя на основе предварительного анализа его устройства`, ``,'') 
+						+line('cyberpower.png')
+							+e.col.col-12
+								+itemB(`14:30 - 15:00  `, `Демонстрация онлайн нового поколения OL (high densyty) `, ``,'') 
+							+e.col.col-12
+								+itemB(`15:00 - 15:30 `, `Green Power UPS на практике - прямое включение из Новосибирска`, ``,'') 
+							+e.col.col-12
+								+itemB(`15:30 - 16:00  `, `Управление батарейными массивами (BMS) и встроенный BMS онлайн и SMART ИБП`, ``,'') 
+							+e.col.col-12
+								+itemB(`16:00 - 16:30 `, `Награждение победителей и эксклюзивный, первый показ новой модели ИБП`, ``,'') 
+						+line('eaton.jpg')
+							+e.col.col-12
+								+itemB(`13:00-14:00 `, `Презентация нового модульного ИБП Eaton 93PM-G2. Прямая трансляция с завода в Эспуу, Финляндия`, ``,'') 
+						
+						+line('elo.png')
+							+e.col.col-12
+								+itemB(`14:00 - 14:30  `, `ELO Retail – Price checker`, ``,'') 
+							+e.col.col-12
+								+itemB(`14:30 - 15:00 `, `ELO POS – Вариации применения моноблоков в разных сферах рынка`, ``,'') 
+							+e.col.col-12
+								+itemB(`15:00 - 15:30 `, `Huddle Kit – Оснащение Конференц залов  - ELO IDS`, ``,'') 
+							+e.col.col-12
+								+itemB(`15:30 - 16:00  `, `Новинки Elo 2021`, ``,'') 
+						
+						+line('extreme.png')
+							+e.col.col-12
+								+itemB(`14:50 - 15:20`, `Система мониторинга и анализа WiFi сети Extreme `, ``,'') 
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Емельянов Роман 
+												| 
+												span  OCS Distribution
+							+e.col.col-12
+								+itemB(`15:30 - 15:50`, `Фабрика и система управления Extreme Managment Center  `, ``,'') 
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Лебедева Вера
+												| 
+												span  OCS Distribution
+						
+						+line('fujitsu.png')
+							+e.col.col-12
+								+itemB(`14:00 - 16:00 `, `Fujitsu ETERNUS Storage Cluster`, ``,'') 
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Андрей Борзенков
+												| 
+												span  Fujitsu
+						
+						+line('H3C.png')
+							+e.col.col-12
+								+itemB(`12:00 - 12:30 `, `Видео о компании H3C`, ``,'') 
+							+e.col.col-12
+								+itemB(`12:30 - 13:45 `, `H3C Intro, H3C Portfolio`, ``,'') 
+							+e.col.col-12
+								+itemB(`14:00 - 14:45 `, `CAS Intro Prezo, CAS vLAB`, ``,'') 
+							+e.col.col-12
+								+itemB(`15:00 - 16:30 `, `AD-DC Intro Prezo, AD-DC vLAB, AD-Campus Intro Prezo, AD-Campus vLAB`, ``,'') 
+						
+						+line('hp.jpg')
+							+e.col.col-12
+								+itemB(`12:30 - 12:40 `, `Прямое включение - стенд НР в режиме live`, ``,'') 
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Алексей Мурашов
+												| 
+												span HP Inc.
+							+e.col.col-12
+								+itemB(`12:40 - 14:30 `, `Трансляция из Шоу-Рума HP&OCS г. Екатеринбург`, ``,'') 
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Игорь Дубровкин
+												| 
+												span  OCS Distribution
+							+e.col.col-12
+								+itemB(`13:00 - 13:45 `, `Продукты и технологии НР из сегмента бизнес PC `, ``,'') 
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Сергей Зеленин
+												| 
+												span  HP Inc.
+							+e.col.col-12
+								+itemB(`14:30 - 16:00 `, `Трансляция из Шоу-Рума HP&OCS г. Самара    `, ``,'') 
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Юлия Марюкина
+												| 
+												span  OCS Distribution
+						
+							+e.col.col-12
+								+itemB(`15:00 - 15:30 `, `Печатная техника НР: Демонстрация возможностей`, ``,'') 
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Сергей Зеленин
+												| 
+												span  HP Inc.
+						+line('jabra.png')
+							+e.col.col-12
+								+itemB(`14:30 - 15:15  `, `Демо на стенде Jabra, рассказ про продукты и новости`, ``,'')  
+							+e.col.col-12
+								+itemB(`15:15 - 15:45 `, `Обзор Jabra PanaCast и Jabra Speak 71015.30 Обзор Jabra Evolve 2 40 и Jabra Evolve 2 65`, ``,'')  
+						
+						+line('poly.png')
+							+e.col.col-12
+								+itemB(`15:00 - 16:30 `, `Вопросы к эксперту Poly`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Сергей Гринченко
+												| 
+												span Poly 
+						
+						+line('powercom.png')
+							+e.col.col-12
+								+itemB(`13:30 - 14:00`, `Презентация трехфазных решений`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Дмитрий Шпанько, Сергей Рябов
+												| 
+												span POWERCOM
+						
+						+line('stratodesk.jpg')
+							+e.col.col-12
+								+itemB(`12:30 - 13:30 `, `Stratodesk NoTouch Desktop - компания, продукты и решения`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Юлия Бусарова
+												| 
+												span Stratodesk
+							+e.col.col-12
+								+itemB(`13:30 - 14:30`, `Создание безопасного рабочего места пользователя и управление им с помощью решений Stratodesk`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Олег Васильев
+												| 
+												span OCS Distribution
+						
+							+e.col.col-12
+								+itemB(`14:30 - 15:30 `, `Платформа управления NoTouch Center, функциональность, настройки и возможности`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Paul Craddock
+												| 
+												span Stratodesk
+						+line('veritas.png')
+							+e.col.col-12
+								+itemB(`13:30 - 14:00 `, `NetBackup 8.3: Обзор обновленного веб-интерфейса и взаимодействия с виртуальными машинами VMware`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Александр Калинин
+												| 
+												span OCS Distribution
+							+e.col.col-12
+								+itemB(`14:30 - 15:00 `, `Восстановление файлов рабочих станций с помощью web-интерфейса Veritas DLO (Desktop and Laptop Options)`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Александр Калинин
+												| 
+												span OCS Distribution
+						
+							+e.col.col-12
+								+itemB(`15:30 - 16:00 `, `Восстановление почты с помощью Veritas Backup Exec`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Александр Калинин
+												| 
+												span OCS Distribution
+						+line('vertiv.png')
+							+e.col.col-12
+								+itemB(`13:00 - 13:10`, `Обзор демо GXT5`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Вотановский Андрей
+												| 
+												span  Vertiv
+							+e.col.col-12
+								+itemB(`14:00 - 14:10 `, `Обзор демо PDU `, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Вотановский Андрей
+												| 
+												span  Vertiv
+						
+							+e.col.col-12
+								+itemB(`15:30 - 16:00 `, `Обзор консоли Avocent`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Вотановский Андрей
+												| 
+												span  Vertiv
+						
+						+line('yadro.jpg')
+							+e.col.col-12
+								+itemB(`15:00 - 15:30 `, `Обзор СХД TATLIN.UNIFIED`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Егор Литвинов
+												| 
+												span Yadro
+							+e.col.col-12
+								+itemB(`15:30 - 16:00`, `Обзор серверов VEGMAN S220/S320 `, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Николай Семенов
+												| 
+												span Yadro
+						+line('logo_ocs.png')
+							+e.col.col-12
+								+itemB(`13:00 - 13:30 `, `Демонстрация платформы Маркетплейс`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Евгений Шнайдер
+												| 
+												span  OCS Distribution
+							+e.col.col-12
+								+itemB(`13:30 - 14:00 `, `Демонстрация платформы С2Р`, ``,'')  
+									+e.text 
+										.row
+											.col-auto
+												strong.text-primary Веселова Наталия
+												| 
+												span  OCS Distribution
+						
 	// end sEvents
 
 
