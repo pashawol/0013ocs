@@ -347,6 +347,8 @@
 		align-items: center;
 		justify-content: center;
 		background-color: #ffffff;
+		padding-left: rem(20);
+		padding-right: rem(20);
 		@include media-breakpoint-up(md) {
 
 			width: rem(240);
