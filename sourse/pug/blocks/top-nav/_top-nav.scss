@@ -97,8 +97,8 @@
 		font-size: 1rem;
 		height: rem(48);
 		position: relative;
-		&::before{
-			content: '';
+		.top-nav__counter{ 
+			font-size: rem(10px);
 			position: absolute;
 			background-color: $primary;
 			width: 1rem;
@@ -106,6 +106,9 @@
 			top: -0.5rem;
 			left: -.5rem;
 			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
 
 		}
 		picture{
