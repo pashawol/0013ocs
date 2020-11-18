@@ -80,7 +80,7 @@ mixin sEvents-12()
 					if p
 						.toggle-text
 							p= p
-			mixin itemB(d,t,l, star , active, p)
+			mixin itemB(a, d,t,l, star , active, p)
 				+e.item(class="wow  animate__fadeInUp "   )&attributes(attributes)
 					.row
 						+e.time.strong.text-primary.col-lg-auto.col.order-first!= d
@@ -95,7 +95,7 @@ mixin sEvents-12()
 						.col-12
 							+e.text-block
 								+e.title.strong
-									a(href="#").text-white!= t
+									a(href= a).text-white!= t
 								if block
 									block
 								else
@@ -135,7 +135,7 @@ mixin sEvents-12()
 					.row.row--sm
 						- for (var x = 0; x < 20; x++)
 							+e.col.col-12
-								+itemB(`13:50`, `Название сессии от вендора в одну или несколько строк`, `Сессия`,'s')
+								+itemB(a, `13:50`, `Название сессии от вендора в одну или несколько строк`, `Сессия`,'s')
 				.tabs__content.active 
 						mixin line(i)
 							.row.row--sm 
@@ -147,167 +147,187 @@ mixin sEvents-12()
 										block
 						
 						+line('baumInform.png')
+							- let a = 'https://us02web.zoom.us/j/82990989017'
 							+e.col.col-12
-								+itemB(`14:00 -14:20  `, ` Показ базовой настройки СХД BAUM-Inform`, ``,'') 
+								+itemB(a, `14:00 -14:20  `, ` Показ базовой настройки СХД BAUM-Inform`, ``,'') 
 							+e.col.col-12
-								+itemB(`15:00 -15:20 `, ` Показ базовой настройки СХД BAUM-Inform`, ``,'') 
+								+itemB(a, `15:00 -15:20 `, ` Показ базовой настройки СХД BAUM-Inform`, ``,'') 
 						+line('checkPoint.jpg')
+							- let a = 'https://us02web.zoom.us/j/82772628132'
 							+e.col.col-12
-								+itemB(`15:00 - 16:00  `, `Демонстрация Check Point Infinity SOC`, ``,'') 
+								+itemB(a, `15:00 - 16:00  `, `Демонстрация Check Point Infinity SOC`, ``,'') 
 							+e.col.col-12
-								+itemB(`16:00 - 16:30`, `Демонстрация Sandblast Agent Management Platform`, ``,'') 
+								+itemB(a, `16:00 - 16:30`, `Демонстрация Sandblast Agent Management Platform`, ``,'') 
 						+line('citrix.jpg')
+							- let a = 'https://us02web.zoom.us/j/83111701528'
 							+e.col.col-12
-								+itemB(`12:00 - 13:00  `, `Демонстрация работы Citrix Unified Gateway в различных сценариях входа пользователя на основе предварительного анализа его устройства `, ``,'') 
+								+itemB(a, `12:00 - 13:00  `, `Демонстрация работы Citrix Unified Gateway в различных сценариях входа пользователя на основе предварительного анализа его устройства `, ``,'') 
 							+e.col.col-12
-								+itemB(`14:00 - 15:00 `, `Демонстрация работы Citrix Unified Gateway в различных сценариях входа пользователя на основе предварительного анализа его устройства`, ``,'') 
+								+itemB(a, `14:00 - 15:00 `, `Демонстрация работы Citrix Unified Gateway в различных сценариях входа пользователя на основе предварительного анализа его устройства`, ``,'') 
 							+e.col.col-12
-								+itemB(`16:00 - 16:30  `, `Демонстрация работы Citrix Unified Gateway в различных сценариях входа пользователя на основе предварительного анализа его устройства`, ``,'') 
+								+itemB(a, `16:00 - 16:30  `, `Демонстрация работы Citrix Unified Gateway в различных сценариях входа пользователя на основе предварительного анализа его устройства`, ``,'') 
 						+line('cyberpower.png')
+							- let a = 'https://us02web.zoom.us/j/84060683810'
 							+e.col.col-12
-								+itemB(`14:30 - 15:00  `, `Демонстрация онлайн нового поколения OL (high densyty) `, ``,'') 
+								+itemB(a, `14:30 - 15:00  `, `Демонстрация онлайн нового поколения OL (high densyty) `, ``,'') 
 							+e.col.col-12
-								+itemB(`15:00 - 15:30 `, `Green Power UPS на практике - прямое включение из Новосибирска`, ``,'') 
+								+itemB(a, `15:00 - 15:30 `, `Green Power UPS на практике - прямое включение из Новосибирска`, ``,'') 
 							+e.col.col-12
-								+itemB(`15:30 - 16:00  `, `Управление батарейными массивами (BMS) и встроенный BMS онлайн и SMART ИБП`, ``,'') 
+								+itemB(a, `15:30 - 16:00  `, `Управление батарейными массивами (BMS) и встроенный BMS онлайн и SMART ИБП`, ``,'') 
 							+e.col.col-12
-								+itemB(`16:00 - 16:30 `, `Награждение победителей и эксклюзивный, первый показ новой модели ИБП`, ``,'') 
+								+itemB(a, `16:00 - 16:30 `, `Награждение победителей и эксклюзивный, первый показ новой модели ИБП`, ``,'') 
 						+line('eaton.jpg')
+							- let a = 'https://us02web.zoom.us/j/89129043176'
 							+e.col.col-12
-								+itemB(`13:00-14:00 `, `Презентация нового модульного ИБП Eaton 93PM-G2. Прямая трансляция с завода в Эспуу, Финляндия`, ``,'') 
+								+itemB(a, `13:00-14:00 `, `Презентация нового модульного ИБП Eaton 93PM-G2. Прямая трансляция с завода в Эспуу, Финляндия`, ``,'') 
 						
 						+line('elo.png')
+							- let a = 'https://us02web.zoom.us/j/87054952457'
 							+e.col.col-12
-								+itemB(`14:00 - 14:30  `, `ELO Retail – Price checker`, ``,'') 
+								+itemB(a, `14:00 - 14:30  `, `ELO Retail – Price checker`, ``,'') 
 							+e.col.col-12
-								+itemB(`14:30 - 15:00 `, `ELO POS – Вариации применения моноблоков в разных сферах рынка`, ``,'') 
+								+itemB(a, `14:30 - 15:00 `, `ELO POS – Вариации применения моноблоков в разных сферах рынка`, ``,'') 
 							+e.col.col-12
-								+itemB(`15:00 - 15:30 `, `Huddle Kit – Оснащение Конференц залов  - ELO IDS`, ``,'') 
+								+itemB(a, `15:00 - 15:30 `, `Huddle Kit – Оснащение Конференц залов  - ELO IDS`, ``,'') 
 							+e.col.col-12
-								+itemB(`15:30 - 16:00  `, `Новинки Elo 2021`, ``,'') 
+								+itemB(a, `15:30 - 16:00  `, `Новинки Elo 2021`, ``,'') 
 						
 						+line('extreme.png')
+							- let a = 'https://us02web.zoom.us/j/86762106929'
 							+e.col.col-12
-								+itemB(`14:50 - 15:20`, `Система мониторинга и анализа WiFi сети Extreme `, ``,'') 
+								+itemB(a, `14:50 - 15:20`, `Система мониторинга и анализа WiFi сети Extreme `, ``,'') 
 								 
 							+e.col.col-12
-								+itemB(`15:30 - 15:50`, `Фабрика и система управления Extreme Managment Center  `, ``,'') 
+								+itemB(a, `15:30 - 15:50`, `Фабрика и система управления Extreme Managment Center  `, ``,'') 
 								 
 						+line('fujitsu.png')
+							- let a = 'https://us02web.zoom.us/j/81336881940'
 							+e.col.col-12
-								+itemB(`14:00 - 16:00 `, `Fujitsu ETERNUS Storage Cluster`, ``,'') 
+								+itemB(a, `14:00 - 16:00 `, `Fujitsu ETERNUS Storage Cluster`, ``,'') 
 								 
 						
 						+line('H3C.png')
+							- let a = 'https://us02web.zoom.us/j/86709423003'
 							+e.col.col-12
-								+itemB(`12:00 - 12:30 `, `Видео о компании H3C`, ``,'') 
+								+itemB(a, `12:00 - 12:30 `, `Видео о компании H3C`, ``,'') 
 							+e.col.col-12
-								+itemB(`12:30 - 13:45 `, `H3C Intro, H3C Portfolio`, ``,'') 
+								+itemB(a, `12:30 - 13:45 `, `H3C Intro, H3C Portfolio`, ``,'') 
 							+e.col.col-12
-								+itemB(`14:00 - 14:45 `, `CAS Intro Prezo, CAS vLAB`, ``,'') 
+								+itemB(a, `14:00 - 14:45 `, `CAS Intro Prezo, CAS vLAB`, ``,'') 
 							+e.col.col-12
-								+itemB(`15:00 - 16:30 `, `AD-DC Intro Prezo, AD-DC vLAB, AD-Campus Intro Prezo, AD-Campus vLAB`, ``,'') 
+								+itemB(a, `15:00 - 16:30 `, `AD-DC Intro Prezo, AD-DC vLAB, AD-Campus Intro Prezo, AD-Campus vLAB`, ``,'') 
 						
 						+line('hp.jpg')
+							- let a = 'https://us02web.zoom.us/j/88568803774'
 							+e.col.col-12
-								+itemB(`12:30 - 12:40 `, `Прямое включение - стенд НР в режиме live`, ``,'') 
+								+itemB(a, `12:30 - 12:40 `, `Прямое включение - стенд НР в режиме live`, ``,'') 
 								 
 							+e.col.col-12
-								+itemB(`12:40 - 14:30 `, `Трансляция из Шоу-Рума HP&OCS г. Екатеринбург`, ``,'') 
+								+itemB(a, `12:40 - 14:30 `, `Трансляция из Шоу-Рума HP&OCS г. Екатеринбург`, ``,'') 
 							 
 							+e.col.col-12
-								+itemB(`13:00 - 13:45 `, `Продукты и технологии НР из сегмента бизнес PC `, ``,'') 
+								+itemB(a, `13:00 - 13:45 `, `Продукты и технологии НР из сегмента бизнес PC `, ``,'') 
 							 
 							+e.col.col-12
-								+itemB(`14:30 - 16:00 `, `Трансляция из Шоу-Рума HP&OCS г. Самара    `, ``,'') 
+								+itemB(a, `14:30 - 16:00 `, `Трансляция из Шоу-Рума HP&OCS г. Самара    `, ``,'') 
 							 
 						
 							+e.col.col-12
-								+itemB(`15:00 - 15:30 `, `Печатная техника НР: Демонстрация возможностей`, ``,'') 
+								+itemB(a, `15:00 - 15:30 `, `Печатная техника НР: Демонстрация возможностей`, ``,'') 
 							 
 						+line('jabra.png')
+							- let a = 'https://us02web.zoom.us/j/83365884473'
 							+e.col.col-12
-								+itemB(`14:30 - 15:15  `, `Демо на стенде Jabra, рассказ про продукты и новости`, ``,'')  
+								+itemB(a, `14:30 - 15:15  `, `Демо на стенде Jabra, рассказ про продукты и новости`, ``,'')  
 							 
 							+e.col.col-12
-								+itemB(`15:15 - 15:45 `, `Обзор Jabra PanaCast и Jabra Speak 71015.30 Обзор Jabra Evolve 2 40 и Jabra Evolve 2 65`, ``,'')  
+								+itemB(a, `15:15 - 15:45 `, `Обзор Jabra PanaCast и Jabra Speak 71015.30 Обзор Jabra Evolve 2 40 и Jabra Evolve 2 65`, ``,'')  
 							 
 						
 							+e.col.col-12
-								+itemB(`15:45 - 16:15 `, `Обзор Jabra Evolve 75e и Jabra Evolve 65t`, ``,'')  
+								+itemB(a, `15:45 - 16:15 `, `Обзор Jabra Evolve 75e и Jabra Evolve 65t`, ``,'')  
 							 
 						+line('logotech.png')
+							- let a = 'https://us02web.zoom.us/j/83485850639'
 							+e.col.col-12
-								+itemB(`13:00 - 13:30 `, `Демонстрация решений Logitech для видеоконференций. Продукты: конференц-камеры Rally и MeetUp, решения для помещений, веб-камера Brio, гарнитура Zone Wireless`, ``,'')  
+								+itemB(a, `13:00 - 13:30 `, `Демонстрация решений Logitech для видеоконференций. Продукты: конференц-камеры Rally и MeetUp, решения для помещений, веб-камера Brio, гарнитура Zone Wireless`, ``,'')  
 							 
 					 
 							+e.col.col-12
-								+itemB(`15:30 - 16:00 `, `Демонстрация решений Logitech для видеоконференций. Продукты: конференц-камеры Rally и MeetUp, решения для помещений, веб-камера Brio, гарнитура Zone Wireless`, ``,'')  
+								+itemB(a, `15:30 - 16:00 `, `Демонстрация решений Logitech для видеоконференций. Продукты: конференц-камеры Rally и MeetUp, решения для помещений, веб-камера Brio, гарнитура Zone Wireless`, ``,'')  
 								 
 						+line('logo_ocs.png')
+							- let a = 'https://us02web.zoom.us/j/89510745749'
 							+e.col.col-12
-								+itemB(`13:00 - 13:30 `, `Демонстрация платформы Маркетплейс`, ``,'')  
+								+itemB(a, `13:00 - 13:30 `, `Демонстрация платформы Маркетплейс`, ``,'')  
 							 
 							+e.col.col-12
-								+itemB(`13:30 - 14:00 `, `Демонстрация платформы С2Р`, ``,'')  
+								+itemB(a, `13:30 - 14:00 `, `Демонстрация платформы С2Р`, ``,'')  
 								 
 						
 						
 						+line('poly.png')
+							- let a = 'https://us02web.zoom.us/j/89218958193'
 							+e.col.col-12
-								+itemB(`15:00 - 16:30 `, `Вопросы к эксперту Poly`, ``,'')  
+								+itemB(a, `15:00 - 16:30 `, `Вопросы к эксперту Poly`, ``,'')  
 								 
 						+line('powercom.png')
+							- let a = 'https://us02web.zoom.us/j/88490285015'
 							+e.col.col-12
-								+itemB(`13:30 - 14:00`, `Презентация трехфазных решений`, ``,'')  
+								+itemB(a, `13:30 - 14:00`, `Презентация трехфазных решений`, ``,'')  
 							 
 						+line('stratodesk.jpg')
+							- let a = 'https://us02web.zoom.us/j/89953483721'
 							+e.col.col-12
-								+itemB(`12:30 - 13:30 `, `Stratodesk NoTouch Desktop - компания, продукты и решения`, ``,'')  
+								+itemB(a, `12:30 - 13:30 `, `Stratodesk NoTouch Desktop - компания, продукты и решения`, ``,'')  
 							 
 							+e.col.col-12
-								+itemB(`13:30 - 14:30`, `Создание безопасного рабочего места пользователя и управление им с помощью решений Stratodesk`, ``,'')  
+								+itemB(a, `13:30 - 14:30`, `Создание безопасного рабочего места пользователя и управление им с помощью решений Stratodesk`, ``,'')  
 							 
 						
 							+e.col.col-12
-								+itemB(`14:30 - 15:30 `, `Платформа управления NoTouch Center, функциональность, настройки и возможности`, ``,'')  
+								+itemB(a, `14:30 - 15:30 `, `Платформа управления NoTouch Center, функциональность, настройки и возможности`, ``,'')  
 								 
 							+e.col.col-12
-								+itemB(`15:30 - 16:30  `, `Stratodesk организация Home office сценария для удаленных пользователей`, ``,'')  
+								+itemB(a, `15:30 - 16:30  `, `Stratodesk организация Home office сценария для удаленных пользователей`, ``,'')  
 						 
 						
 						+line('Unify.png')
+							- let a = 'https://us02web.zoom.us/j/8850609339'
 							+e.col.col-12
-								+itemB(`13:00 - 14:00 `, ` Демонстрация возможности Web Collaboration`, ``,'') 
+								+itemB(a, `13:00 - 14:00 `, ` Демонстрация возможности Web Collaboration`, ``,'') 
 							+e.col.col-12
-								+itemB(`15:00 - 16:00  `, ` Демонстрация возможности OpenScape Contact Cente`, ``,'') 
+								+itemB(a, `15:00 - 16:00  `, ` Демонстрация возможности OpenScape Contact Cente`, ``,'') 
 						+line('veritas.png')
+							- let a = 'https://us02web.zoom.us/j/81422233037'
 							+e.col.col-12
-								+itemB(`13:30 - 14:00 `, `NetBackup 8.3: Обзор обновленного веб-интерфейса и взаимодействия с виртуальными машинами VMware`, ``,'')  
+								+itemB(a, `13:30 - 14:00 `, `NetBackup 8.3: Обзор обновленного веб-интерфейса и взаимодействия с виртуальными машинами VMware`, ``,'')  
 								 
 							+e.col.col-12
-								+itemB(`14:30 - 15:00 `, `Восстановление файлов рабочих станций с помощью web-интерфейса Veritas DLO (Desktop and Laptop Options)`, ``,'')  
+								+itemB(a, `14:30 - 15:00 `, `Восстановление файлов рабочих станций с помощью web-интерфейса Veritas DLO (Desktop and Laptop Options)`, ``,'')  
 							 
 							+e.col.col-12
-								+itemB(`15:30 - 16:00 `, `Восстановление почты с помощью Veritas Backup Exec`, ``,'')  
+								+itemB(a, `15:30 - 16:00 `, `Восстановление почты с помощью Veritas Backup Exec`, ``,'')  
 								 
 						+line('vertiv.png')
+							- let a = 'https://us02web.zoom.us/j/83684295739'
 							+e.col.col-12
-								+itemB(`13:00 - 13:10`, `Обзор демо GXT5`, ``,'')  
+								+itemB(a, `13:00 - 13:10`, `Обзор демо GXT5`, ``,'')  
 								 
 							+e.col.col-12
-								+itemB(`14:00 - 14:10 `, `Обзор демо PDU `, ``,'')  
+								+itemB(a, `14:00 - 14:10 `, `Обзор демо PDU `, ``,'')  
 							 
 							+e.col.col-12
-								+itemB(`15:30 - 16:00 `, `Обзор консоли Avocent`, ``,'')  
+								+itemB(a, `15:30 - 16:00 `, `Обзор консоли Avocent`, ``,'')  
 							 
 						
 						+line('yadro.jpg')
+							- let a = 'https://us02web.zoom.us/j/85071788344'
 							+e.col.col-12
-								+itemB(`15:00 - 15:30 `, `Обзор СХД TATLIN.UNIFIED`, ``,'')  
+								+itemB(a, `15:00 - 15:30 `, `Обзор СХД TATLIN.UNIFIED`, ``,'')  
 							 
 							+e.col.col-12
-								+itemB(`15:30 - 16:00`, `Обзор серверов VEGMAN S220/S320 `, ``,'')  
+								+itemB(a, `15:30 - 16:00`, `Обзор серверов VEGMAN S220/S320 `, ``,'')  
 							 
 						
 	// end sEvents
