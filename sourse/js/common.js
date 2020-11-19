@@ -371,10 +371,13 @@ function eventHandler() {
 
 	$(document).trigger("enhance");
 
-	// $(".sEvents__item").hover(
-	// 	function() { 
-	// 		$(this).find('.toggle-text').slideToggle();
-	// 	})
+	$(".canvas-block__btn-bottom").click(function () { 
+		const destination = $('.sContent').offset().top;
+
+		$('html, body').animate({ scrollTop: destination }, 1100);
+
+		return false;
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

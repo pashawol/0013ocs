@@ -349,10 +349,14 @@ function eventHandler() {
 	$(document).on('click', '[href="#modal-content"]', function () {
 		$('#modal-content .modal-inner').html($(this).next().html());
 	});
-	$(document).trigger("enhance"); // $(".sEvents__item").hover(
-	// 	function() { 
-	// 		$(this).find('.toggle-text').slideToggle();
-	// 	})
+	$(document).trigger("enhance");
+	$(".canvas-block__btn-bottom").click(function () {
+		var destination = $('.sContent').offset().top;
+		$('html, body').animate({
+			scrollTop: destination
+		}, 1100);
+		return false;
+	});
 }
 
 ;

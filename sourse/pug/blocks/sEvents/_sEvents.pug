@@ -9,7 +9,7 @@ mixin sEvents()
 						.col-auto.order-lg-last
 							+e.star.active
 								+icon('star-active')
-						.col-md-auto.order-md-first.order-lg-0
+						+e.col-label.col-md-auto.order-md-first.order-lg-0
 							+e.label-elem!= l
 					.col-lg.order-lg-first
 						+e.text-block
@@ -62,7 +62,7 @@ mixin sEvents-12()
 								+e.star(class= active)
 									+icon('star-active')
 						if l
-							.col-md-auto.order-md-first.order-lg-0
+							+e.col-label.col-md-auto.order-md-first.order-lg-0
 								+e.label-elem!= l
 						.col-lg.order-lg-first
 							+e.text-block
@@ -90,7 +90,7 @@ mixin sEvents-12()
 								+e.star(class= active)
 									+icon('star-active')
 						if l
-							.col-md-auto.order-md-first.order-lg-0
+							+e.col-label.col-md-auto.order-md-first.order-lg-0
 								+e.label-elem!= l
 						.col-12
 							+e.text-block

@@ -1,5 +1,9 @@
 	// start .sEvents
 .sEvents {
+&__col &__col-label {
+		width: 100%;
+		flex: 1 0 0%;
+	}
 	&--speaker {
 		max-width: rem(1170);
 	}
@@ -182,7 +186,7 @@
 					}
 				}
 		}
-		min-height: rem(224);
+		// min-height: rem(224);
 	}
 
 	&__star{
@@ -304,7 +308,8 @@
 	}
 	.row--sm{
 		@include roww(16px);
-		.sEvents__item{
+		 .sEvents__item{
+			min-height: rem(224);
 			min-height: calc(248);
 			 height: calc(100% - 16px);
 		}
